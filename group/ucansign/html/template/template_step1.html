@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>유캔싸인</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/chunk-vendors.60e13059.css"> <!-- 기존 관리자 확인용 css 추후 삭제 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout_sample.css"> <!-- 기존 관리자 확인용 css 추후 삭제 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap">
+    <div class="editor-wrap">
+        <div class="e-header e-fixed">
+            <h2>템플릿 설정</h2>
+        </div>
+        <!-- //e-header -->
+        <div class="e-container">
+            <div class="e-cont">
+                <div class="e-inner-sm">
+                    <div class="sign-group">
+                        <div class="box sign">
+                            <div class="box-body">
+                                <div class="b-tit sub-tit">
+                                    <span class="label s-left">A</span>
+                                    <h3>첫 번째 서명 참여자</h3>
+                                    <button type="button" class="btn-close"><i class="ico ico-close">닫기</i></button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="role1" class="sr-only">역할</label>
+                                    <input type="text" id="role1" value="" placeholder="역할" class="form-control">
+                                    <!-- tooltip -->
+                                    <div class="tooltip black left" style="position:absolute;right:110%;top:0;"> <!-- 위치는 스크립트로 설정 -->
+                                        계약서 내에서 해당 참여자의 역할을 입력해 주세요.<br>
+                                        예시) ‘임차인’, ‘근로자’, ‘갑’, ‘을’
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-btn">
+                                <div class="table-group">
+                                    <span role="button" class="btn btn-gray">미리 정보 입력하기</span>
+                                </div>
+                            </div>
+                            <div class="drag-btn">
+                                <button type="button"><i class="ico ico-drag">위치 옮기는 버튼</i></button>
+                            </div>
+                        </div>
+                        <!-- //기본 스타일 -->
+                        <div class="box sign">
+                            <div class="box-body">
+                                <div class="b-tit sub-tit">
+                                    <span class="label s-left">B</span>
+                                    <h3>두 번째 서명 참여자</h3>
+                                    <button type="button" class="btn-close"><i class="ico ico-close">닫기</i></button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="role2" class="sr-only">역할</label>
+                                    <input type="text" id="role2" value="" placeholder="역할" class="form-control error">
+                                    <p class="alert">
+                                        <svg class="" data-icon="info-circle" width="0.938em" height="0.938em" fill="#ff4d4f" aria-hidden="true" viewBox="64 64 896 896" focusable="false">
+                                            <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M464 336a48 48 0 1096 0 48 48 0 10-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z">
+                                        </path>
+                                        </svg>
+                                        <span>역할은 필수 입력사항입니다.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="box-btn">
+                                <div class="table-group">
+                                    <span role="button" class="btn btn-gray">미리 정보 입력하기</span>
+                                </div>
+                            </div>
+                            <div class="drag-btn">
+                                <button type="button"><i class="ico ico-drag">위치 옮기는 버튼</i></button>
+                            </div>
+                        </div>
+                        <!-- //역할 입력 안했을 때 -->
+                        <div class="box sign">
+                            <div class="box-body">
+                                <div class="b-tit sub-tit">
+                                    <span class="label s-left">C</span>
+                                    <h3>세 번째 서명 참여자</h3>
+                                    <button type="button" class="btn-close"><i class="ico ico-close">닫기</i></button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="role3" class="sr-only">역할</label>
+                                    <input type="text" id="role3" placeholder="역할" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name3" class="sr-only">이름 또는 회사명</label>
+                                    <input type="text" id="name3" placeholder="이름 또는 회사명" class="form-control">
+                                </div>
+                            </div>
+                            <div class="box-btn">
+                                <div class="table-group">
+                                    <span role="button" class="btn btn-gray">이메일 전송</span>
+                                    <span role="button" class="btn btn-gray">카카오톡 전송</span>
+                                </div>
+                            </div>
+                            <div class="drag-btn">
+                                <button type="button"><i class="ico ico-drag">위치 옮기는 버튼</i></button>
+                            </div>
+                        </div>
+                        <!-- //미리 정보 입력하기 버튼 눌렀을 때 -->
+                        <div class="box sign">
+                            <div class="box-body">
+                                <div class="b-tit sub-tit">
+                                    <span class="label s-left">D</span>
+                                    <h3>네 번째 서명 참여자</h3>
+                                    <button type="button" class="btn-close"><i class="ico ico-close">닫기</i></button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="role4" class="sr-only">역할</label>
+                                    <input type="text" id="role4" placeholder="역할" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name4" class="sr-only">이름 또는 회사명</label>
+                                    <input type="text" id="name4" placeholder="이름 또는 회사명" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <div class="select-area form-control">
+                                                <span class="select-btn select-click">
+                                                    <svg class="" data-icon="down" width="12px" height="12px" fill="currentColor" aria-hidden="true" viewBox="64 64 896 896" focusable="false">
+                                                        <path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                                <div class="select-chk select-click"><span class="select-txt">010</span></div>
+                                                <ul class="select-list">
+                                                    <li class="option selected">010</li>
+                                                </ul>
+                                            </div>
+                                            <!-- tooltip -->
+                                            <div class="tooltip black left" style="position:absolute;right:110%;top:0;"> <!-- 위치는 스크립트로 설정 -->
+                                                010이 아닌 2G 휴대폰 참여자에게 카카오톡으로 요청할 수 없습니다.
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <label for="phone" class="sr-only">휴대폰번호</label>
+                                            <input type="text" id="phone" placeholder="'-' 없이 숫자만 입력" class="form-control">
+                                            <!-- tooltip -->
+                                            <div class="tooltip black right" style="position:absolute;left:110%;top:0;">
+                                                해당 서명 참여자가 카카오톡을 이용하지 않을경우, 문자로 요청됩니다.
+                                                <a href="javascript:;" class="more">자세히 알아보기<i class="arrow arrow-sm arrow-blue right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="drag-btn">
+                                <button type="button"><i class="ico ico-drag">위치 옮기는 버튼</i></button>
+                            </div>
+                        </div>
+                        <!-- //카카오톡 전송 눌렀을 때 -->
+                        <div class="box sign">
+                            <div class="box-body">
+                                <div class="b-tit sub-tit">
+                                    <span class="label s-left">E</span>
+                                    <h3>다섯 번째 서명 참여자</h3>
+                                    <button type="button" class="btn-close"><i class="ico ico-close">닫기</i></button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="role5" class="sr-only">역할</label>
+                                    <input type="text" id="role5" placeholder="역할" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name5" class="sr-only">이름 또는 회사명</label>
+                                    <input type="text" id="name5" placeholder="이름 또는 회사명" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email5" class="sr-only">이메일 주소</label>
+                                    <input type="text" id="email5" value="" placeholder="이메일 주소" class="form-control">
+                                </div>
+                            </div>
+                            <div class="drag-btn">
+                                <button type="button"><i class="ico ico-drag">위치 옮기는 버튼</i></button>
+                            </div>
+                        </div>
+                        <!-- //다섯번째 서명 (input 알럿 노출 화면)-->
+                    </div>
+                    <!-- //서명 리스트 그룹 -->
+                    <div class="box">
+                        <div class="btn-center">
+                            <button type="button" class="btn btn-lg btn-block btn-white">
+                                <span class="ico-plus">
+                                    <svg data-icon="plus" width="16px" height="16px" fill="#828282" aria-hidden="true" viewBox="64 64 896 896" focusable="false"><defs><style></style></defs>
+                                    <path d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"></path><path d="M176 474h672q8 0 8 8v60q0 8-8 8H176q-8 0-8-8v-60q0-8 8-8z">
+                                    </path></svg>
+                                </span>
+                                서명 참여자 추가
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //e-container -->
+        <div class="e-footer e-fixed">
+            <div class="e-inner-sm">
+                <div class="btn-row">
+                    <div class="btn-table">
+                        <a href="javascript:;" class="btn btn-gray-line modal-trigger" data-modal-id="saved-out">나가기</a>
+                        <a href="./template_step2.html" class="btn btn-blue btn-inactive">다음 단계로</a> <!-- 상단 필수 내용이 모두 입력되면 btn-inactive 클래스가 제거됩니다. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //e-footer -->
+    </div>
+</div>
+<!-- //wrap -->
+
+<div id="saved-out" class="modal modal-sm">
+    <div class="modal-header">
+        <span role="button" class="modal-close">닫기</span>
+    </div>
+    <div class="modal-content text-center">
+        <div class="cont-header">
+            <h3>저장하고 나가기</h3>
+            <b class="text-gray">입력한 내용이 아직 저장되지 않았습니다.<br>
+                저장하고 나가시겠습니까?</b>
+        </div>
+        <div class="cont-body">
+            <div class="form-group text-left">
+                <label for="pw" class="form-tit">템플릿 이름</label>
+                <input type="text" id="pw" placeholder="대량전송 이름을 2자 이상 입력해 주세요." value=" [샘플] 표준 근로계약서" minlength="2" maxlength="" class="form-control">
+                <div class="btn-row mt15">
+                    <div class="btn-table">
+                        <a href="../template.html" class="btn btn-gray-line">나가기</a>
+                        <a href="javascript:;" class="btn btn-blue">저장 후 나가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //저장하고 나가기 -->
+
+</body>
+
+
+</html>
+

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>PAYAPP</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;900&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/aos.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/aos.js"></script>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/jquery-waypoints.min.js"></script>
+    <script type="text/javascript" src="../js/inview.min.js"></script>
+    <script type="text/javascript" src="../js/counterup.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap" class="sub-wrap">
+    <section class="container" id="join">
+        <form method="post" name="sellerfrm" id="sellerfrm" onsubmit="return false;">
+            <div class="seller-join" id="serviceStep2">
+                <div class="join-title">
+                    <h2><img src="../images/common/payapp.svg" alt="PAYAPP"></h2>
+                    <span>판매자 회원가입</span>
+                </div>
+                <fieldset id="companyInfo">
+                    <legend class="sr-only">본인인증</legend>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="compname" class="tit">상호명 (법인명)</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm" name="compname" id="compname" placeholder="상호명을 입력해주세요.">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="pnum" class="tit">사업자등록번호</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm form-btn" name="pnum" id="pnum" placeholder="사업자등록번호를 입력해주세요.">
+                            <a id="compRegNumReq" href="">인증하기</a>
+                        </div>
+                        <div class="bu-list">
+                            <ul>
+                                <li>실명인증이 되지 않는 경우 아래의 실명인증기관에 실명등록을 요청할 수 있습니다.</li>
+                                <li>나이스신용평가정보: 1588-2486</li>
+                                <li>타인의 정보 및 주민번호를 부정하게 사용하는 경우 3년 이하의 징역 또는 1천만원 이하의 벌금에 처해질 수 있습니다.(주민등록법 제 27조)</li>
+                                <li>만 14세 미만은 회원으로 가입할 수 없습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="phone" class="tit">휴대전화 번호</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm form-btn" name="phone" id="phone" placeholder="휴대전화 번호를 입력해 주세요.">
+                            <a id="phoneAuthBtn" href="">인증번호 발송</a>
+                            <div class="guide-text text-red">휴대전화 번호를 입력하세요.</div>
+                        </div>
+                    </div>
+                    <div class="panel" id="phoneAuthCheck">
+                        <div class="panel-heading">
+                            <label for="smsnumber" class="tit">인증번호 입력</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm form-btn" name="smsnumber" id="smsnumber" placeholder="인증번호를 입력해 주세요.">
+                            <a id="smsnumberBtn" href="">인증하기</a>
+                            <div class="guide-text text-red" id="smsnumberMsg">인증번호를 입력하세요.</div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="sr-only">가입비 안내</legend>
+                    <div class="panel" id="tr_join_type">
+                        <div class="panel-heading">
+                            <h4 class="tit">가입비<span class="label-gray">이벤트</span></h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel-box">
+                                <span class="price">
+                                    <p class="arrow-line">
+                                        <b class="price-text">132,000</b> <small>원</small>
+                                    </p>
+                                </span>
+                                <strong class="text-red price-text">무료</strong>
+                                <div class="seller-price">
+                                    <strong>판매자 수수료</strong>
+                                    <ul>
+                                        <li>카드 <b>3.4%</b></li>
+                                        <li>휴대폰 <b>5%</b></li>
+                                        <li>카드 <b>D+5 일</b></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="sr-only">회원정보 입력</legend>
+                    <div class="panel radio-box" id="corptype_row">
+                        <div class="panel-heading">
+                            <h4 class="tit necessary">사업자 구분</h4>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="panel-box row">
+                                <li class="col-6 input-rdo">
+                                    <label for="corp_type1">
+                                        <input type="radio" id="corp_type1" name="corp_type" class="chk" checked>
+                                        <span>법인</span>
+                                    </label>
+                                </li>
+                                <li class="col-6 input-rdo">
+                                    <label for="corp_type2">
+                                        <input type="radio" id="corp_type2" name="corp_type" class="chk">
+                                        <span>개인</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel" id="biztype_row">
+                        <div class="panel-heading">
+                            <h4 class="tit">업태 / 업종</h4>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="row">
+                                <li class="col-6"><input type="text" class="form-control form-sm" name="biztype1" id="biztype1" placeholder="업태"></li>
+                                <li class="col-6"><input type="text" class="form-control form-sm" name="biztype2" id="biztype2" placeholder="업종"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel" id="ceo_nm_row">
+                        <div class="panel-heading">
+                            <label for="ceo_nm" class="tit necessary">대표자 성함</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm" name="ceo_nm" id="ceo_nm" placeholder="대표자 성함">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="userid" class="tit necessary">아이디</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm form-btn" name="userid" id="userid" placeholder="4자리 이상의 영문자, 숫자(첫 글자는 영문)">
+                            <a id="checkUseridBtn" href="">아이디 중복 확인</a>
+                            <div class="guide-text text-red">아이디 첫글자는 영문 소문자만 가능합니다.</div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="userpwd" class="tit necessary">비밀번호</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="password" class="form-control form-sm" name="userpwd" id="userpwd" placeholder="8자리 숫자, 영문자 혼합">
+                            <div class="guide-text text-red">비밀번호는 8자리 숫자, 영문자 혼합으로 입력하세요.</div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="userpwd_check" class="tit necessary">비밀번호 확인</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="password" class="form-control form-sm" name="userpwd_check" id="userpwd_check" placeholder="비밀번호 확인">
+                            <div class="guide-text text-red">비밀번호가 일치하지 않습니다.</div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="sellername" class="tit necessary">판매자명</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm" name="sellername" id="sellername" placeholder="판매자명을 입력해 주세요.">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="tit necessary">이메일</h4>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="email-box row">
+                                <li class="col-4"><input type="text" class="form-control form-sm" name="email1" id="email1" placeholder="이메일 아이디"></li>
+                                <li class="col-4"><input type="text" class="form-control form-sm" name="email2" id="email2" placeholder="직접입력" value=""></li>
+                                <li class="col-3">
+                                    <select class="form-control form-sm" name="email3" id="email3">
+                                        <option value="">- 이메일 선택 -</option>
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="daum.net">daum.net</option>
+                                        <option value="gmail.com">gmail.com</option>
+                                        <option value="nate.com">nate.com</option>
+                                        <option value="write" selected="">직접입력
+                                    </select>
+                                </li>
+                            </ul>
+                            <div class="guide-text text-red">페이앱 관련소식을 받으실 이메일 주소를 입력해 주세요.</div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="bizkind" class="tit">서비스 구분</label>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="row">
+                                <li class="col-3">
+                                    <select class="form-control form-sm" name="bizkind" id="bizkind">
+                                        <option value="선택하세요">선택하세요</option>
+                                        <option value="Blog사업자">Blog사업자</option>
+                                        <option value="쇼핑몰사업자">쇼핑몰사업자</option>
+                                        <option value="방문판매">방문판매</option>
+                                        <option value="음식점(배달)">음식점(배달)</option>
+                                        <option value="A/S긴급출동">A/S긴급출동</option>
+                                        <option value="운수업">운수업</option>
+                                        <option value="컨텐츠">컨텐츠</option>
+                                        <option value="도소매">도소매</option>
+                                        <option value="유통">유통</option>
+                                        <option value="서비스">서비스</option>
+                                        <option value="숙박업">숙박업</option>
+                                        <option value="임대업">임대업</option>
+                                        <option value="농수산업">농수산업</option>
+                                        <option value="기타">기타</option>
+                                    </select>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="zipcode" class="tit necessary">주소</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm form-btn" name="zipcode" id="zipcode" placeholder="우편번호" readonly>
+                            <a id="findAddrBtn" href="">주소 찾기</a>
+                            <div class="add-wrap">
+                                <input type="text" class="form-control form-sm" name="addr1" id="addr1" placeholder="주소">
+                                <input type="text" class="form-control form-sm" name="addr2" id="addr2" placeholder="상세주소 입력">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend class="sr-only">선택사항 입력</legend>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="homepage" class="tit">홈페이지<small>(선택)</small></label>
+                        </div>
+                        <div class="panel-body">
+                            <span class="url-tit">http://</span>
+                            <input type="text" class="form-control form-sm" name="homepage" id="homepage" placeholder="주소를 입력해 주세요.">
+                            <div class="guide-text text-red">운영하고 계시는 홈페이지를 입력해 주세요.</div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="compbank" class="tit">정산은행<small>(선택)</small></label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm" name="compbank" id="compbank" placeholder="정산은행을 입력해 주세요.">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="compbanknum" class="tit">계좌번호<small>(선택)</small></label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm" name="compbanknum" id="compbanknum" placeholder="계좌번호를 입력해 주세요.">
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="compbankname" class="tit">예금주<small>(선택)</small></label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control form-sm" name="compbankname" id="compbankname" placeholder="예금주를 입력해 주세요.">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="btn-group">
+                    <a class="btn btn-gray-line sellerRegistCancelBtn">취소</a>
+                    <a class="btn btn-blue" id="sellerRegistBtn">가입완료</a>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+<!-- //sub-wrap -->
+</body>
+</html>
+

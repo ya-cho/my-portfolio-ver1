@@ -1,0 +1,2632 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Prosell Admin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/font/common.css">
+    <link rel="stylesheet" href="../css/adm/common.css">
+    <link rel="stylesheet" href="../css/adm/ui.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="update"></div>
+    <div class="layout-top clearfix">
+        <h1 class="logo">
+            <a href="#"></a>
+        </h1>
+        <ul class="menu">
+            <li><a href="">PC 바로가기</a></li>
+            <li><a href="">모바일 바로가기</a></li>
+            <li><a href="">기술지원</a></li>
+            <li><a href="">페이앱</a></li>
+        </ul>
+        <div class="side">
+            <span class="name">{아이디} 님</span>
+            <div class="order-info">
+                <div class="select-wrap">
+                    <div class="selectbox" data-focus="">
+                        <span class="select">주문자명</span>
+                        <div class="option">
+                            <input type="hidden" name="choice" value="" data-title="주문자명">
+                            <ul>
+                                <li class="focus" data-value="">주문자명</li>
+                                <li data-value="">수령자명</li>
+                                <li data-value="">주문번호</li>
+                                <li data-value="">주문상품명</li>
+                                <li data-value="">휴대폰번호</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-wrap">
+                    <input type="text" name="" id="" placeholder="주문 검색">
+                    <a href="" class="btn-search">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:#616977;}
+                                .st1{fill:none;stroke:#616977;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+                            </style>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M8.43,3c2.95,0,5.35,2.4,5.35,5.35c0,2.95-2.4,5.35-5.35,5.35c-2.95,0-5.35-2.4-5.35-5.35
+                                    C3.08,5.4,5.48,3,8.43,3 M8.43,1C4.37,1,1.08,4.29,1.08,8.35c0,4.06,3.29,7.35,7.35,7.35c4.06,0,7.35-3.29,7.35-7.35
+                                    C15.78,4.29,12.49,1,8.43,1L8.43,1z"></path>
+                                </g>
+                                <line class="st1" x1="13.07" y1="13.35" x2="18.08" y2="18.37"></line>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <a href="" class="logout"></a>
+        </div>
+    </div>
+    <div class="layout-main side">
+        <div class="layout-wrap clearfix">
+            <div class="side-menu">
+                <span class="ham-btn" data-btn="menu-side" data-value=""></span>
+                <ul class="menu">
+                    <li class="depth1" data-menu-depth1="product">
+                        <div class="icon">
+                            <i class="ico ico-product"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">상품관리</p>
+                            <div class="depth2">
+                                <a href="" class="on">상품 조회/수정</a>
+                                <a href="">상품 등록</a>
+                                <a href="">상품 일괄등록</a>
+                                <a href="">상품 카테고리</a>
+                                <a href="">상품 불편신고</a>
+                                <a href="" class="darken">사진 보관함</a>
+                                <a href="" class="darken">문서 보관함</a>
+                                <a href="" class="darken">서식 보관함</a>
+                                <a href="" class="darken">상품 브랜드</a>
+                                <a href="" class="darken">상품 추가주문옵션</a>
+                                <a href="" class="darken">상품 색상/규격</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="order">
+                        <div class="icon">
+                            <i class="ico ico-order"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">주문관리</p>
+                            <div class="depth2">
+                                <a href="">주문 조회<span class="count">99</span></a>
+                                <a href="">미결제 확인<span class="count">99</span></a>
+                                <a href="">발송 관리<span class="count">99</span></a>
+                                <a href="">일괄 발송처리</a>
+                                <a href="">발주 관리</a>
+                                <a href="">취소 관리<span class="count">99</span></a>
+                                <a href="">반품 관리<span class="count">99</span></a>
+                                <a href="">교환 관리<span class="count">99</span></a>
+                                <a href="">개인 결제관리<span class="count">99</span></a>
+                                <a href="" class="darken">구매확정 내역</a>
+                                <a href="" class="darken">전체 결제내역</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="account">
+                        <div class="icon">
+                            <i class="ico ico-account"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">회원/혜택관리</p>
+                            <div class="depth2">
+                                <a href="">쿠폰관리</a>
+                                <a href="">쿠폰 이용내역 조회</a>
+                                <a href="">쿠폰 자동발급 설정</a>
+                                <a href="">적립금 관리</a>
+                                <a href="">적립금 자동지급 설정</a>
+                                <a href="">회원계정 관리</a>
+                                <a href="">고객등급 관리</a>
+                                <a href="" class="darken">휴면계정 관리</a>
+                                <a href="" class="darken">탈퇴계정 관리</a>
+                                <a href="" class="darken">본인확인 회원</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="ai">
+                        <div class="icon">
+                            <i class="ico ico-ai"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">마케팅·메시지</p>
+                            <div class="depth2">
+                                <a href="">메시지 보내기</a>
+                                <a href="">메시지 발송내역</a>
+                                <a href="">메시지 자동발송 설정</a>
+                                <a href="">알림톡 자동발송 설정</a>
+                                <a href="">이메일 자동발송 설정</a>
+                                <a href="">이메일 발송내역</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="contents">
+                        <div class="icon">
+                            <i class="ico ico-contents"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">문의/게시판관리</p>
+                            <div class="depth2">
+                                <a href="">상품문의 관리</a>
+                                <a href="">1:1문의 관리</a>
+                                <a href="">상품평 관리</a>
+                                <a href="">자주묻는 질문</a>
+                                <a href="">공지사항</a>
+                                <a href="">게시판 관리</a>
+                                <a href="">게시판 권한 설정</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="design">
+                        <div class="icon">
+                            <i class="ico ico-design"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">디자인관리</p>
+                            <div class="depth2">
+                                <a href="">쇼핑몰 색상·로고</a>
+                                <a href="">쇼핑몰 템플릿</a>
+                                <a href="">쇼핑몰 디자인 편집</a>
+                                <a href="">통합 배너</a>
+                                <a href="">메인 배너</a>
+                                <a href="">팝업창 관리</a>
+                                <a href="" class="darken">쇼핑몰 페이지 스킨</a>
+                                <a href="" class="darken">아이콘 디자인</a>
+                                <a href="" class="darken">쿠폰 디자인</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="charges">
+                        <div class="icon">
+                            <i class="ico ico-charges"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">정산관리</p>
+                            <div class="depth2">
+                                <a href="">페이앱 판매자</a>
+                                <a href="">페이앱 고객지원</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="stat">
+                        <div class="icon">
+                            <i class="ico ico-stat"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">통계 및 분석</p>
+                            <div class="depth2">
+                                <a href="">방문 통계</a>
+                                <a href="">회원 통계</a>
+                                <a href="">상품 통계</a>
+                                <a href="">주문 통계</a>
+                                <a href="">매출 통계</a>
+                                <a href="">기타 통계</a>
+                                <a href="" class="darken">현재 접속자</a>
+                                <a href="" class="darken">방문자 로그</a>
+                                <a href="" class="darken">페이지 로그</a>
+                                <a href="" class="darken">로그인 기록</a>
+                                <a href="" class="darken">고객 장바구니 분석</a>
+                                <a href="" class="darken">고객 상품보관함 분석</a>
+                                <a href="" class="darken">고객 최근본상품 분석</a>
+                                <a href="" class="darken">고객 검색기록 분석</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="shopping">
+                        <div class="icon">
+                            <i class="ico ico-shopping"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">쇼핑몰관리</p>
+                            <div class="depth2">
+                                <a href="">판매자 정보</a>
+                                <a href="">쇼핑환경 설정</a>
+                                <a href="">배송사 관리</a>
+                                <a href="">할증지역 관리</a>
+                                <a href="">상품 공급자 관리</a>
+                                <a href="">결제수단 설정</a>
+                                <a href="">시스템 설정</a>
+                                <a href="" class="darken">외부연동 설정</a>
+                                <a href="" class="darken">회원가입폼 설정</a>
+                                <a href="" class="darken">웹 페이지 관리</a>
+                                <a href="" class="darken">관리자 계정 관리</a>
+                                <a href="" class="darken">관리자 권한 설정</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="container">
+                <div id="layout-header" class="layout-header">
+                    <span class="btn-side" data-btn="menu-side" data-value=""></span>
+                    <a href="" class="title">상품 조회/수정</a>
+                </div>
+                <div class="layout-container">
+                    <button type="button" data-toggle="modal" data-target="#order_ver1" style="padding: 10px; background: #000; color: #fff;">주문관리 ver.1</button>
+                    <button type="button" data-toggle="modal" data-target="#order_ver2" style="padding: 10px; background: #000; color: #fff;">주문관리 ver.2</button>
+                    <button type="button" data-toggle="modal" data-target="#pay_ver1" style="padding: 10px; background: #000; color: #fff;">결제 변동내역 ver.1</button>
+                    <button type="button" data-toggle="modal" data-target="#pay_ver2" style="padding: 10px; background: #000; color: #fff;">결제 변동내역 ver.2</button>
+                    <button type="button" data-toggle="modal" data-target="#cancel" style="padding: 10px; background: #000; color: #fff;">주문취소</button>
+                    <button type="button" data-toggle="modal" data-target="#point" style="padding: 10px; background: #000; color: #fff;">포인트 지급</button>
+                    <button type="button" data-toggle="modal" data-target="#coupon" style="padding: 10px; background: #000; color: #fff;">쿠폰 지급</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="order_ver1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-header">
+                <h5 class="modal-title">[주문내역] <span>주문번호 2101010001</span></h5>
+                <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">
+                    <span class="ico-close"></span>
+                </button>
+            </div>
+            <div class="modal-body fixed-menu">
+                <div class="inner">
+                    <ul class="tab-menu">
+                        <li><a href="#" data-scroll="menu01" class="active">주문정보</a></li>
+                        <li><a href="#" data-scroll="menu02">주문상품</a></li>
+                        <li><a href="#" data-scroll="menu03">배송정보</a></li>
+                        <li><a href="#" data-scroll="menu04">배송/할인</a></li>
+                        <li><a href="#" data-scroll="menu05">결제정보</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <section class="order-section" id="menu01" data-anchor="menu01">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>주문정보</h3>
+                                </div>
+                                <table class="table-simple">
+                                    <colgroup>
+                                        <col style="width: 150px;">
+                                        <col>
+                                        <col style="width: 150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>주문상태</th>
+                                        <td>결제완료</td>
+                                        <th>주문자명</th>
+                                        <td>
+                                            홍길동
+                                            <div class="btn-side">
+                                                <a href="" class="btn btn-round">회원정보</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>주문자 휴대폰</th>
+                                        <td>010-1234-5678
+                                            <div class="btn-side">
+                                                <a href="" class="btn btn-round">문자발송</a>
+                                            </div>
+                                        </td>
+                                        <th>이메일주소</th>
+                                        <td>test@naver.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th>주문일시</th>
+                                        <td>2021-01-01 (12:00:00)</td>
+                                        <th>주문번호</th>
+                                        <td>2101010001</td>
+                                    </tr>
+                                    <tr>
+                                        <th>결제일시</th>
+                                        <td>2021-01-01 (12:00:00)</td>
+                                        <th>결제번호</th>
+                                        <td>2101010001</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="order-section" id="menu02" data-anchor="menu02">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>주문상품</h3>
+                                    <div class="btn-side">
+                                        <a href="" class="btn btn-round">부분취소</a>
+                                        <a href="" class="btn btn-round">전체취소</a>
+                                    </div>
+                                </div>
+                                <table class="table-basic">
+                                    <colgroup>
+                                        <col>
+                                        <col style="width: 440px;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>상품번호</th>
+                                        <th>상품명/옵션명/모델명</th>
+                                        <th>주문수량</th>
+                                        <th>판매가</th>
+                                        <th>할인가</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>99</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <p>상품명</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>9,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>555</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>상품명</span>
+                                                <p>모델명/모델번호</p>
+                                            </div>
+                                        </td>
+                                        <td>2 개</td>
+                                        <td>20,000 원</td>
+                                        <td>18,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>상품명</span>
+                                                <p>옵션명1 : 옵션값</p>
+                                            </div>
+                                        </td>
+                                        <td>100 개</td>
+                                        <td>1,000,000 원</td>
+                                        <td>900,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>256</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>상품명</span>
+                                                <p>옵션명1 : 옵션값 [모델명/모델번호]</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>10,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1000</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>상품명</span>
+                                                <p>옵션명1이 길 때 : 옵션값이 길 때 / 옵션명2가 길 때 : 옵션값이 길 때 / 옵션명3이 길 때 : 옵션값이 길 때 [모델명/모델번호가 길 때]</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>10,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-dark-blue">└</td>
+                                        <td class="text-left text-dark-blue">추가 주문옵션명 : 옵션값 무료+수량 1개일 때</td>
+                                        <td>1 개</td>
+                                        <td>0 원</td>
+                                        <td>0 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-dark-blue">└</td>
+                                        <td class="text-left text-dark-blue">추가 주문옵션명 : 옵션값 무료+수량 2개일 때</td>
+                                        <td>2 개</td>
+                                        <td>0 원</td>
+                                        <td>0 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-dark-blue">└</td>
+                                        <td class="text-left text-dark-blue">추가 주문옵션명 : 옵션값 1000원+수량 1개일 때</td>
+                                        <td>1 개</td>
+                                        <td>1,000 원</td>
+                                        <td>1,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-dark-blue">└</td>
+                                        <td class="text-left text-dark-blue">추가 주문옵션명 : 옵션값 1000원+수량 1,000개일 때</td>
+                                        <td>1,000 개</td>
+                                        <td>1,000,000 원</td>
+                                        <td>1,000,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>나이키 기획전</span>
+                                                <p>색상 : 빨강 / 사이즈 : 100</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>10,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>나이키 기획전</span>
+                                                <p>색상 : 빨강 / 사이즈 : 100 [NK-10005L]</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>10,000 원</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="guide guide-right">공급자명 : ABC마트 / 대표전화 : 02-1234-5678</p>
+                                <!-- 테이블 하단 가이드 -->
+                            </div>
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>주문 요청사항</h3>
+                                </div>
+                                <table class="table-basic">
+                                    <colgroup>
+                                        <col>
+                                        <col style="width: 399px;">
+                                        <col style="width: 399px;">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>상품번호</th>
+                                        <th>안내 메시지</th>
+                                        <th>주문 요청사항</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>99</td>
+                                        <td class="opt-info">
+                                            <div class="text-left">
+                                                <p class="opt-name">옵션명1 : 옵션값 (모델명/모델번호)</p>
+                                                <p class="message">개인통관부호부를 입력하세요.<br>개인통관부호부가 없다면 관세청 홈페이지에서 발급받으세요.</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <textarea name="" id=""></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1000</td>
+                                        <td class="opt-info">
+                                            <div class="text-left">
+                                                <p class="opt-name">옵션명1이 길 때 : 옵션값이 길 때 / 옵션명2가 길 때 : 옵션값이 길 때 / 옵션명3이 길 때 : 옵션값이 길 때 (모델명/모델번호가 길 때)</p>
+                                                <p class="message">안내 메시지도 길 때<br>안내 메시지도 길 때<br>안내 메시지도 길 때<br>안내 메시지도 길 때<br>안내 메시지도 길 때<br>안내 메시지도 길 때<br>안내 메시지도 길 때</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <textarea name="" id="" disabled></textarea>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="order-section" id="menu03" data-anchor="menu03">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>배송정보</h3>
+                                </div>
+                                <form>
+                                    <table class="table-simple table-form">
+                                        <colgroup>
+                                            <col style="width: 150px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th><label for="name" class="necessary">받으시는 분</label></th>
+                                            <td colspan="3">
+                                                <input type="text" id="name" name="">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="hp" class="necessary">휴대폰 번호</label></th>
+                                            <td colspan="3">
+                                                <input type="text" id="hp" name="hp">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="phone">추가 전화번호</label></th>
+                                            <td colspan="3">
+                                                <input type="text" id="phone" name="phone">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="addr" class="necessary">배송지</label></th>
+                                            <td class="addr-form" colspan="3">
+                                                <input type="text" id="addr" name="addr">
+                                                <a href="" class="btn btn-square">우편번호</a>
+                                                <div>
+                                                    <input type="text" id="addr1" name="addr1">
+                                                    <input type="text" id="addr2" name="addr2">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="msg">배송 메시지</label></th>
+                                            <td colspan="3">
+                                                <input type="text" id="msg" name="msg" class="w100p">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                <form>
+                                    <table class="table-simple table-form">
+                                        <colgroup>
+                                            <col style="width: 150px;">
+                                            <col>
+                                            <col style="width: 150px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th><label for="" class="necessary">배송방식</label></th>
+                                            <td colspan="3">
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select">택배 무료</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">택배 무료</li>
+                                                            <li class="" data-value="">택배 무료 (할증 선불)</li>
+                                                            <li class="" data-value="">택배 무료 (할증 착불)</li>
+                                                            <li class="" data-value="">택배 유료 (선불)</li>
+                                                            <li class="" data-value="">택배 유료 (착불)</li>
+                                                            <li class="" data-value="">퀵배송 무료</li>
+                                                            <li class="" data-value="">퀵배송 유료 (선불)</li>
+                                                            <li class="" data-value="">퀵배송 유료 (착불)</li>
+                                                            <li class="" data-value="">직접배송 무료</li>
+                                                            <li class="" data-value="">직접배송 유료 (선불)</li>
+                                                            <li class="" data-value="">직접배송 유료 (착불)</li>
+                                                            <li class="" data-value="">방문수령</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="">택배사</label></th>
+                                            <td>
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select">우체국 택배</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">우체국 택배</li>
+                                                            <li class="" data-value="">우체국 택배</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th><label for="">무게</label></th>
+                                            <td>100 Kg</td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="">운송장 번호</label></th>
+                                            <td>
+                                                <div class="form-wrap">
+                                                    <div class="form-group">
+                                                        <input type="text" id="" name="">
+                                                        <a href="" class="btn btn-square">배송조회</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th><label for="">출고일시</label></th>
+                                            <td>
+                                                <div class="form-wrap">
+                                                    <div class="form-group">
+                                                        <input type="text" id="" name="">
+                                                        <a href="" class="btn btn-square">현재시각</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                        </section>
+                        <section class="order-section" id="menu04" data-anchor="menu04">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>배송/할인</h3>
+                                </div>
+                                <table class="table-basic">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>주문합계</th>
+                                        <th>배송비(선결제)</th>
+                                        <th>할인합계</th>
+                                        <th>포인트 결제</th>
+                                        <th>결제금액</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="bg-blue">
+                                        <td>2,071,000 원</td>
+                                        <td>13,000 원</td>
+                                        <td>- 103,000 원</td>
+                                        <td>- 100 원</td>
+                                        <td class="result">1,980,900 원</td>
+                                    </tr>
+                                    <tr class="price-info">
+                                        <td>
+                                            <dl>
+                                                <dt>상품 판매가</dt>
+                                                <dd>1,070,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>추가 주문옵션</dt>
+                                                <dd>1,001,000 원</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>기본 배송비</dt>
+                                                <dd>10,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>제주지역 할증</dt>
+                                                <dd>3,000 원</dd>
+                                            </dl>
+                                            <dl class="free">
+                                                <dt>도서지역 할증</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                            <dl class="free">
+                                                <dt>무게할증</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>즉시할인</dt>
+                                                <dd>53,500 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>상품할인 쿠폰</dt>
+                                                <dd>17,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>묶음할인 쿠폰</dt>
+                                                <dd>30,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>배송할인 쿠폰</dt>
+                                                <dd>2,500 원</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>포인트 차감</dt>
+                                                <dd>100 P</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>과세상품 합계</dt>
+                                                <dd>891,728 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>면세상품 합계</dt>
+                                                <dd>1,000,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>부가세</dt>
+                                                <dd>89,172 원</dd>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="guide guide-left">※ 배송/할인 정보는 결제번호를 기준으로 제공됩니다. 한 개 이상의 주문번호가 존재하는 경우 합산 정보가 제공됩니다.</p>
+                            </div>
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>쿠폰 적용내역</h3>
+                                </div>
+                                <table class="table-basic coupon-list">
+                                    <colgroup>
+                                        <col style="width: 99px;">
+                                        <col>
+                                        <col style="width: 381px;">
+                                        <col>
+                                        <col style="width: 199px;">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>쿠폰유형</th>
+                                        <th>할인 적용액</th>
+                                        <th>쿠폰명</th>
+                                        <th>적용 카테고리</th>
+                                        <th>할인조건</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>상품할인</td>
+                                        <td>10,000 원</td>
+                                        <td>10% 상품할인 쿠폰 (최대 할인금액 50,000 원)</td>
+                                        <td class="ellipsis">최종카테고리명</td>
+                                        <td>상품가 10,000 원 이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>상품할인</td>
+                                        <td>5,000 원</td>
+                                        <td>5,000 원 상품할인 쿠폰</td>
+                                        <td class="ellipsis">글자가길때글자가길때글자가길때글자가길때글자가길때글자가길때</td>
+                                        <td>상품가 10,000 원 이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>상품할인</td>
+                                        <td>2,000 원</td>
+                                        <td>2,000 원 상품할인 쿠폰</td>
+                                        <td class="ellipsis">패션</td>
+                                        <td>상품가 10,000 원 이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>묶음할인</td>
+                                        <td>30,000 원</td>
+                                        <td>50% 묶음할인 쿠폰 (최대 할인금액 1,000,000 원)</td>
+                                        <td class="ellipsis">미용</td>
+                                        <td>상품 합계 10,000 원 이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배송할인</td>
+                                        <td>2,500 원</td>
+                                        <td>2,500 원 배송할인 쿠폰</td>
+                                        <td class="ellipsis">전체</td>
+                                        <td>상품 합계 1,000,000 원 이상</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="guide guide-left">※ 쿠폰 적용내역은 결제번호를 기준으로 제공됩니다. 한 개 이상의 주문번호가 존재하는 경우 합산 정보가 제공됩니다.</p>
+                            </div>
+                        </section>
+                        <section class="order-section" id="menu05" data-anchor="menu05">
+                            <div class="title clearfix">
+                                <h3>결제정보</h3>
+                                <div class="btn-side">
+                                    <a href="" class="btn btn-round">결제 변동내역</a>
+                                    <a href="" class="btn btn-round">주문영수증</a>
+                                    <a href="" class="btn btn-round">매출전표</a>
+                                </div>
+                            </div>
+                            <table class="table-simple">
+                                <colgroup>
+                                    <col style="width: 150px;">
+                                    <col>
+                                    <col style="width: 150px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>결제수단</th>
+                                    <td>신용/체크 카드</td>
+                                    <th>결제일시</th>
+                                    <td>2021-01-01 (12:00:00)</td>
+                                </tr>
+                                <tr>
+                                    <th>카드종류</th>
+                                    <td>현대카드 (일시불)</td>
+                                    <th>카드번호</th>
+                                    <td>9490 - 19** - **** - 1313</td>
+                                </tr>
+                                <tr>
+                                    <th>결제금액</th>
+                                    <td>1,959,400 원</td>
+                                    <th>과세상품 합계</th>
+                                    <td>1,959,400 원</td>
+                                </tr>
+                                <tr>
+                                    <th>부가세</th>
+                                    <td>178,127 원</td>
+                                    <th>면세상품 합계</th>
+                                    <td>0 원</td>
+                                </tr>
+                                <tr>
+                                    <th>결제상태</th>
+                                    <td>결제완료</td>
+                                    <th>결제 요청번호</th>
+                                    <td>
+                                        47961351
+                                        <div class="btn-side">
+                                            <a href="" class="btn btn-round">복사</a>
+                                            <a href="" class="btn btn-round">PG 조회</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결제대행(PG)</th>
+                                    <td>PAYAPP</td>
+                                    <th>카드 승인번호</th>
+                                    <td>
+                                        00648109
+                                        <div class="btn-side">
+                                            <a href="" class="btn btn-round">복사</a>
+                                            <a href="" class="btn btn-round">PG 조회</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p class="guide guide-left">※ 결제번호 내 한 개 이상의 주문번호가 존재하는 경우 합산 정보가 제공됩니다.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="submit">확인</a>
+                <a href="" class="cancel" data-dismiss="modal">취소</a>
+            </div>
+        </div>
+    </div>
+    <!--주문관리 ver.1-->
+    <div class="modal fade" id="order_ver2" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-header">
+                <h5 class="modal-title">[주문내역] <span>주문번호 2101010001</span></h5>
+                <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">
+                    <span class="ico-close"></span>
+                </button>
+            </div>
+            <div class="modal-body fixed-menu">
+                <div class="inner">
+                    <ul class="tab-menu">
+                        <li><a href="#" data-scroll="menu06" class="active">주문정보</a></li>
+                        <li><a href="#" data-scroll="menu07">주문상품</a></li>
+                        <li><a href="#" data-scroll="menu08">배송정보</a></li>
+                        <li><a href="#" data-scroll="menu09">배송/할인</a></li>
+                        <li><a href="#" data-scroll="menu10">결제정보</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <section class="order-section" id="menu06" data-anchor="menu06">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>주문정보</h3>
+                                </div>
+                                <table class="table-simple">
+                                    <colgroup>
+                                        <col style="width: 150px;">
+                                        <col>
+                                        <col style="width: 150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>주문상태</th>
+                                        <td>입금대기</td>
+                                        <th>주문자명</th>
+                                        <td>홍길동 (비회원)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>주문자 휴대폰</th>
+                                        <td>010-1234-5678
+                                            <div class="btn-side">
+                                                <a href="" class="btn btn-round">문자발송</a>
+                                            </div>
+                                        </td>
+                                        <th>이메일주소</th>
+                                        <td>test@naver.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th>주문일시</th>
+                                        <td>2021-01-01 (12:00:00)</td>
+                                        <th>주문번호</th>
+                                        <td>
+                                            <ul class="num-group">
+                                                <li><a href="">2101010001</a></li>
+                                                <li class="focus">2101010002</li>
+                                                <li><a href="">2101010003</a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>결제일시</th>
+                                        <td>-</td>
+                                        <th>결제번호</th>
+                                        <td>2101010001</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="order-section" id="menu07" data-anchor="menu07">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>주문상품</h3>
+                                    <!--<div class="btn-side">
+                                        <a href="" class="btn btn-round">분할배송</a>
+                                        <a href="" class="btn btn-round">부분취소</a>
+                                        <a href="" class="btn btn-round">전체취소</a>
+                                    </div>-->
+                                </div>
+                                <table class="table-basic">
+                                    <colgroup>
+                                        <col>
+                                        <col style="width: 440px;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>상품번호</th>
+                                        <th>상품명/옵션명/모델명</th>
+                                        <th>주문수량</th>
+                                        <th>판매가</th>
+                                        <th>할인가</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>99</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <p>상품명</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>9,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>555</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>상품명</span>
+                                                <p>모델명/모델번호</p>
+                                            </div>
+                                        </td>
+                                        <td>2 개</td>
+                                        <td>20,000 원</td>
+                                        <td>18,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>상품명</span>
+                                                <p>옵션명1 : 옵션값</p>
+                                            </div>
+                                        </td>
+                                        <td>100 개</td>
+                                        <td>1,000,000 원</td>
+                                        <td>900,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>256</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>상품명</span>
+                                                <p>옵션명1 : 옵션값 [모델명/모델번호]</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>10,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1000</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>상품명</span>
+                                                <p>옵션명1이 길 때 : 옵션값이 길 때 / 옵션명2가 길 때 : 옵션값이 길 때 / 옵션명3이 길 때 : 옵션값이 길 때 [모델명/모델번호가 길 때]</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>10,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-dark-blue">└</td>
+                                        <td class="text-left text-dark-blue">추가 주문옵션명 : 옵션값 무료+수량 1개일 때</td>
+                                        <td>1 개</td>
+                                        <td>0 원</td>
+                                        <td>0 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-dark-blue">└</td>
+                                        <td class="text-left text-dark-blue">추가 주문옵션명 : 옵션값 무료+수량 2개일 때</td>
+                                        <td>2 개</td>
+                                        <td>0 원</td>
+                                        <td>0 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-dark-blue">└</td>
+                                        <td class="text-left text-dark-blue">추가 주문옵션명 : 옵션값 1000원+수량 1개일 때</td>
+                                        <td>1 개</td>
+                                        <td>1,000 원</td>
+                                        <td>1,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-dark-blue">└</td>
+                                        <td class="text-left text-dark-blue">추가 주문옵션명 : 옵션값 1000원+수량 1,000개일 때</td>
+                                        <td>1,000 개</td>
+                                        <td>1,000,000 원</td>
+                                        <td>1,000,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>나이키 기획전</span>
+                                                <p>색상 : 빨강 / 사이즈 : 100</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>10,000 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                            <span class="thumb">
+                                                <img src="../img/sample_img01.jpg" alt="">
+                                            </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <span>나이키 기획전</span>
+                                                <p>색상 : 빨강 / 사이즈 : 100 [NK-10005L]</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>10,000 원</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="guide">본 주문상품은 입점상품 입니다. (공급자명 : ABC마트 / 대표전화 : 02-1234-5678)</p>
+                                <!-- 테이블 하단 가이드 -->
+                            </div>
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>주문 요청사항</h3>
+                                </div>
+                                <table class="table-basic">
+                                    <colgroup>
+                                        <col>
+                                        <col style="width: 399px;">
+                                        <col style="width: 399px;">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>상품번호</th>
+                                        <th>안내 메시지</th>
+                                        <th>주문 요청사항</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>99</td>
+                                        <td class="opt-info">
+                                            <div class="text-left">
+                                                <p class="opt-name">옵션명1 : 옵션값 (모델명/모델번호)</p>
+                                                <p class="message">개인통관부호부를 입력하세요.<br>개인통관부호부가 없다면 관세청 홈페이지에서 발급받으세요.</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <textarea name="" id=""></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1000</td>
+                                        <td class="opt-info">
+                                            <div class="text-left">
+                                                <p class="opt-name">옵션명1이 길 때 : 옵션값이 길 때 / 옵션명2가 길 때 : 옵션값이 길 때 / 옵션명3이 길 때 : 옵션값이 길 때 (모델명/모델번호가 길 때)</p>
+                                                <p class="message">안내 메시지도 길 때<br>안내 메시지도 길 때<br>안내 메시지도 길 때<br>안내 메시지도 길 때<br>안내 메시지도 길 때<br>안내 메시지도 길 때<br>안내 메시지도 길 때</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <textarea name="" id="" disabled></textarea>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="order-section" id="menu08" data-anchor="menu08">
+                            <div class="title clearfix">
+                                <h3>배송정보</h3>
+                            </div>
+                            <form>
+                                <table class="table-simple table-form">
+                                    <colgroup>
+                                        <col style="width: 150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th><label for="name" class="necessary">받으시는 분</label></th>
+                                        <td colspan="3">
+                                            <input type="text" id="name" name="" value="홍길동" disabled>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="hp" class="necessary">휴대폰 번호</label></th>
+                                        <td colspan="3">
+                                            <input type="text" id="hp" name="hp" value="010-1234-5678" disabled>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="phone">추가 전화번호</label></th>
+                                        <td colspan="3">
+                                            <input type="text" id="phone" name="phone" disabled>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="addr" class="necessary">배송지</label></th>
+                                        <td class="addr-form" colspan="3">
+                                            <input type="text" id="addr" name="addr" value="08389" disabled>
+                                            <a href="" class="btn btn-square">우편번호</a>
+                                            <div>
+                                                <input type="text" id="addr1" name="addr1" value="서울특별시 구로구 디지털로26길 61 (구로동)" disabled>
+                                                <input type="text" id="addr2" name="addr2" value="1801" disabled>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="msg">배송 메시지</label></th>
+                                        <td colspan="3">
+                                            <input type="text" id="msg" name="msg" class="w100p" value="부재 시 경비실에 보관해주세요." disabled>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <form>
+                                <table class="table-simple table-form">
+                                    <colgroup>
+                                        <col style="width: 150px;">
+                                        <col>
+                                        <col style="width: 150px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th><label for="" class="necessary">배송방식</label></th>
+                                        <td colspan="3">
+                                            <div class="selectbox" data-focus="">
+                                                <span class="select disabled">택배 무료</span>
+                                                <div class="option">
+                                                    <input type="hidden" id="" name="" data-title="" value="">
+                                                    <ul>
+                                                        <li class="focus" data-value="">택배 무료</li>
+                                                        <li class="" data-value="">택배 무료 (할증 선불)</li>
+                                                        <li class="" data-value="">택배 무료 (할증 착불)</li>
+                                                        <li class="" data-value="">택배 유료 (선불)</li>
+                                                        <li class="" data-value="">택배 유료 (착불)</li>
+                                                        <li class="" data-value="">퀵배송 무료</li>
+                                                        <li class="" data-value="">퀵배송 유료 (선불)</li>
+                                                        <li class="" data-value="">퀵배송 유료 (착불)</li>
+                                                        <li class="" data-value="">직접배송 무료</li>
+                                                        <li class="" data-value="">직접배송 유료 (선불)</li>
+                                                        <li class="" data-value="">직접배송 유료 (착불)</li>
+                                                        <li class="" data-value="">방문수령</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="">택배사</label></th>
+                                        <td>
+                                            <div class="selectbox" data-focus="">
+                                                <span class="select disabled">우체국 택배</span>
+                                                <div class="option">
+                                                    <input type="hidden" id="" name="" data-title="" value="">
+                                                    <ul>
+                                                        <li class="focus" data-value="">우체국 택배</li>
+                                                        <li class="" data-value="">우체국 택배</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <th><label for="">무게</label></th>
+                                        <td>100 Kg</td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="">운송장 번호</label></th>
+                                        <td>
+                                            <div class="form-wrap">
+                                                <div class="form-group">
+                                                    <input type="text" id="" name="">
+                                                    <a href="" class="btn btn-square">배송조회</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <th><label for="">출고일시</label></th>
+                                        <td>
+                                            <div class="form-wrap">
+                                                <div class="form-group">
+                                                    <input type="text" id="" name="" value="021-01-01 12:00:00" disabled>
+                                                    <a href="" class="btn btn-square">현재시각</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><label for="">전달사항</label></th>
+                                        <td colspan="3">
+                                            <textarea name="" id=""></textarea>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </section>
+                        <section class="order-section" id="menu09" data-anchor="menu09">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>배송/할인</h3>
+                                </div>
+                                <table class="table-basic">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>주문합계</th>
+                                        <th>배송비(선결제)</th>
+                                        <th>할인합계</th>
+                                        <th>포인트 결제</th>
+                                        <th>결제금액</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="bg-blue">
+                                        <td>2,071,000 원</td>
+                                        <td>13,000 원</td>
+                                        <td>- 103,000 원</td>
+                                        <td>- 100 원</td>
+                                        <td class="result">1,980,900 원</td>
+                                    </tr>
+                                    <tr class="price-info">
+                                        <td>
+                                            <dl>
+                                                <dt>상품 판매가</dt>
+                                                <dd>1,070,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>추가 주문옵션</dt>
+                                                <dd>1,001,000 원</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>기본 배송비</dt>
+                                                <dd>10,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>제주지역 할증</dt>
+                                                <dd>3,000 원</dd>
+                                            </dl>
+                                            <dl class="free">
+                                                <dt>도서지역 할증</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                            <dl class="free">
+                                                <dt>무게할증</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>즉시할인</dt>
+                                                <dd>53,500 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>상품할인 쿠폰</dt>
+                                                <dd>17,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>묶음할인 쿠폰</dt>
+                                                <dd>30,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>배송할인 쿠폰</dt>
+                                                <dd>2,500 원</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>포인트 차감</dt>
+                                                <dd>100 P</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>과세상품 합계</dt>
+                                                <dd>891,728 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>면세상품 합계</dt>
+                                                <dd>1,000,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>부가세</dt>
+                                                <dd>89,172 원</dd>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>쿠폰 적용내역</h3>
+                                </div>
+                                <table class="table-basic coupon-list">
+                                    <colgroup>
+                                        <col style="width: 99px;">
+                                        <col>
+                                        <col style="width: 381px;">
+                                        <col>
+                                        <col style="width: 199px;">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>쿠폰유형</th>
+                                        <th>할인 적용액</th>
+                                        <th>쿠폰명</th>
+                                        <th>적용 카테고리</th>
+                                        <th>할인조건</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>상품할인</td>
+                                        <td>10,000 원</td>
+                                        <td>10% 상품할인 쿠폰 (최대 할인금액 50,000 원)</td>
+                                        <td class="ellipsis">최종카테고리명</td>
+                                        <td>상품가 10,000 원 이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>상품할인</td>
+                                        <td>5,000 원</td>
+                                        <td>5,000 원 상품할인 쿠폰</td>
+                                        <td class="ellipsis">글자가길때글자가길때글자가길때글자가길때글자가길때글자가길때</td>
+                                        <td>상품가 10,000 원 이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>상품할인</td>
+                                        <td>2,000 원</td>
+                                        <td>2,000 원 상품할인 쿠폰</td>
+                                        <td class="ellipsis">패션</td>
+                                        <td>상품가 10,000 원 이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>묶음할인</td>
+                                        <td>30,000 원</td>
+                                        <td>50% 묶음할인 쿠폰 (최대 할인금액 1,000,000 원)</td>
+                                        <td class="ellipsis">미용</td>
+                                        <td>상품 합계 10,000 원 이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배송할인</td>
+                                        <td>2,500 원</td>
+                                        <td>2,500 원 배송할인 쿠폰</td>
+                                        <td class="ellipsis">전체</td>
+                                        <td>상품 합계 1,000,000 원 이상</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section class="order-section" id="menu10" data-anchor="menu10">
+                            <div class="title clearfix">
+                                <h3>결제정보</h3>
+                                <div class="btn-side">
+                                    <a href="" class="btn btn-round">결제 변동내역</a>
+                                    <a href="" class="btn btn-round">주문영수증</a>
+                                    <a href="" class="btn btn-round">매출전표</a>
+                                </div>
+                            </div>
+                            <table class="table-simple table-form">
+                                <colgroup>
+                                    <col style="width: 150px;">
+                                    <col>
+                                    <col style="width: 150px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>결제수단</th>
+                                    <td>무통장 입금</td>
+                                    <th>
+                                        <label for="">입금확인 일시</label>
+                                    </th>
+                                    <td>
+                                        <div class="form-wrap">
+                                            <div class="form-group">
+                                                <input type="text" id="" name="">
+                                                <a href="" class="btn btn-square">현재시각</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>입금기한</th>
+                                    <td>2021-01-01 ~ 2021-01-07</td>
+                                    <th>
+                                        <label for="">입금자명</label>
+                                    </th>
+                                    <td><input type="text" id="" name="" value="홍길동" class="w140"></td>
+                                </tr>
+                                <tr>
+                                    <th>입금계좌</th>
+                                    <td>
+                                        <div class="select-group">
+                                            <div class="selectbox" data-focus="">
+                                                <span class="select">기업은행</span>
+                                                <div class="option">
+                                                    <input type="hidden" name="choice" value="" data-title="기업은행">
+                                                    <ul>
+                                                        <li class="focus" data-value="">기업은행</li>
+                                                        <li data-value="">신한은행</li>
+                                                        <li data-value="">국민은행</li>
+                                                        <li data-value="">농협</li>
+                                                        <li data-value="">새마을금고</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="w100p" value="123-5678-0000" disabled>
+                                            <input type="text" class="w100p" value="김판매" disabled>
+                                        </div>
+                                    </td>
+                                    <th>환불계좌</th>
+                                    <td>
+                                        <div class="select-group">
+                                            <div class="selectbox" data-focus="">
+                                                <span class="select">국민은행</span>
+                                                <div class="option">
+                                                    <input type="hidden" name="choice" value="" data-title="기업은행">
+                                                    <ul>
+                                                        <li class="focus" data-value="">기업은행</li>
+                                                        <li data-value="">신한은행</li>
+                                                        <li data-value="">국민은행</li>
+                                                        <li data-value="">농협</li>
+                                                        <li data-value="">새마을금고</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="w100p" value="10002-000-0000">
+                                            <input type="text" class="w100p" value="홍구매">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>결제금액</th>
+                                    <td>1,959,400 원</td>
+                                    <th>과세상품 합계</th>
+                                    <td>1,959,400 원</td>
+                                </tr>
+                                <tr>
+                                    <th>부가세</th>
+                                    <td>178,127 원</td>
+                                    <th>면세상품 합계</th>
+                                    <td>0 원</td>
+                                </tr>
+                                <tr>
+                                    <th>결제상태</th>
+                                    <td>결제완료</td>
+                                    <th>결제 요청번호</th>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <th>결제대행(PG)</th>
+                                    <td>-</td>
+                                    <th>카드 승인번호</th>
+                                    <td>-</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="submit">확인</a>
+                <a href="" class="cancel" data-dismiss="modal">취소</a>
+            </div>
+        </div>
+    </div>
+    <!--주문관리 ver.2-->
+    <div class="modal fade" id="pay_ver1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-header">
+                <h5 class="modal-title">결제 변동내역</h5>
+                <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">
+                    <span class="ico-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="inner">
+                    <section class="pay-section">
+                        <h2>결제정보</h2>
+                        <ul class="item-list">
+                            <li>
+                                <ul class="item">
+                                    <li>
+                                        <div class="sub-tit">
+                                            신한카드 (일시불)
+                                            <div class="label-wrap">
+                                                <span class="label label-gray">결제완료</span>
+                                            </div>
+                                        </div>
+                                        <span class="price"><strong>1,959,400</strong> 원</span>
+                                    </li>
+                                    <li><span class="date">2021.01.01 (12:00:00)</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="item">
+                                    <li>
+                                        <div class="sub-tit">
+                                            신한카드 (일시불)
+                                            <div class="label-wrap">
+                                                <span class="label label-gray">결제완료</span>
+                                            </div>
+                                        </div>
+                                        <span class="price"><strong>1,959,400</strong> 원</span>
+                                    </li>
+                                    <li><span class="date">2021.01.01 (12:00:00)</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="cancel" data-dismiss="modal">닫기</a>
+            </div>
+        </div>
+    </div>
+    <!-- 결제 변동내역 ver.1 -->
+    <div class="modal fade" id="pay_ver2" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-header">
+                <h5 class="modal-title">결제 변동내역</h5>
+                <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">
+                    <span class="ico-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="inner">
+                    <section class="pay-section">
+                        <h2>결제정보</h2>
+                        <ul class="item-list">
+                            <li>
+                                <ul class="item">
+                                    <li>
+                                        <div class="sub-tit">
+                                            무통장 입금
+                                            <div class="label-wrap">
+                                                <span class="label label-red">입금대기</span>
+                                                <span class="label label-red">결제보류</span>
+                                                <span class="label label-gray">결제완료</span>
+                                            </div>
+                                        </div>
+                                        <span class="price"><strong>1,959,400</strong> 원</span>
+                                    </li>
+                                    <li><span class="date">2021.01.01 (12:00:00)</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="cancel" data-dismiss="modal">닫기</a>
+            </div>
+        </div>
+    </div>
+    <!-- 결제 변동내역 ver.2 -->
+    <div class="modal fade" id="cancel" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-header">
+                <h5 class="modal-title">[직권취소] <span>주문번호 2101010001,2101010002</span></h5>
+                <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">
+                    <span class="ico-close"></span>
+                </button>
+            </div>
+            <div class="modal-body fixed-menu">
+                <div class="inner">
+                    <ul class="tab-menu">
+                        <li><a href="#" data-scroll="menu11" class="active">취소정보</a></li>
+                        <li><a href="#" data-scroll="menu12">취소상품</a></li>
+                        <li><a href="#" data-scroll="menu13">환불계산</a></li>
+                        <li><a href="#" data-scroll="menu14">결제정보</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <section class="order-section" id="menu03" data-anchor="menu11">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>취소정보</h3>
+                                </div>
+                                <form>
+                                    <table class="table-simple table-form">
+                                        <colgroup>
+                                            <col style="width: 150px;">
+                                            <col>
+                                            <col style="width: 150px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th>취소상태</th>
+                                            <td>취소접수</td>
+                                            <th>취소 요청자</th>
+                                            <td>
+                                                이명박 <span class="text-red">(관리자)</span>
+                                                <div class="btn-side">
+                                                    <a href="" class="btn btn-round">회원정보</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>취소 접수일시</th>
+                                            <td>2021-01-01</td>
+                                            <th>취소번호</th>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <th>환불 완료일시</th>
+                                            <td>-</td>
+                                            <th>취소사유</th>
+                                            <td>
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select">판매자 직권 취소</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">판매자 직권 취소</li>
+                                                            <li class="" data-value="">단순변심</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="">취소사유 상세</label></th>
+                                            <td colspan="3">
+                                                <textarea name="" id=""></textarea>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                <form>
+                                    <table class="table-simple table-form">
+                                        <colgroup>
+                                            <col style="width: 150px;">
+                                            <col>
+                                            <col style="width: 150px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th><label for="">포인트 반환</label></th>
+                                            <td colspan="3">
+                                                <input type="text" id="" name="" class="w240" value="100,000" disabled> <span class="side-txt">원 (환불 후 잔고 : 0 P)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="" class="necessary">환불금액</label></th>
+                                            <td colspan="3">
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select w100 disabled">자동계산</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="자동계산" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">자동계산</li>
+                                                            <li class="" data-value="">수동계산</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="w240" id="" name="" value="99,000" disabled> <span class="side-txt">원 (환불 후 잔고 : 0 원)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="" class="necessary">환불수단</label></th>
+                                            <td colspan="3">
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select w240 disabled">신용/체크 카드 (승인취소)</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">신용/체크 카드 (승인취소)</li>
+                                                            <li class="" data-value="">신용/체크 카드 (승인취소)</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <span class="side-txt">(환불 한도 : 99,000 원)</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                <div class="center-btn">
+                                    <a href="" class="btn btn-red">취소완료</a>
+                                    <!-- btn-blue 클래스 입력 시 버튼 컬러 블루로 변경 -->
+                                </div>
+                            </div>
+                        </section>
+                        <section class="order-section" id="menu02" data-anchor="menu12">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>취소상품</h3>
+                                </div>
+                                <table class="table-basic">
+                                    <colgroup>
+                                        <col>
+                                        <col style="width: 440px;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>상품번호</th>
+                                        <th>상품명/옵션명/모델명</th>
+                                        <th>취소수량</th>
+                                        <th>판매가</th>
+                                        <th>할인가</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                                <span class="thumb">
+                                                    <img src="../img/sample_img01.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <p>그룹1의 무료배송 상품</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>9,546 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                                <span class="thumb">
+                                                    <img src="../img/sample_img01.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <p>그룹1의 조건부 무료 배송 상품 (20,000원 이상/미달시 2500)</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>9,545 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                                <span class="thumb">
+                                                    <img src="../img/sample_img01.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <p>그룹1의 택배(선불 3,000) 상품</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>9,545 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                                <span class="thumb">
+                                                    <img src="../img/sample_img01.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <p>그룹1의 택배(선불 5,000) 상품</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>10,000 원</td>
+                                        <td>19,091 원</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table-basic">
+                                    <colgroup>
+                                        <col>
+                                        <col style="width: 440px;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                                <span class="thumb">
+                                                    <img src="../img/sample_img01.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <p>그룹2의 무료배송 상품</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>20,000 원</td>
+                                        <td>17,091 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                                <span class="thumb">
+                                                    <img src="../img/sample_img01.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <p>그룹2의 조건부 무료 배송 상품 (50,000원 이상/미달시 5000)</p>
+                                            </div>
+                                        </td>
+                                        <td>1 개</td>
+                                        <td>20,000 원</td>
+                                        <td>19,091 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                                <span class="thumb">
+                                                    <img src="../img/sample_img01.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <p>그룹2의 택배(선불 6,000) 상품</p>
+                                            </div>
+                                        </td>
+                                        <td>2 개</td>
+                                        <td>40,000 원</td>
+                                        <td>29,182 원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td class="text-left">
+                                            <div class="prod-img">
+                                                <span class="thumb">
+                                                    <img src="../img/sample_img01.jpg" alt="">
+                                                </span>
+                                            </div>
+                                            <div class="prod-tit">
+                                                <p>그룹2의 택배(선불 10,000) 상품</p>
+                                            </div>
+                                        </td>
+                                        <td>5 개</td>
+                                        <td>100,000 원</td>
+                                        <td>95,455 원</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="guide guide-right">공급자명 : ABC마트 / 대표전화 : 02-1234-5678</p>
+                            </div>
+                        </section>
+                        <section class="order-section" id="menu04" data-anchor="menu13">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>환불계산</h3>
+                                </div>
+                                <table class="table-basic">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>취소상품 합계</th>
+                                        <th>배송비(선결제)</th>
+                                        <th>할인취소</th>
+                                        <th>포인트 반환</th>
+                                        <th>환불금액</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="bg-red">
+                                        <td>220,000 원</td>
+                                        <td>0 원</td>
+                                        <td>- 21,000 원</td>
+                                        <td>- 100,000 원</td>
+                                        <td class="result">99,000 원</td>
+                                    </tr>
+                                    <tr class="price-info">
+                                        <td>
+                                            <dl>
+                                                <dt>상품 판매가</dt>
+                                                <dd>220,000 원</dd>
+                                            </dl>
+                                            <dl class="free">
+                                                <dt>추가 주문옵션</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl class="free">
+                                                <dt>기본 배송비</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                            <dl class="free">
+                                                <dt>제주지역 할증</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                            <dl class="free">
+                                                <dt>도서지역 할증</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                            <dl class="free">
+                                                <dt>무게할증</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>즉시할인 취소</dt>
+                                                <dd>6,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>상품할인 쿠폰 취소</dt>
+                                                <dd>5,000 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>묶음할인 쿠폰 취소</dt>
+                                                <dd>10,000 원</dd>
+                                            </dl>
+                                            <dl class="free">
+                                                <dt>배송할인 쿠폰 취소</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                            <dl class="free">
+                                                <dt>무료배송 취소</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>포인트 반환</dt>
+                                                <dd>100,000 P</dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>환불 후 잔고</dt>
+                                                <dd>0 원</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>포인트 잔고</dt>
+                                                <dd>0 P</dd>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="guide">※ 환불계산 정보는 결제번호를 기준으로 제공됩니다. 한 개 이상의 주문번호가 존재하는 경우 합산 정보가 제공됩니다.</p>
+                            </div>
+                            <div class="ordre-list">
+                                <div class="title clearfix">
+                                    <h3>쿠폰 반환정보</h3>
+                                </div>
+                                <table class="table-basic coupon-list">
+                                    <colgroup>
+                                        <col style="width: 100px;">
+                                        <col style="width: 100px;">
+                                        <col style="width: 380px;">
+                                        <col>
+                                        <col style="width: 200px;">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>쿠폰유형</th>
+                                        <th>할인 적용액</th>
+                                        <th>쿠폰명</th>
+                                        <th>적용 카테고리</th>
+                                        <th>할인조건</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="bg-red">
+                                        <td>상품할인</td>
+                                        <td>5,000 원</td>
+                                        <td class="text-left"><span class="text-red">[반환예정]</span> 5,000 원 상품할인 쿠폰</td>
+                                        <td>전체 카테고리</td>
+                                        <td class="text-left">판매가 30,000 원 이상</td>
+                                    </tr>
+                                    <tr class="bg-red">
+                                        <td>묶음할인</td>
+                                        <td>10,000 원</td>
+                                        <td class="text-left"><span class="text-red">[반환예정]</span> 5% 묶음할인 쿠폰 (최대할인 10,000 원)</td>
+                                        <td>전체 카테고리</td>
+                                        <td class="text-left">주문 합계 50,000 원 이상</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p class="guide">※ 쿠폰 반환정보는 결제번호를 기준으로 제공됩니다. 한 개 이상의 주문번호가 존재하는 경우 합산 정보가 제공됩니다.</p>
+                            </div>
+                        </section>
+                        <section class="order-section" id="menu03" data-anchor="menu14">
+                            <div class="order-list">
+                                <div class="title clearfix">
+                                    <h3>결제정보 <span class="text-red">(취소전)</span></h3>
+                                    <div class="btn-side">
+                                        <a href="" class="btn btn-round">결제 변동내역</a>
+                                        <a href="" class="btn btn-round">주문영수증</a>
+                                        <a href="" class="btn btn-round">매출전표</a>
+                                    </div>
+                                </div>
+                                <form>
+                                    <table class="table-simple">
+                                        <colgroup>
+                                            <col style="width: 150px;">
+                                            <col>
+                                            <col style="width: 150px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th>결제수단</th>
+                                            <td>신용/체크 카드</td>
+                                            <th>결제일시</th>
+                                            <td>2021-01-01 (12:00:00)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>카드종류</th>
+                                            <td>현대카드 (일시불)</td>
+                                            <th>카드번호</th>
+                                            <td>9490 - 19** - **** - 1313</td>
+                                        </tr>
+                                        <tr>
+                                            <th>결제금액</th>
+                                            <td>99,000</td>
+                                            <th>과세상품 합계</th>
+                                            <td>90,000 원</td>
+                                        </tr>
+                                        <tr>
+                                            <th>부가세</th>
+                                            <td>9,000 원</td>
+                                            <th>면세상품 합계</th>
+                                            <td>0 원</td>
+                                        </tr>
+                                        <tr>
+                                            <th>결제상태</th>
+                                            <td>결제완료</td>
+                                            <th>결제 요청번호</th>
+                                            <td>47961351
+                                                <div class="btn-side">
+                                                    <a href="" class="btn btn-round">복사</a>
+                                                    <a href="" class="btn btn-round">PG 조회</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>결제대행(PG)</th>
+                                            <td>PAYAPP</td>
+                                            <th>카드 승인번호</th>
+                                            <td>00648109
+                                                <div class="btn-side">
+                                                    <a href="" class="btn btn-round">복사</a>
+                                                    <a href="" class="btn btn-round">PG 조회</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="guide">※ 결제번호 내 한 개 이상의 주문번호가 존재하는 경우 합산 정보가 제공됩니다.</p>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="submit">확인</a>
+                <a href="" class="cancel" data-dismiss="modal">취소</a>
+            </div>
+        </div>
+    </div>
+    <!-- 주문취소 -->
+    <div class="modal fade" id="point" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-header">
+                <h5 class="modal-title">[포인트 지급] <span>관리자 직권 지급</span></h5>
+                <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">
+                    <span class="ico-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="inner">
+                    <section class="order-section">
+                        <div class="title clearfix">
+                            <h3>회원정보</h3>
+                        </div>
+                        <form>
+                            <table class="table-simple">
+                                <colgroup>
+                                    <col style="width: 150px;">
+                                    <col>
+                                    <col style="width: 150px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>아이디</th>
+                                    <td>test
+                                        <div class="btn-side">
+                                            <a href="" class="btn btn-round">회원정보</a>
+                                        </div>
+                                    </td>
+                                    <th>회원등급</th>
+                                    <td>【1】 패밀리</td>
+                                </tr>
+                                <tr>
+                                    <th>성명</th>
+                                    <td>홍길동</td>
+                                    <th>메모</th>
+                                    <td>
+                                        <a href="" class="btn btn-round">0 건</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>소지 포인트</th>
+                                    <td>1,000 P</td>
+                                    <th>소지 쿠폰</th>
+                                    <td>0 장</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </section>
+                    <section class="order-section">
+                        <div class="title clearfix">
+                            <h3>포인트 지급/차감</h3>
+                        </div>
+                        <form>
+                            <table class="table-simple table-form">
+                                <colgroup>
+                                    <col style="width: 150px;">
+                                    <col>
+                                    <col style="width: 150px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th class="necessary">구분</th>
+                                    <td>
+                                        <ul class="radio-group">
+                                            <li>
+                                                <input type="radio" id="list01" name="list" checked>
+                                                <label for="list01">
+                                                    <span>지급</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="list02" name="list">
+                                                <label for="list02">
+                                                    <span>차감</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <th><label for="" class="necessary">지급 사유</label></th>
+                                    <td>
+                                        <div class="selectbox" data-focus="">
+                                            <span class="select">선택하세요.</span>
+                                            <div class="option">
+                                                <input type="hidden" id="" name="" data-title="" value="">
+                                                <ul>
+                                                    <li class="focus" data-value="">선택하세요.</li>
+                                                    <li class="" data-value="">로그인 관련</li>
+                                                    <li class="" data-value="">가입 관련</li>
+                                                    <li class="" data-value="">주문 관련</li>
+                                                    <li class="" data-value="">취소 관련</li>
+                                                    <li class="" data-value="">반품 관련</li>
+                                                    <li class="" data-value="">교환 관련</li>
+                                                    <li class="" data-value="">기타</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="" class="necessary">지급액</label></th>
+                                    <td>
+                                        <input type="text"><span class="side-txt">포인트</span>
+                                    </td>
+                                    <th class="necessary">담당자</th>
+                                    <td>관리자성명 (adminid)</td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">지급명</label></th>
+                                    <td colspan="3">
+                                        <input type="text" class="w100p">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">알림 메시지</label></th>
+                                    <td colspan="3">
+                                        <ul class="radio-btn">
+                                            <li>
+                                                <input type="radio" id="option01" name="option" value="">
+                                                <label for="option01">
+                                                    <span>미발송</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="option02" name="option" value="" checked>
+                                                <label for="option02">
+                                                    <span>발송</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>메시지 유형</th>
+                                    <td colspan="3">
+                                        <ul class="radio-group">
+                                            <li>
+                                                <input type="radio" id="message01" name="message" checked>
+                                                <label for="message01">
+                                                    <span>SMS</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="message02" name="message">
+                                                <label for="message02">
+                                                    <span>LMS</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="message03" name="message">
+                                                <label for="message03">
+                                                    <span>MMS</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="" class="necessary">메시지 내용</label></th>
+                                    <td colspan="3">
+                                        <textarea name="" id=""></textarea>
+                                        <div class="info-area clearfix">
+                                            <div class="count">
+                                                <span class="text-blue">0</span> / <span>90 Byte</span>
+                                            </div>
+                                            <p>메시지 잔고(충전금)가 부족한 경우, 메시지는 발송되지 않습니다.(현재 잔고 : 15,496 원)</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>발송일시</th>
+                                    <td colspan="3">
+                                        <div class="period-group">
+                                            <div class="selectbox" data-focus="">
+                                                <span class="select">예약발송</span>
+                                                <div class="option">
+                                                    <input type="hidden" name="choice" value="" data-title="예약발송">
+                                                    <ul>
+                                                        <li class="focus" data-value="">예약발송</li>
+                                                        <li data-value="">예약발송</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <span>발송일시</span>
+                                            <div class="period">
+                                                <input type="text">
+                                                <span class="ico-period">
+                                                        <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-5 -4 16 16" style="enable-background:new -5 -4 16 16;" xml:space="preserve">
+                                                            <style type="text/css">
+                                                                .st2{fill:none;stroke:#000000;stroke-miterlimit:10;}
+                                                            </style>
+                                                            <g>
+                                                                <path d="M10-1v12H-4V-1H10 M11-2H-5v14h16V-2L11-2z"></path>
+                                                            </g>
+                                                            <line class="st2" x1="-1.5" y1="-2" x2="-1.5" y2="-4"></line>
+                                                            <rect x="-2" y="1" width="2" height="2"></rect>
+                                                            <rect x="6" y="1" width="2" height="2"></rect>
+                                                            <rect x="2" y="1" width="2" height="2"></rect>
+                                                            <rect x="-2" y="4" width="2" height="2"></rect>
+                                                            <rect x="6" y="4" width="2" height="2"></rect>
+                                                            <rect x="2" y="4" width="2" height="2"></rect>
+                                                            <rect x="-2" y="7" width="2" height="2"></rect>
+                                                            <rect x="6" y="7" width="2" height="2"></rect>
+                                                            <rect x="2" y="7" width="2" height="2"></rect>
+                                                            <line class="st2" x1="7.5" y1="-2" x2="7.5" y2="-4"></line>
+                                                        </svg>
+                                                    </span>
+                                            </div>
+                                            <div class="selectbox" data-focus="">
+                                                <span class="select">13시</span>
+                                                <div class="option">
+                                                    <input type="hidden" name="choice" value="" data-title="13시">
+                                                    <ul>
+                                                        <li class="focus" data-value="">13시</li>
+                                                        <li data-value="">14시</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="selectbox" data-focus="">
+                                                <span class="select">40분</span>
+                                                <div class="option">
+                                                    <input type="hidden" name="choice" value="" data-title="40분">
+                                                    <ul>
+                                                        <li class="focus" data-value="">40분</li>
+                                                        <li data-value="">50분</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>MMS 이미지</th>
+                                    <td colspan="3">
+                                        <a href="" class="btn btn-square">이미지 등록</a>
+                                        <div class="guide-txt">
+                                            <p class="text-blue">권장크기 : 1000(이하) * 1000(이하)</p>
+                                            <p>- MMS 이미지는 파일 규격 JPG, 용량 300 Kbyte를 초과 시 누락될 수 있습니다.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </section>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="submit">확인</a>
+                <a href="" class="cancel" data-dismiss="modal">취소</a>
+            </div>
+        </div>
+    </div>
+    <!-- 포인트 지급 -->
+    <div class="modal fade" id="coupon" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-header">
+                <h5 class="modal-title">[쿠폰 지급] <span>관리자 직권 지급</span></h5>
+                <button type="button" class="close-btn" data-dismiss="modal" aria-label="Close">
+                    <span class="ico-close"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="inner">
+                    <section class="order-section">
+                        <div class="title clearfix">
+                            <h3>회원정보</h3>
+                        </div>
+                        <form>
+                            <table class="table-simple">
+                                <colgroup>
+                                    <col style="width: 150px;">
+                                    <col>
+                                    <col style="width: 150px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>아이디</th>
+                                    <td>test
+                                        <div class="btn-side">
+                                            <a href="" class="btn btn-round">회원정보</a>
+                                        </div>
+                                    </td>
+                                    <th>회원등급</th>
+                                    <td>【1】 패밀리</td>
+                                </tr>
+                                <tr>
+                                    <th>성명</th>
+                                    <td>홍길동</td>
+                                    <th>메모</th>
+                                    <td>
+                                        <a href="" class="btn btn-round">0 건</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>소지 포인트</th>
+                                    <td>1,000 P</td>
+                                    <th>소지 쿠폰</th>
+                                    <td>0 장</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </section>
+                    <section class="order-section">
+                        <div class="title clearfix">
+                            <h3>포인트 지급/차감</h3>
+                        </div>
+                        <form>
+                            <table class="table-simple table-form">
+                                <colgroup>
+                                    <col style="width: 150px;">
+                                    <col>
+                                    <col style="width: 150px;">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th>지급사유</th>
+                                    <td>관리자 직권</td>
+                                    <th><label for="" class="necessary">담당자</label></th>
+                                    <td>관리자성명 (adminid)</td>
+                                </tr>
+                                <tr>
+                                    <th><label for="" class="necessary">쿠폰선택</label></th>
+                                    <td colspan="3">
+                                        <div class="form-wrap">
+                                            <div class="form-group">
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select">선택하세요.</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">쿠폰을 선택하세요.</li>
+                                                            <li class="" data-value="">회원가입 쿠폰</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <a href="" class="btn btn-square">쿠폰열람</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">지급명</label></th>
+                                    <td colspan="3">
+                                        <input type="text" class="w100p">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="">알림 메시지</label></th>
+                                    <td colspan="3">
+                                        <ul class="radio-btn">
+                                            <li>
+                                                <input type="radio" id="coupon01" name="coupon" value="" checked>
+                                                <label for="coupon01">
+                                                    <span>미발송</span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" id="coupon02" name="coupon" value="">
+                                                <label for="coupon02">
+                                                    <span>발송</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </section>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="submit">확인</a>
+                <a href="" class="cancel" data-dismiss="modal">취소</a>
+            </div>
+        </div>
+    </div>
+    <!-- 쿠폰 지급 -->
+    
+
+</body>
+</html>

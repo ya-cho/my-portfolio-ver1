@@ -1,0 +1,376 @@
+/* ----------------------------------------------------------------
+	mixin style
+---------------------------------------------------------------- */
+
+@mixin rounded($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin text-shadow($x, $y, $blur, $color) {
+    -webkit-text-shadow: $x $y $blur $color;
+    -moz-text-shadow: $x $y $blur $color;
+    text-shadow: $x $y $blur $color;
+}
+@mixin shadow($x, $y, $blur, $color) {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+}
+@mixin shadow-inset($x, $y, $blur, $color) {
+    -webkit-box-shadow: inset $x $y $blur $color;
+    -moz-box-shadow: inset $x $y $blur $color;
+    box-shadow: inset $x $y $blur $color;
+}
+@mixin box-sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@mixin linear-gradient($from, $to) {
+    background-color: $to;
+    background-image: -moz-linear-gradient($from, $to); // Firefox
+    background-image: -o-linear-gradient($from, $to); // Opera
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to)); // Chrome11+
+    background-image: -webkit-linear-gradient($from, $to); // Safari5.1+, Chrome10+
+    background-image: -ms-linear-gradient($from, $to); // IE10
+    background-image: linear-gradient($from, $to); // W3C
+}
+@mixin radial-gradient($from, $to) {
+    background: -moz-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to));
+    background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -o-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -ms-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background-color: $from;
+}
+
+// size
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin size-same($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// transition
+@mixin transition ($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+
+// generic transform
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    -o-transform: $transforms;
+    transform: $transforms;
+}
+
+// translate
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+@mixin translateX ($x) {
+    @include transform(translateX($x));
+}
+@mixin translateY ($y) {
+    @include transform(translateY($y));
+}
+// rotate
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+// scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+// Skew
+@mixin skew ($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+// animation keyframe
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+@mixin animation-delay($delay) {
+    -webkit-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -o-animation-delay: $delay;
+    animation-delay: $delay;
+}
+
+// opacity
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie);
+}
+
+// placeholder
+@mixin placeholder() {
+    $selector: '';
+    $prefixes: (
+            moz: "::-moz",
+            webkit: "::-webkit",
+            ie: ":-ms"
+    );
+    @each $prop, $value in $prefixes {
+        @if $prop != "moz" {
+            $selector: #{$value}-input-placeholder;
+        } @else {
+            $selector: #{$value}-placeholder;
+        }
+        @if & {
+            &#{$selector} {
+                @content;
+            }
+        } @else {
+            #{$selector} {
+                @content;
+            }
+        }
+    }
+    &::placeholder {
+        @content;
+    }
+}
+
+// clearfix
+@mixin clearfix {
+    &:before, &:after {
+        content: ' ';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// title
+@mixin heading-main {
+    display: inline-block;
+    margin-bottom: 0.7em;
+    font-size: 5.1rem;
+    line-height: 7rem;
+    letter-spacing: -0.25rem;
+    @include breakpoint(desktop){
+        font-size: 4.5rem;
+    }
+    @include breakpoint(tablet){
+        font-size: 4.2rem;
+    }
+    @include breakpoint(mobile){
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+}
+@mixin heading-sub {
+    display: inline-block;
+    margin-bottom: 2em;
+    font-size: 3.8rem;
+    font-weight: 600;
+    line-height: 5.5rem;
+    @include breakpoint(mobile){
+        font-size: 3.2rem;
+        line-height: 4.6rem;
+    }
+}
+@mixin heading-tit {
+    display: inline-block;
+    font-size: 3.8rem;
+    font-weight: 500;
+    line-height: 5rem;
+    @include breakpoint(mobile){
+        margin-bottom: 0.5em;
+        font-size: 3rem;
+        line-height: 3.6rem;
+    }
+}
+@mixin list-tit {
+    font-size: 1.7rem;
+    font-weight: 700;
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+}
+@mixin main-tit {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    font-size: 6.4rem;
+    line-height: 140%;
+    letter-spacing: -0.25rem;
+    em {
+        font-weight: 100;
+    }
+    @include breakpoint(desktop){
+        font-size: 4.5rem;
+    }
+    @include breakpoint(tablet){
+        font-size: 4.2rem;
+    }
+    @include breakpoint(mobile){
+        font-size: 3.5rem;
+        line-height: 5rem;
+    }
+}
+
+// overflow hidden
+@mixin ellipsis {
+    overflow: hidden;
+    min-height: 22px;
+    display: block;
+    white-space: nowrap;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+// width
+@mixin container {
+    position: relative;
+    width: 100%;
+}
+@mixin inner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include breakpoint(pc) {
+        margin: 0 20px;
+    }
+}
+@mixin inner-lg {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    @include breakpoint(visual) {
+        margin: 0 4.5%;
+    }
+    @include breakpoint(pc) {
+        margin: 0 20px;
+    }
+}
+@mixin inner-wide {
+    @media only screen and (min-width: $breakpoint-pc) {
+        position: relative;
+        left: 50%;
+        > * {
+            margin-left: -600px;
+        }
+    }
+    @include breakpoint(pc) {
+        padding: 0 20px;
+    }
+}
+
+// variables
+@mixin desktop {
+    @media (max-width: #{$breakpoint-desktop}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+/* ----------------------------------------------------------------
+	extend style
+---------------------------------------------------------------- */
+// visible-hidden
+%visible-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    text-indent: -9999;
+    clip: rect(0 0 0 0);
+}
+
+// icon
+%ico {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -9999px;
+    vertical-align: middle;
+    background: url("../images/common/icon.png") no-repeat;
+    background-size: 1000px;
+}
+
+// logo
+%logo {
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    vertical-align: middle;
+    background: url("../images/common/payapp.svg") 0 0 no-repeat;
+}

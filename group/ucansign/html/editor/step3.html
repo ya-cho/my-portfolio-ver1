@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>유캔싸인</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/chunk-vendors.60e13059.css"> <!-- 기존 관리자 확인용 css 추후 삭제 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout_sample.css"> <!-- 기존 관리자 확인용 css 추후 삭제 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap">
+    <div class="editor-wrap">
+        <div class="e-header e-fixed">
+            <ol class="step-area">
+                <li class="on"><em>1</em>참여자 설정</li>
+                <li class="on"><em>2</em>서명 입력 설정</li>
+                <li class="on"><em>3</em>송수신 설정</li>
+            </ol>
+        </div>
+        <!-- //e-header -->
+        <div class="e-container">
+            <div class="e-cont">
+                <div class="e-inner-sm">
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="b-tit sub-tit">
+                                <h3>문서이름</h3>
+                                <button type="button" class="btn-close"><i class="ico ico-close">닫기</i></button>
+                            </div>
+                            <div class="form-group">
+                                <label for="docuName" class="sr-only">문서이름</label>
+                                <textarea rows="2" id="docuName" class="form-control" readonly>[샘플] 서명요청 체험문서</textarea>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-blue btn-block">문서 이름 수정</button>
+
+                            <div class="form-line mt15">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="form-tit">서명 유효기간 설정</label>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <input type="text" value="14" class="form-control input-num"> 일
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //서명 유효기간 설정 -->
+                            <div class="form-line">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="form-tit">완료된 문서 잠금설정</label>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <label for="lock" class="input-chk">
+                                            <input type="checkbox" name="lock" id="lock" value="1">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //완료된 문서 잠금설정 -->
+                        </div>
+                    </div>
+                    <!-- 문서 이름 수정 클릭 전 -->
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="b-tit sub-tit">
+                                <h3>문서이름</h3>
+                                <button type="button" class="btn-close"><i class="ico ico-close">닫기</i></button>
+                            </div>
+                            <div class="form-group">
+                                <label for="docuName" class="sr-only">문서이름</label>
+                                <textarea rows="2" id="docuName" class="form-control write">[샘플] 서명요청 체험문서</textarea>
+                            </div>
+                            <div class="btn-row">
+                                <div class="btn-table">
+                                    <a href="javascript:;" class="btn btn-sm btn-gray-line">취소</a>
+                                    <a href="javascript:;" class="btn btn-sm btn-blue">수정완료</a>
+                                </div>
+                            </div>
+
+                            <div class="form-line mt15">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="form-tit">서명 유효기간 설정</label>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <input type="text" value="14" class="form-control input-num"> 일
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //서명 유효기간 설정 -->
+                            <div class="form-line">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="form-tit">완료된 문서 잠금설정</label>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <label for="lock" class="input-chk">
+                                            <input type="checkbox" name="lock" id="lock" value="1" checked>
+                                            <span class="checkbox"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- 문서 잠금설정에 체크하면 노출되는 영역 -->
+                                <div class="lock-wrap">
+                                    <div class="form-group">
+                                        <div class="input-group form-control form-ico">
+                                            <input type="text" placeholder="8자 이상 32자 이하" maxlength="32">
+                                            <span role="button" class="input-group-addon" title="암호보기"><i class="ico ico-pw"></i></span>
+                                        </div>
+                                    </div>
+                                    <p class="form-guide">서명이 모두 완료된 문서 파일을 열람할 때 비밀번호를 입력해야 합니다.</p>
+                                </div>
+                            </div>
+                            <!-- //완료된 문서 잠금설정 -->
+                        </div>
+                    </div>
+                    <!-- 문서 이름 수정 클릭 후 -->
+
+                    <div class="sign-group">
+                        <div class="box sign">
+                            <div class="box-body">
+                                <div class="b-tit sub-tit">
+                                    <span class="label s-left">A</span>
+                                    <h3>첫 번째 서명 참여자</h3>
+                                    <button type="button" class="btn-close"><i class="ico ico-close">닫기</i></button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="docuName1" class="sr-only">문서이름</label>
+                                    <textarea rows="2" id="docuName1" class="form-control" readonly>[샘플] 서명요청 체험문서</textarea>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-blue btn-block">남길 말 입력</button>
+                                <!-- 남길 말 입력 버튼을 클릭하면 노출되는 영역 -->
+                                <div class="form-group">
+                                    <label for="talk1" class="sr-only">남기실 말</label>
+                                    <textarea rows="2" id="talk1" class="form-control write" placeholder="남기실 말을 입력해주세요." maxlength="200"></textarea>
+                                    <p class="letter text-right text-gray"><em>0</em> / 200</p>
+                                </div>
+                            </div>
+                            <div class="box-btn">
+                                <button type="button" class="btn btn-gray btn-block modal-trigger" data-modal-id="certify-way">인증 수단 추가 하기</button>
+                            </div>
+                        </div>
+                        <!-- //첫번째 서명 -->
+                        <div class="box sign">
+                            <div class="box-body">
+                                <div class="b-tit sub-tit">
+                                    <span class="label s-left">B</span>
+                                    <h3>두 번째 서명 참여자</h3>
+                                    <button type="button" class="btn-close"><i class="ico ico-close">닫기</i></button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="docuName2" class="sr-only">문서이름</label>
+                                    <textarea rows="2" id="docuName2" class="form-control" readonly>[샘플] 서명요청 체험문서</textarea>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-blue btn-block">남길 말 입력</button>
+
+                                <div class="certify-wrap">
+                                    <div class="sub-tit">
+                                        <i class="ico ico-phone-chk s-left"></i>
+                                        <div class="tit-txt">
+                                            <h3>휴대폰 본인 인증</h3>
+                                            <p>주식회사 아트리즈 (010-1234-5678)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-btn">
+                                <button type="button" class="btn btn-gray btn-block modal-trigger" data-modal-id="certify-way">인증 수단 수정 하기</button>
+                            </div>
+                        </div>
+                        <!-- //두번째 서명 -->
+                        <div class="box sign">
+                            <div class="box-body">
+                                <div class="b-tit sub-tit">
+                                    <span class="label s-left">C</span>
+                                    <h3>세 번째 서명 참여자</h3>
+                                    <button type="button" class="btn-close"><i class="ico ico-close">닫기</i></button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="docuName3" class="sr-only">문서이름</label>
+                                    <textarea rows="2" id="docuName3" class="form-control" readonly>[샘플] 서명요청 체험문서</textarea>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-blue btn-block">남길 말 입력</button>
+
+                                <div class="certify-wrap">
+                                    <div class="sub-tit">
+                                        <i class="ico ico-pw-chk s-left"></i>
+                                        <div class="tit-txt">
+                                            <h3>접근 암호 인증</h3>
+                                            <p>**********</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-btn">
+                                <button type="button" class="btn btn-gray btn-block modal-trigger" data-modal-id="certify-way">인증 수단 수정 하기</button>
+                            </div>
+                        </div>
+                        <!-- //세번째 서명 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //e-container -->
+        <div class="e-footer e-fixed">
+            <div class="e-inner-sm">
+                <div class="btn-row">
+                    <div class="btn-table">
+                        <a href="javascript:;" class="btn btn-gray-line">나가기</a>
+                        <a href="./step2.html" class="btn btn-blue btn-inactive modal-trigger" data-modal-id="certify-warning">다음 단계로</a> <!-- 상단 필수 내용이 모두 입력되면 btn-inactive 클래스가 제거됩니다. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //e-footer -->
+    </div>
+</div>
+<!-- //wrap -->
+
+<div id="certify-way" class="modal modal-md">
+    <div class="modal-header">
+        <h2>추가 인증 수단 설정</h2>
+        <span role="button" class="modal-close">닫기</span>
+    </div>
+    <div class="modal-content bg-gray">
+        <div class="panel-wrap">
+            <div class="panel">
+                <div class="panel-head">
+                   <div class="sub-tit">
+                       <i class="ico ico-pw-chk s-left"></i>
+                       <div class="tit-txt">
+                           <h3>접근 암호 인증</h3>
+                           <p>참여자는 암호를 입력한 후, 서명할 수 있습니다.</p>
+                       </div>
+                       <div class="s-right">
+                           <label for="pwCertify" class="input-chk">
+                               <input type="checkbox" name="pwCertify" id="pwCertify" value="1" checked>
+                               <span class="checkbox"></span>
+                           </label>
+                       </div>
+                   </div>
+                </div>
+                <!-- // 접근 암호 인증 체크버튼을 클릭하면 노출되는 영역 -->
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="pw" class="form-tit">접근 암호</label>
+                        <div class="input-group form-control form-ico">
+                            <input type="text" id="pw" placeholder="4자 이상 20자 이하" maxlength="20">
+                            <span role="button" class="input-group-addon" title="암호보기"><i class="ico ico-pw"></i></span>
+                        </div>
+                        <p class="form-guide list-style mt15">
+                            <b class="text-black"><i>※</i> 접근 암호를 참여자에게 미리 알려주세요.</b><br>
+                            설정된 암호는 이후 변경, 확인이 어려우니 신중하게 설정해주세요.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- //접근 암호 인증 -->
+            <div class="panel">
+                <div class="panel-head">
+                    <div class="sub-tit">
+                        <i class="ico ico-phone-chk s-left"></i>
+                        <div class="tit-txt">
+                            <h3>휴대폰 본인 인증</h3>
+                            <p>참여자는 휴대폰 본인 인증 후, 서명할 수 있습니다.</p>
+                        </div>
+                        <div class="s-right">
+                            <label for="phoneCertify" class="input-chk">
+                                <input type="checkbox" name="phoneCertify" id="phoneCertify" value="1" checked>
+                                <span class="checkbox"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 휴대폰 본인 인증 체크버튼을 클릭하면 노출되는 영역 -->
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="userName" class="form-tit">참여자 실명</label>
+                        <input type="text" id="userName" placeholder="1자 이상 30자 이내" value="주식회사 유디아이디" class="form-control">
+                    </div>
+                    <!-- //참여자 실명 -->
+                    <div class="form-group">
+                        <label for="phone" class="form-tit">참여자 명의의 휴대폰 번호</label>
+                        <input type="text" id="phone" placeholder="'-'없이 숫자만 입력" class="form-control" maxlength="11">
+                        <p class="form-guide mt15">
+                            <b class="text-black"><i>※</i> 휴대폰 명의의 참여자 실명을 입력해 주세요.</b>
+                        </p>
+                    </div>
+                    <!-- //참여자 명의의 휴대폰 번호 -->
+                </div>
+            </div>
+            <!-- //휴대폰 본인 인증 -->
+        </div>
+        <!-- //panel-wrap -->
+        <div class="btn-horizon">
+            <a href="javascript:;" class="btn btn-gray-line">취소</a>
+            <a href="javascript:;" class="btn btn-blue btn-inactive">설정하기</a> <!-- 상단 필수 내용이 모두 입력되면 btn-inactive 클래스가 제거됩니다. -->
+        </div>
+    </div>
+</div>
+<!-- //추가 인증 수단 설정 모달 -->
+
+<div id="certify-warning" class="modal modal-md">
+    <div class="modal-header">
+        <span role="button" class="modal-close">닫기</span>
+    </div>
+    <div class="modal-content">
+        <div class="cont-header text-center">
+            <svg class="ico-img" data-icon="exclamation-circle" width="4.5em" height="4.5em" fill="#ff4d4e" aria-hidden="true" viewBox="64 64 896 896" focusable="false">
+                <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm-32 232c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V296zm32 440a48.01 48.01 0 010-96 48.01 48.01 0 010 96z">
+                </path>
+            </svg>
+            <h3>잠금 설정 주의사항</h3>
+            <p>서명이 모두 완료되면 문서가 잠금 설정됩니다.<br>아래 내용을 반드시 확인해 주세요!</p>
+        </div>
+        <div class="modal-inner bg-light-gray">
+            <div class="agree-area">
+                <ul>
+                    <li>
+                        <label for="chk1" class="input-chk">
+                            <input type="checkbox" name="chk1" id="chk1" checked>
+                            <span class="checkbox"></span>
+                            <span class="txt">비밀번호를 잊으면 찾을 수 없으니, 꼭 기록해 두세요.</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="chk2" class="input-chk">
+                            <input type="checkbox" name="chk2" id="chk2">
+                            <span class="checkbox"></span>
+                            <span class="txt">서명이 모두 완료되면 문서에 비밀번호가 설정됩니다.</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="chk3" class="input-chk">
+                            <input type="checkbox" name="chk3" id="chk3">
+                            <span class="checkbox"></span>
+                            <span class="txt">참여자에게 비밀번호를 전달하셔야 문서와 이력 파일을 볼 수 있습니다.</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //waring-wrap -->
+        <div class="btn-horizon">
+            <a href="javascript:;" class="btn btn-blue btn-inactive modal-trigger" data-modal-id="certify-info">다음 단계로</a> <!-- 상단 필수 내용이 모두 입력되면 btn-inactive 클래스가 제거됩니다. -->
+        </div>
+    </div>
+</div>
+<!-- //서명 인증 완료 주의사항 모달 -->
+
+<div id="certify-info" class="modal modal-md">
+    <div class="modal-header">
+        <h2>서명 요청 정보</h2>
+        <span role="button" class="modal-close">닫기</span>
+    </div>
+    <div class="modal-content bg-gray">
+        <div class="panel-wrap">
+            <div class="panel">
+                <div class="panel-head">
+                    <div class="sub-tit">
+                        <div class="row">
+                            <h3 class="col-3">문서 이름</h3>
+                            <span class="co-9 text-blue">[샘플] 서명요청 체험문서</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //문서 이름 -->
+            <div class="panel">
+                <div class="panel-head">
+                    <div class="sub-tit">
+                        <h3>서명 참여자 정보</h3>
+                        <span class="s-right">추가 인증수단</span>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-wrap">
+                        <li class="row">
+                            <div class="col-10">
+                                <b class="label-num">1</b>
+                                <p>주식회사 유디아이디 (admin@atreez.com)</p>
+                            </div>
+                            <span class="col-2 text-gray text-right">설정안함</span>
+                        </li>
+                        <li class="row">
+                            <div class="col-10">
+                                <b class="label-num">2</b>
+                                <p>주식회사 유디아이디 (admin@atreez.com)</p>
+                            </div>
+                            <span class="col-2 text-gray text-right">설정안함</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //서명 참여자 정보 -->
+            <div class="agree-area mt15">
+                <label for="agree" class="input-chk">
+                    <input type="checkbox" name="agree" id="agree" value="1">
+                    <span class="checkbox"></span>
+                    <span class="txt">전자서명개인정보 수집 및 이용에 동의합니다.</span>
+                </label>
+                <span role="button" class="link text-gray">보기</span>
+            </div>
+        </div>
+        <!-- //panel-wrap -->
+        <div class="btn-horizon">
+            <a href="javascript:;" class="btn btn-gray-line">취소</a>
+            <a href="javascript:;" class="btn btn-blue btn-inactive">서명 요청하기</a> <!-- 상단 필수 내용이 모두 입력되면 btn-inactive 클래스가 제거됩니다. -->
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="banner-txt row">
+            <p class="col-8">주식회사 아트리즈에게 문서를 공유합니다. <button type="button" class="btn-info">?</button></p>
+            <div class="col-4 text-right">
+                <a href="javascript:;" class="text-blue more link modal-trigger" data-modal-id="docu-share">문서 공유 설정<i class="arrow arrow-md arrow-blue right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //서명 요청 정보 모달 -->
+
+<div id="docu-share" class="modal modal-md">
+    <div class="modal-header">
+        <h2>문서 공유 설정</h2>
+        <span role="button" class="modal-close">닫기</span>
+    </div>
+    <div class="modal-content bg-gray">
+        <div class="panel-wrap">
+            <div class="panel">
+                <div class="panel-head">
+                    <div class="sub-tit">
+                        <h3>공유 구성원 선택</h3>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="tag-area">
+                            <span class="tag tag-blue tag-round">[주식회사] 유디아이디</span>
+                            <span class="tag tag-blue tag-round">문주루</span>
+                            <span class="tag tag-blue tag-round tag-cancel">문주루 <button type="button" class="btn-cancel"><i class="ico ico-b-delete">태그취소</i></button></span>
+                        </div>
+                        <p class="form-guide mt15">
+                            <b class="text-black"><i>※</i> 구성원의 공유받은 문서 록록에서 해당 문서를 확인 할 수 있습니다.</b>
+                        </p>
+                    </div>
+                    <!-- //공유 구성원 태그 -->
+                    <div class="form-group">
+                        <div class="select-area select-input form-control">
+                            <span class="select-btn">
+                                <svg data-icon="search" width="1em" height="1em" fill="#666" aria-hidden="true" viewBox="64 64 896 896" focusable="false">
+                                    <path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <div class="select-chk select-click">
+                                <span class="select-txt">추가 구성원 검색</span>
+                            </div>
+                            <ul class="select-list">
+                                <li class="option selected">
+                                    <span class="select-ico"><i class="ico ico-s"></i></span>
+                                    <span class="select-txt">전체 구성원 선택</span>
+                                </li>
+                                <li class="option">
+                                    <span class="select-ico"><i class="ico ico-s ico-sign"></i></span>
+                                    <span class="select-txt">주식회사 유디아이디(udid.co.krt)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //서명 참여자 정보 -->
+        </div>
+        <!-- //panel-wrap -->
+        <div class="btn-horizon">
+            <a href="javascript:;" class="btn btn-gray-line">닫기</a>
+            <a href="javascript:;" class="btn btn-blue">설정완료</a>
+        </div>
+    </div>
+</div>
+<!-- //문서 공유 설정 모달 -->
+
+</body>
+
+
+</html>
+

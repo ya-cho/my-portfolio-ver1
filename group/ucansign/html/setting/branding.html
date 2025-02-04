@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>유캔싸인</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/chunk-vendors.60e13059.css"> <!-- 기존 관리자 확인용 css 추후 삭제 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout_sample.css"> <!-- 기존 관리자 확인용 css 추후 삭제 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap">
+    <header>
+        <h1>
+            <a href="documents.html"><span class="logo logo-sm white">유캔싸인</span><em>관리자</em></a>
+        </h1>
+        <div role="button" class="menu"><span class="line"></span></div>
+    </header>
+    <aside>
+        <div class="side-wrap">
+            <button type="button" class="btn btn-blue btn-md btn-rounded">서명 요청하기</button>
+            <nav>
+                <div class="side-link">
+                    <b class="text-blue">무제한</b>
+                    <a href="#a">총 잔여 서명요청 <i class="ico ico-rem ico-link"></i></a>
+                </div>
+                <div class="menu-list">
+                    <ul class="slide-menu">
+                        <li class="depth">
+                            <a href="../documents.html">
+                                <i class="ico ico-papers"></i>조직문서
+                            </a>
+                            <ul class="sub">
+                                <li><a href="#a">내 담당 문서</a></li>
+                                <li><a href="#a">공유 받은 문서</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../template.html">
+                                <i class="ico ico-rem ico-template"></i>템플릿
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../bulkTransmit.html">
+                                <i class="ico ico-send"></i>대량전송
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../docuEdit.html">
+                                <i class="ico ico-edit"></i>문서편집기
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../signStamp.html">
+                                <i class="ico ico-seal"></i>사인/도장
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="info-menu">
+                        <a href="./profile.html" class="active"><span class="new">설정</span> <i class="arrow arrow-md arrow-gray right"></i></a> <!-- 설정이 추가되면 new 클래스 추가 -->
+                        <a href="#a">고객센터 <i class="arrow arrow-md arrow-gray right"></i></a>
+                        <a href="javascript:;">로그아웃 <i class="arrow arrow-md arrow-gray right"></i></a>
+                    </div>
+                </div>
+            </nav>
+            <div class="update-btn ">
+                <button type="button" class="btn btn-dark-blue btn-md btn-rounded">
+                    <i class="ico ico-rem ico-update"></i><span class="new">업데이트 소식</span> <!-- 업데이트가 추가되면 new 클래스 추가 -->
+                </button>
+            </div>
+        </div>
+    </aside>
+    <section class="container sub-bg">
+        <div class="a-header">
+            <h2>설정</h2>
+            <div class="change-locale">
+                <button type="button" class="ant-dropdown-trigger dropdown ant-btn">다국어</button>
+            </div>
+        </div>
+        <section class="a-cont">
+            <div class="setting">
+                <div class="tab-line">
+                    <div class="inner">
+                        <ul>
+                            <li><a href="profile.html">내 정보</a></li>
+                            <li><a href="billing.html">결제 정보</a></li>
+                            <li><a href="organization.html">조직 정보</a></li>
+                            <li><a href="members.html">구성원 정보</a></li>
+                            <li><a href="share.html">기본 공유 관리</a></li>
+                            <li class="active"><a href="branding.html">맞춤 브랜딩</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="inner">
+                        <div class="info-cont">
+                            <p class="info-guide">맞춤 브랜딩 정보를 변경하면, 경영지원의 모든 구성원에게 동시에 적용됩니다!</p>
+                            <div class="horizon-list">
+                                <div>
+                                    <div class="list-tit">
+                                        <h4>이메일</h4>
+                                    </div>
+                                    <ul class="info-list">
+                                        <li>서명 요청자와 참여자에게 발송되는 이메일의 로고 이미지, 스타일, 소개글 등을 변경할 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="info-list">
+                                        <li>
+                                            <dl>
+                                                <dt class="col-3">로고이미지</dt>
+                                                <dd>
+                                                    <div class="form-box service-logo">
+                                                         <img src="../images/branding/service_logo_ex.png" alt="">
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt class="col-3">로고링크</dt>
+                                                <dd>https://www.modusign.co.kr</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt class="col-3">설명글</dt>
+                                                <dd>간편 전자계약 모두싸인</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt class="col-3">상단/하단바 색상</dt>
+                                                <dd>
+                                                    <span class="label-color" style="border-color:#182341;background:#182341;"></span> #182341
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt class="col-3">버튼 색상</dt>
+                                                <dd>
+                                                    <span class="label-color" style="border-color:#1890ff;background:#1890ff;"></span> #1890ff
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dt class="col-3">버튼 글자 색상</dt>
+                                                <dd>
+                                                    <span class="label-color" style="background:#ffffff"></span> #ffffff
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn btn-blue modal-trigger" data-modal-id="style-change">변경하기</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="list-tit">
+                                        <h4>발신자 정보</h4>
+                                    </div>
+                                    <ul class="info-list">
+                                        <li>서명 요청자와 참여자에게 발송되는 이메일의 보내는 사람 이름을 변경할 수 있습니다.</li>
+                                        <li>
+                                            <div class="form-group form-group-md">
+                                                <label for="sendUser" class="form-tit">보내는 사람 이름</label>
+                                                <input id="sendUser" type="text" value="유캔싸인" placeholder="" class="form-control">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn btn-blue btn-inactive">저장하기</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+<!-- //wrap -->
+
+<div id="style-change" class="modal modal-xlg">
+    <div class="modal-header bg-gray">
+        <h2>이메일 스타일</h2>
+        <span role="button" class="modal-close">닫기</span>
+    </div>
+    <div class="modal-content">
+        <div class="table-group custom-wrap">
+            <div class="col-4">
+               <div class="modal-left">
+                   <li class="form-group">
+                       <label class="form-tit">
+                           <span class="mr10">로고 이미지</span>
+                           <button type="button" class="text-blue text-line modal-trigger" data-modal-id="logo-upload">변경하기<i class="arrow arrow-md arrow-blue right"></i></button>
+                       </label>
+                       <div class="form-box service-logo">
+                           <img src="../images/branding/service_logo_ex.png" alt="">
+                       </div>
+                   </li>
+                   <!-- //로고 이미지 -->
+                   <li class="form-group">
+                       <label for="logoLink" class="form-tit">로고 링크</label>
+                       <input id="logoLink" type="url" placeholder="" value="https://www.modusign.co.kr" class="form-control">
+                   </li>
+                   <!-- //로고 링크 -->
+                   <div class="form-group">
+                       <label for="explain" class="form-tit">설명글</label>
+                       <input id="explain" type="url" placeholder="" value="간편 전자계약 모두싸인" class="form-control">
+                   </div>
+                   <!-- //설명글 -->
+                   <li class="form-group">
+                       <label for="explain" class="form-tit">상단/하단 바 색상</label>
+                       <div class="form-box">
+                           <span role="button" class="label-color" style="border-color:#182341;background:#182341;"></span>
+                           <span>#182341</span>
+                       </div>
+                   </li>
+                   <!-- //상단/하단 바 색상 -->
+                   <li class="form-group">
+                       <label for="explain" class="form-tit">버튼 색상</label>
+                       <div class="form-box">
+                           <span role="button" class="label-color" style="border-color:#1890ff;background:#1890ff;"></span>
+                           <span>#1890ff</span>
+                       </div>
+                   </li>
+                   <!-- //버튼 색상 -->
+                   <li class="form-group">
+                       <label for="explain" class="form-tit">버튼 텍스트 색상</label>
+                       <div class="form-box">
+                           <span role="button" class="label-color" style="background:#ffffff"></span>
+                           <span>#ffffff</span>
+                       </div>
+                   </li>
+                   <!-- //버튼 색상 -->
+               </div>
+            </div>
+            <div class="col-8">
+                <div class="modal-right">
+                    <div class="preview-area">
+                        <div class="mail-custom">
+                             메일 편집 미리보기 화면이 노출되는 영역입니다
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="btn-row">
+            <div class="btn-table">
+                <a href="javascript:;" class="btn btn-gray-line">취소</a>
+                <a href="javascript:;" class="btn btn-blue btn-inactive">저장하기</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //이메일 스타일 변경 모달 -->
+
+<div id="logo-upload" class="modal modal-md">
+    <div class="modal-header bg-gray">
+        <h2>로고 이미지 업로드</h2>
+        <span role="button" class="modal-close">닫기</span>
+    </div>
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="upload-wrap">
+                <strong>Upload complete</strong>
+                <small class="text-gray">
+                    선택된 로고를 업로드하여 이메일 스타일 설정을 진행해 주세요.<br>
+                    300kb 이하의 JPG또는 PNG 이미지 파일만 가능합니다.
+                </small>
+                <div class="file-box w300">
+                    <input type="file" id="file_file" name="file_file" class="input-file">
+                    <div class="input-group form-control form-lg">
+                        <input type="text" name="file_file" id="" class="form-upload ellipsis" placeholder="선택된 파일 없음" value="file name-2021-03-05.png" readonly="">
+                        <b role="button" class="input-group-addon text-gray">취소 <i class="ico ico-cancel"></i></b>
+                    </div>
+                </div>
+            </div>
+            <div class="upload-guide">
+                <img src="../images/common/logo_upload_guide.png" alt="로고 가로 최대 250px, 세로 최대 80px">
+            </div>
+            <div class="btn-row mt15">
+                <div class="btn-table btn-table-sm">
+                    <a href="javascript:;" class="btn btn-blue btn-inactive">업로드</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //로고 이미지 업로드 모달 -->
+
+</body>
+
+
+</html>
+

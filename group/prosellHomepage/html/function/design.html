@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>프로셀 홈페이지</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/aos.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/aos.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap">
+    <header id="global-header">
+        <div class="header-wrapper">
+            <h1>
+                <a href="../index.html" class="prosell-logo"><img src="../images/common/prosell_logo.svg" alt="프로셀 바로가기"></a>
+                <span class="sub-logo">
+                    <a href="https://payapp.kr/homepage/index.html" target="_blank" class="payapp-logo"><img src="../images/common/payapp_logo.svg" alt="페이앱 바로가기"></a>
+                    <!--<a href="https://www.udpay.co.kr/" target="_blank" class="udpay-logo"><img src="../images/common/udpay_logo.svg" alt="유디페이 바로가기"></a>-->
+                </span>
+            </h1>
+            <nav class="gnb">
+                <div class="menu-btn">
+                    메뉴클릭
+                </div>
+                <div class="mobile-lnb">
+                    <ul>
+                        <li class="depth">
+                            <a href="javascript:;">주요기능</a>
+                            <ul class="sub">
+                                <li><a href="design.html">디자인관리</a></li>
+                                <li><a href="product.html">상품관리</a></li>
+                                <li><a href="order.html">주문/배송관리</a></li>
+                                <li><a href="etc.html">기타</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../hosting/hosting.html">호스팅</a>
+                        </li>
+                        <li>
+                            <a href="../addition/additional.html">부가서비스</a>
+                        </li>
+                        <li>
+                            <a href="../service/service.html">결제서비스</a>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">가이드</a>
+                            <ul class="sub">
+                                <li><a href="">시작하기</a></li>
+                                <li><a href="">튜토리얼</a></li>
+                                <li><a href="">도움말</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">고객센터</a>
+                            <ul class="sub">
+                                <li><a href="../cscenter/faq.html">자주묻는질문</a></li>
+                                <li><a href="../cscenter/qa-list.html">문의하기</a></li>
+                                <li><a href="../cscenter/domain-write.html">도메인 연동 신청</a></li>
+                                <li><a href="../cscenter/db-write.html">쇼핑몰 DB 이전신청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">내 서비스</a>
+                        </li>
+                    </ul>
+                    <div class="mobile-info">
+                        <a href="../member/login.html" class="btn-round">로그인</a>
+                        <a href="javascript:;" class="btn-purple btn-round" onclick="location.href='../member/join.html'">회원가입</a>
+                    </div>
+                </div>
+                <div class="web">
+                    <div class="gnb-area">
+                        <ul>
+                            <li class="drop">
+                                <a href="design.html" class="on">주요기능</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="design.html" class="active">디자인관리</a></li>
+                                        <li><a href="product.html">상품관리</a></li>
+                                        <li><a href="order.html">주문/배송관리</a></li>
+                                        <li><a href="etc.html">기타</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="../hosting/hosting.html">호스팅</a>
+                            </li>
+                            <li class="drop">
+                                <a href="../addition/additional.html">부가서비스</a>
+                            </li>
+                            <li class="drop">
+                                <a href="../service/service.html">결제서비스</a>
+                            </li>
+                            <li class="drop">
+                                <a href="#a">가이드</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="">시작하기</a></li>
+                                        <li><a href="">튜토리얼</a></li>
+                                        <li><a href="">도움말</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="../cscenter/faq.html">고객센터</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="../cscenter/faq.html">자주묻는질문</a></li>
+                                        <li><a href="../cscenter/qa-list.html">문의하기</a></li>
+                                        <li><a href="../cscenter/domain-write.html">도메인 연동 신청</a></li>
+                                        <li><a href="../cscenter/db-write.html">쇼핑몰 DB 이전신청</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="">내 서비스</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+
+            <div class="gnb-info">
+                <a href="../member/login.html">로그인</a>
+                <a href="javascript:;" onclick="location.href='../member/join.html'">회원가입</a>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <section class="container sub-container" id="design">
+        <section class="section1">
+            <div class="banner bg-green">
+                <div class="inner">
+                    <div class="txt">
+                        <h3 data-aos="fade-down" data-aos-duration="700">디자인관리</h3>
+                        <div class="guide-txt">
+                            <p>코딩을 못해도 자유자재로 원하는 쇼핑몰을<span> 만들 수 있습니다.</span></p>
+                        </div>
+                    </div>
+                    <div class="obj" data-aos="fade" data-aos-duration="700" data-aos-delay="500">
+                        <img src="../images/sub_page/sub_icon/design_icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section class="section2">
+            <div class="table-row">
+                <div class="col-6">
+                    <div class="item-info">
+                        <h4>신개념 디자인<br>다이렉트 편집 모드</h4>
+                        <p>
+                            실제 쇼핑몰 화면에서 버튼 하나만 누르면<br>
+                            '디자인 편집 모드'로 변환 됩니다.<br>
+                            실제 화면을 보며 실시간으로 추가하고 삭제하고<br>
+                            변경하고 내 마음대로 쇼핑몰을 꾸며보세요.
+                    </p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="obj" data-aos="fade-up" data-aos-duration="700" data-aos-delay="800">
+                        <img src="../images/sub_page/function/design/obj1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section class="section3 bg-gray">
+            <div class="table-row">
+                <div class="col-6">
+                    <div class="item-info">
+                        <h4>HTML을 몰라도 손쉽게</h4>
+                        <p>
+                            HTML을 몰라도 설정 On/Off 만으로<br>
+                            다양한 구조로 수정이 가능합니다.<br>
+                            내 쇼핑몰의 성격에 따라 설정을 끄고, 켜고!<br>
+                            손쉽게 쇼핑몰 구조를 변경 가능합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="obj" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                        <img src="../images/sub_page/function/design/obj2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+
+        <section class="section4">
+            <div class="table-row">
+                <div class="col-6">
+                    <div class="item-info">
+                        <h4>다채로운 템플릿과<br>스킨이 모두 무료</h4>
+                        <p>
+                            다양한 템플릿과 스킨으로 쇼핑몰의 Frame과 Feel을<br>
+                            손쉽게 변경할 수 있어요. 외주 맡기거나 유료로<br>
+                            이용했던 아이템들이 프로셀에선 모두 무료!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="obj" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                        <img src="../images/sub_page/function/design/obj3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section4 -->
+    </section>
+    <!-- //container -->
+
+    <footer id="global-footer">
+        <div class="footer-area">
+            <section class="footer-wrap">
+                <div class="top">
+                    <h1><img src="../images/common/prosell_logo_gray.svg" alt="프로셀 로고"></h1>
+                    <div class="familysite">
+                        <span class="select-btn"></span>
+                        <span class="select-chk">패밀리 사이트</span>
+                        <ul class="site-list">
+                            <li><a href="http://blogpay.co.kr/" target="_blank">블로그페이</a></li>
+                            <li><a href="https://make.link/" target="_blank">메이크링크</a></li>
+                            <li><a href="http://mklink.co.kr/main" target="_blank">마케터링크</a></li>
+                            <li><a href="https://prosell.co.kr/" target="_blank">프로셀</a></li>
+                            <li><a href="https://www.ciderpay.com/" target="_blank">사이다페이</a></li>
+                            <li><a href="https://zipsa.net/" target="_blank">집사</a></li>
+                            <li><a href="https://danbipay.com/main" target="_blank">단비페이</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright-wrap">
+                    <div class="company">
+                        <p>
+                            <span>대표자명 : 정재훈</span><span>사업자등록번호 : 113-86-56537<a href="https://www.ftc.go.kr/www/bizCommList.do?key=232" target="_blank" class="lighten">사업자정보확인</a></span><span>통신판매업신고 : 제 2012-서울구로-0239호</span>
+                        </p>
+                        <p>
+                            <span>주소 : 서울특별시 구로구 디지털로 26길 61 에이스하이엔드타워 2차 1202호</span><span>대표메일 : <a href="mailto:payapp@udid.co.kr">prosell@udid.co.kr</a></span>
+                        </p>
+                        <p>Copyright © 프로셀. All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="terms">
+                    <a href="" target="_blank">공지사항</a>
+                    <a href="">서비스이용약관</a>
+                    <a href="">개인정보처리방침</a>
+                </div>
+                <div class="banner-wrap">
+                    <div class="social">
+                        <a href="https://www.instagram.com/payapp_official/" target="_blank" title="페이앱 공식 인스타그램"><i class="ico ico-insta"></i></a>
+                        <a href="https://www.facebook.com/udidcorporation" target="_blank" title="페이앱 공식 페이스북"><i class="ico ico-facebook"></i></a>
+                        <a href="https://pf.kakao.com/_LAsjT" target="_blank" title="페이앱 공식 플러스친구"><i class="ico ico-kakaoplus"></i></a>
+                        <a href="https://blog.naver.com/udidcompany" target="_blank" title="페이앱 공식 네이버 블로그"><i class="ico ico-blog"></i></a>
+                        <a href="https://post.naver.com/udidpayapp" target="_blank" title="블로그페이 공식 포스트"><i class="ico ico-post"></i></a>
+                    </div>
+                    <div class="banner-area">
+                        <span><i class="ico ico-innobiz"></i></span>
+                        <span><i class="ico ico-isms"></i></span>
+                        <span><i class="ico ico-nts"></i></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="top-btn">
+            <div role="button" class="f-btn go-top"><i class="ico ico-top"></i></div>
+        </div>
+
+    </footer>
+    <!-- //footer -->
+</div>
+<!-- //main-wrap -->
+</body>
+
+
+</html>
+

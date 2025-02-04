@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>PAYAPP</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;900&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/aos.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/aos.js"></script>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/jquery-waypoints.min.js"></script>
+    <script type="text/javascript" src="../js/inview.min.js"></script>
+    <script type="text/javascript" src="../js/counterup.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="popup-wrap">
+    <div class="popup-header">
+        <h2>페이앱 리셀러 신청</h2>
+    </div>
+    <div class="popup-content">
+        <div class="write-form">
+            <form id="" method="post" name="requestfrm" action="resellregist_exe.html" onsubmit="return false;">
+                <input type="hidden" name="mode" value="request">
+                <input type="hidden" name="agent_type" value="5">
+                <fieldset>
+                    <legend class="sr-only">리셀러 신청 정보</legend>
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="compname">업체명</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control" id="compname" name="compname" placeholder="업체명을 입력해 주세요.">
+                        </div>
+                    </div>
+                    <!-- //업체명 -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="homepage">홈페이지</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="url" class="form-control" id="homepage" name="homepage" value="http://">
+                        </div>
+                    </div>
+                    <!-- // 홈페이지 -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="phone">휴대전화 번호</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control" id="phone" name="phone" maxlength="11" placeholder="휴대전화 번호를 입력해 주세요.">
+                        </div>
+                    </div>
+                    <!-- //휴대전화 번호 -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="email">이메일</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="이메일을 입력해 주세요.">
+                        </div>
+                    </div>
+                    <!-- //이메일 -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="addr">주소</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control" id="addr" name="addr" placeholder="주소를 입력해 주세요.">
+                        </div>
+                    </div>
+                    <!-- //주소 -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <label for="solname">솔루션명</label>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control" id="solname" name="solname" placeholder="솔루션명을 입력해 주세요.">
+                        </div>
+                    </div>
+                    <!-- //솔루션명 -->
+                    <div class="panel">
+                        <div class="panel-heading top">
+                            <label for="solexplean">솔루션 설명</label>
+                        </div>
+                        <div class="panel-body">
+                            <textarea rows="6" name="solexplean" id="solexplean" placeholder="솔루션을 설명해 주세요."></textarea>
+                        </div>
+                    </div>
+                    <!-- //솔루션 설명 -->
+                    <div class="panel">
+                        <div class="panel-heading top">
+                            <span>개인정보 수집 및 이용안내</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="agree-wrap">
+                                <div class="agree-view">
+                                <textarea rows="6" readonly>[개인정보의 수집 및 이용에 대한 안내]
+㈜유디아이디(이하 “회사”)는 정보통신망 이용촉진 및 정보보호 등에 관한 법률 외 모든 관련 법령을 준수하고 있으며, 다음과 같은 목적으로 개인정보를 수집하고 있습니다.
+
+    ◎ 수집하는 개인정보 항목
+    1. 회사는 각종 서비스의 제공, 회원가입, 원활한 고객상담을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+    가. 신청자: 홈페이지주소, 신청자명,  전화번호, 팩스번호, 핸드폰번호, 이메일,  주소
+
+    ◎ 수집 및 이용 목적
+    1. 신청 처리 및 상담 요청 응답
+
+    ◎ 보유 및 이용기간
+    1. 서비스 이용계약: 서비스 종료시까지
+    2. 대금결제 및 재화 등에 관한 기록: 5년
+    3. 계약 또는 청약철회 등에 관한 기록: 5년
+    4. 소비자의 불만 또는 분쟁처리에 관한 기록: 3년
+    본인은 개인정보 및 서비스 이용 관련정보를 귀사가 위와 같이 수집. 이용함에 관하여 고지 받았으며 이를 충분히 이해하고 동의합니다.
+
+[개인정보 제공 범위]
+    1. 수집된 개인정보는 리셀러 신청상담용도로만 사용합니다.</textarea>
+                                </div>
+                                <label for="agree" class="input-chk">
+                                    <input type="checkbox" name="agree" id="agree" value="1"><span>개인정보 수집 및 이용안내에 동의합니다.</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="btn-center-block">
+                    <div class="btn-horizon">
+                        <div class="btn-table">
+                            <a href="javascript:changeConfig()" role="button" class="btn btn-cell btn-blue">신청하기</a>
+                            <a href="javascript:popwinclose()" role="button" class="btn btn-cell btn-gray-line">취소</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- // pop-wrap -->
+
+</body>
+
+</html>
+

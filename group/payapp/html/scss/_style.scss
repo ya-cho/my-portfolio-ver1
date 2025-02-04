@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------------
+	var style
+---------------------------------------------------------------- */
+$white: #fff;
+$black: #000;            // lighten($black, 20%) = #333, lighten($black, 40%) = #666, lighten($black, 80%) = ccc;
+$gray: #ddd;
+$light-gray: #f5f5f5;
+$blue: #185ef8;
+$pale-blue: #6e96ff;
+$sky-blue: #00bfff;
+$dodger-blue: #008ef8;
+$navy-blue: #484f77;
+$dark-navy: #162351;
+$red: #fa2841;
+$orange: #ff8909;
+$yellow: #eccb6b;
+
+/* font */
+$main-font: 'Noto Sans KR', sans-serif;
+$num-font: 'Roboto', sans-serif;
+$head-font: 'Spoqa Han Sans', sans-serif;       // 100, 300, 400, 700

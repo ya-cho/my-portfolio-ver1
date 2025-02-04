@@ -1,0 +1,76 @@
+.clearfix:after {content: ""; display: block; clear:both;}
+body {min-width: 1360px;}
+
+/* sst-menu */
+.sst-menu {font-family: "gulim"; position: relative; z-index: 1000;}
+.sst-menu.sst-active {width: 100%; height: 50px;}
+.sst-menu .btn {padding: 10px; width: 30px; height: 30px; position: absolute; top: 0; left: 0; cursor: pointer;}
+.sst-menu .btn-open {background: #327ed8; position: fixed; top: 0; left: 0;}
+.sst-menu .btn-open:hover {background: #1c6bca;}
+.sst-menu .btn-close {background: rgba(0,0,0,0.1);}
+.sst-menu .btn-close:hover {background: #1c6bca;}
+.sst-menu .btn-close svg {opacity: 0.5;}
+.sst-menu .btn-close:hover svg {opacity: 1; transition: opacity 0.3s;}
+.sst-menu .title-bar {display: none; background: #388cf1; position: fixed; width: 100%;}
+.sst-menu.sst-active .title-bar {display: block;}
+.sst-menu .title-bar .logo {padding: 15px 20px; margin-left: 50px; display: block; width: 100px; height: 20px; float: left;}
+.sst-menu .title-bar .menu {float: left;}
+.sst-menu .title-bar .menu > li {padding: 17px 14px; float: left; position: relative; cursor: pointer;}
+.sst-menu .title-bar .menu > li:hover {background: #1d6ccb;}
+.sst-menu .title-bar .menu > li.hov-none {padding: 17px 31px 17px 14px;}
+.sst-menu .title-bar .menu > li.hov-none:hover {background: transparent;}
+.sst-menu .title-bar .menu > li:not(:first-child):before {display: inline-block; content: ""; width: 1px; height: 12px; background: rgba(255,255,255,0.2); position: absolute; margin: auto; left: 0; top: 0; bottom: 0;}
+.sst-menu .title-bar .menu > li:hover + li:before {display: none;}
+.sst-menu .title-bar .menu > li:hover:before {display: none;}
+.sst-menu .title-bar .menu > li > a {position: relative; line-height: 16px; color: #fff; font-weight: 600;}
+.sst-menu .title-bar a.opt-empty:hover {text-decoration: underline;}
+.sst-menu .title-bar a .ico-new-window {margin-left: 5px; position: absolute; display: inline-block; width: 12px; height: 12px; top: 0; opacity: 0.5;}
+.sst-menu .title-bar .right-btn {padding: 17px 31px 17px 14px; float: right;}
+.sst-menu .title-bar .right-btn a {position: relative; line-height: 16px; color: #fff; font-weight: 600;}
+.sst-menu .title-bar .menu .list-wrap {width: 280px; position: absolute; top: 50px; left: 0; font-size: 12px; display: none;}
+.sst-menu .title-bar .menu .list {background: #f8f8f8; border: 1px solid #d4d4d4;}
+.sst-menu .title-bar .menu .list li {padding: 12px 9px 12px 15px;}
+.sst-menu .title-bar .menu .list li + li {border-top: 1px solid #d4d4d4;}
+.sst-menu .title-bar .menu .list li:hover {background: #fff;}
+.sst-menu .title-bar .menu .list li > div {display: inline-block; vertical-align: middle; line-height: 12px;}
+.sst-menu .title-bar .menu .list li .title.btn-3 {width: 55%;}
+.sst-menu .title-bar .menu .list li .title.btn-2 {width: 70%;}
+.sst-menu .title-bar .menu .list li .title.btn-1 {width: 86%;}
+.sst-menu .title-bar .menu .list li .title p {width: 100%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; color: #333;}
+.sst-menu .title-bar .menu .list li .btns {margin-left: 5px;}
+.sst-menu .title-bar .menu .list li .btns a {display: inline-block; color: #ccc; font-weight: 600; position: relative;}
+.sst-menu .title-bar .menu .list li .btns a + a {margin-left: 9px;}
+.sst-menu .title-bar .menu .list li .btns a + a:before {display: inline-block; content: ""; width: 1px; height: 11px; background: rgba(0,0,0,0.1); position: absolute; left: -7px;}
+.sst-menu .title-bar .menu .list li .btns a.on {color: #388cf1;}
+.sst-menu .title-bar .menu .list li .btns a:hover {color: #1d6ccb; text-decoration: underline;}
+.sst-menu .title-bar .menu > li:hover .list-wrap {display: block;}
+.sst-menu .title-bar .menu .btn-wrap {display: table; width: 100%; table-layout: fixed;}
+.sst-menu .title-bar .menu .btn-wrap a {display: table-cell; padding: 13px 0; background: #e4e4e4; text-align: center; border-style: solid; border-color: #d4d4d4; border-width: 0 0 1px 1px; line-height: 13px; font-weight: 600; color: #999;}
+.sst-menu .title-bar .menu .btn-wrap a:last-child {border-width: 0 1px 1px 1px;}
+.sst-menu .title-bar .menu .btn-wrap a:hover {background: #1d6ccb; color: #fff;}
+
+/* banner */
+.l-banner {display: none; position: relative; height: 100px;}
+.l-banner.active {display: block;}
+.l-banner .swiper-container {width: 100%; height: 100%;}
+.l-banner .swiper-slide {text-align: center; height: 100px;}
+.l-banner .swiper-slide .item {display: inline-block; max-width: var(--main-width); width: 100%; height: 100%; position: relative;}
+.l-banner .swiper-slide .item img {max-width: 100%; max-height: 100%; position: absolute; left: 50%;  -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0);}
+
+/* sst-item */
+.l-banner .sst-item {max-width: var(--main-width);}
+.sst-item {width: 100%; height: 100%; position: absolute; top: 0; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); border: 1px solid #388cf1; opacity: 0; transition: opacity 0.2s; box-sizing: border-box;}
+.sst-item:hover {opacity: 1;}
+.sst-item p {padding: 5px; display: inline-block; font-family: "gulim"; font-size: 11px; color: #fff; background: #388cf1;}
+.sst-item .modify {position: absolute; top: 2px; right: 2px; height: 20px;}
+.sst-item .modify ul {font-size: 0;}
+.sst-item .modify li {display: inline-block; background: #388cf1; -webkit-border-radius: 3px; border-radius: 3px; cursor: pointer;}
+.sst-item .modify li + li {margin-left: 2px;}
+.sst-item .modify li:hover {background: #2d70c1;}
+.sst-item .modify span,
+.sst-item .modify a {padding: 4px; display: block; width: 12px; height: 12px;}
+
+/* logo layout */
+.lh-logo .wrap {max-width: var(--main-width); margin: 0 auto; position: relative;}
+.lh-logo .logo {margin: 0 auto 20px; width: calc(100% - 640px); height: 120px; max-height: 120px; position: relative; top: 10px;}
+.lh-logo .logo > a {display: block; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}

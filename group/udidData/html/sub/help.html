@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>UDDATA</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <link rel="stylesheet" type="text/css" href="../css/aos.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script type="text/javascript" src="../js/aos.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap" class="sub-wrap">
+    <header class="fixed">
+        <div class="header-wrap en">
+            <h1>
+                <a href="../index.html" class="logo">UDDATA</a>
+            </h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="./product.html">Product</a>
+                        <ul class="sub">
+                            <li><a href="./product.html#menu1" class="locate">Pipeline</a></li>
+                            <li><a href="./product.html#menu2" class="locate">Chart</a></li>
+                            <li><a href="./product.html#menu3" class="locate">Deploy&Scheduler</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./document.html">Document</a></li>
+                    <li><a href="#a">Use Case</a></li>
+                    <li><a href="./help.html">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <!-- //header -->
+
+    <section class="container pd-t" id="help">
+        <section class="sub-visual bg-green">
+            <div class="inner">
+                <div class="heading-sub text-white">
+                    <h2 class="en" data-aos="fade-right" data-aos-duration="600">Help</h2>
+                    <p data-aos="fade-right" data-aos-duration="900">유디데이터만의 기능 개선/변경을 확인하세요.</p>
+                </div>
+            </div>
+        </section>
+        <!-- //sub-visual -->
+        <section class="sub-content pd-b">
+            <div class="inner">
+                <h3 class="sub-tit en">Release Note</h3>
+                <div class="version select-area line">
+                    <span class="select-btn"></span>
+                    <span class="select-chk en">v3.7.0.9</span>
+                    <ul class="select-list">
+                        <li><a href="#panel1" class="option locate">v3.7.0.9</a></li>
+                        <li><a href="#panel2" class="option locate">v3.7.0.8</a></li>
+                        <li><a href="#panel3" class="option locate">v3.7.0.7</a></li>
+                        <li><a href="#panel4" class="option locate">v3.7.0.6</a></li>
+                    </ul>
+                </div>
+
+                <article id="panel1" class="panel-box">
+                    <h3>v3.7.0.9 릴리즈 노트</h3>
+                    <div class="panel">
+                        <strong class="info-tit en">ENHANCEMENT</strong>
+                        <dl>
+                            <dt>Deeplearing</dt>
+                            <dd>- BMP Training job이 deprecate되어 기존 BMP job에서 clone기능 제한</dd>
+                            <dd>- training, evaluation용 채널의 repeat, shuffle 등 기본 입력값을 다르게 적용</dd>
+                            <dd>- description, error message 강화</dd>
+                            <dd>- job 삭제 시 기본 동작을 파일도 삭제하는 것으로 변경</dd>
+                        </dl>
+                    </div>
+                    <div class="panel">
+                        <strong class="info-tit en">MINOR FIXES</strong>
+                        <dl>
+                            <dt>Engine</dt>
+                            <dd>- Flow output 처리를 link에서 copy로 변경</dd>
+                            <dd>- Spark global group by 의 Iterator 에 InterruptibleIterator 적용</dd>
+                            <dd>- DataRoot path 설정 보완</dd>
+                            <dd>- Script 실행 옵션 추가</dd>
+                        </dl>
+                        <dl>
+                            <dt>Analytics App</dt>
+                            <dd>- Publish 시 Snapshot On/Off 설정 기능 추가</dd>
+                            <dd>- Single 템플릿에서 Condition상자 확장 기능 추가</dd>
+                            <dd>- DatePicker 컨트롤 추가</dd>
+                            <dd>- Secure Mode에서 계정 정보 연동할 수 있는 기능 추가</dd>
+                        </dl>
+                    </div>
+                </article>
+                <!-- //panel1 -->
+                <article id="panel2" class="panel-box">
+                    <h3>v3.7.0.8 릴리즈 노트</h3>
+                    <div class="panel">
+                        <strong class="info-tit en">MINOR FIXES</strong>
+                        <dl>
+                            <dt>Engine</dt>
+                            <dd>- Flow output 처리를 link에서 copy로 변경</dd>
+                            <dd>- Spark global group by 의 Iterator 에 InterruptibleIterator 적용</dd>
+                            <dd>- DataRoot path 설정 보완</dd>
+                            <dd>- Script 실행 옵션 추가</dd>
+                        </dl>
+                        <dl>
+                            <dt>Analytics App</dt>
+                            <dd>- Publish 시 Snapshot On/Off 설정 기능 추가</dd>
+                            <dd>- Single 템플릿에서 Condition상자 확장 기능 추가</dd>
+                            <dd>- DatePicker 컨트롤 추가</dd>
+                            <dd>- Secure Mode에서 계정 정보 연동할 수 있는 기능 추가</dd>
+                        </dl>
+                    </div>
+                </article>
+                <!-- //panel2 -->
+                <article id="panel3" class="panel-box">
+                    <h3>v3.7.0.7 릴리즈 노트</h3>
+                    <div class="panel">
+                        <strong class="info-tit en">ENHANCEMENT</strong>
+                        <dl>
+                            <dt>Deeplearing</dt>
+                            <dd>- BMP Training job이 deprecate되어 기존 BMP job에서 clone기능 제한</dd>
+                            <dd>- training, evaluation용 채널의 repeat, shuffle 등 기본 입력값을 다르게 적용</dd>
+                            <dd>- description, error message 강화</dd>
+                            <dd>- job 삭제 시 기본 동작을 파일도 삭제하는 것으로 변경</dd>
+                        </dl>
+                    </div>
+                </article>
+                <!-- //panel3 -->
+                <article id="panel4" class="panel-box">
+                    <h3>v3.7.0.6 릴리즈 노트</h3>
+                    <div class="panel">
+                        <strong class="info-tit en">ENHANCEMENT</strong>
+                        <dl>
+                            <dt>Deeplearing</dt>
+                            <dd>- BMP Training job이 deprecate되어 기존 BMP job에서 clone기능 제한</dd>
+                            <dd>- training, evaluation용 채널의 repeat, shuffle 등 기본 입력값을 다르게 적용</dd>
+                            <dd>- description, error message 강화</dd>
+                            <dd>- job 삭제 시 기본 동작을 파일도 삭제하는 것으로 변경</dd>
+                        </dl>
+                    </div>
+                    <div class="panel">
+                        <strong class="info-tit en">MINOR FIXES</strong>
+                        <dl>
+                            <dt>Engine</dt>
+                            <dd>- Flow output 처리를 link에서 copy로 변경</dd>
+                            <dd>- Spark global group by 의 Iterator 에 InterruptibleIterator 적용</dd>
+                            <dd>- DataRoot path 설정 보완</dd>
+                            <dd>- Script 실행 옵션 추가</dd>
+                        </dl>
+                        <dl>
+                            <dt>Analytics App</dt>
+                            <dd>- Publish 시 Snapshot On/Off 설정 기능 추가</dd>
+                            <dd>- Single 템플릿에서 Condition상자 확장 기능 추가</dd>
+                            <dd>- DatePicker 컨트롤 추가</dd>
+                            <dd>- Secure Mode에서 계정 정보 연동할 수 있는 기능 추가</dd>
+                        </dl>
+                    </div>
+                </article>
+                <!-- //panel3 -->
+            </div>
+        </section>
+    </section>
+    <!-- //container -->
+
+    <footer>
+        <div class="go-top">
+            <i class="ico ico-top">상단으로 가기</i>
+        </div>
+        <div class="footer-wrap">
+            <section class="top-area">
+                <div class="inner">
+                    <div class="link">
+                        <h2 class="logo gray">유디데이터</h2>
+                        <div class="familysite select-area">
+                            <span class="select-btn"></span>
+                            <span class="select-chk en">FAMILY SITE</span>
+                            <ul class="select-list">
+                                <li><a href="https://www.payapp.kr/index.html" target="_blank" rel="noopener noreferrer">페이앱</a></li>
+                                <li><a href="http://blogpay.co.kr/" target="_blank" rel="noopener noreferrer">블로그페이</a></li>
+                                <li><a href="https://make.link/" target="_blank" rel="noopener noreferrer">메이크링크</a></li>
+                                <li><a href="https://prosell.co.kr/" target="_blank" rel="noopener noreferrer">프로셀</a></li>
+                                <li><a href="https://www.ciderpay.com/" target="_blank" rel="noopener noreferrer">사이다페이</a></li>
+                                <li><a href="https://zipsa.net/" target="_blank" rel="noopener noreferrer">집사</a></li>
+                                <li><a href="https://danbipay.com/main" target="_blank" rel="noopener noreferrer">단비페이</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu row" role="navigation">
+                        <div class="col-lg-7 hidden-md">
+                            <div class="table-row en">
+                                <div class="table-cell">
+                                    <b class="tit">Product</b>
+                                    <ul>
+                                        <li><a href="#a">UD Data</a></li>
+                                        <li><a href="#a">Pipeline</a></li>
+                                        <li><a href="#a">Chart</a></li>
+                                    </ul>
+                                </div>
+                                <div class="table-cell">
+                                    <b class="tit">Document</b>
+                                    <ul>
+                                        <li><a href="#a">Pipeline</a></li>
+                                        <li><a href="#a">Chart</a></li>
+                                    </ul>
+                                </div>
+                                <div class="table-cell">
+                                    <b class="tit">Use Case</b>
+                                    <ul>
+                                        <li><a href="#a">Sample Pipeline</a></li>
+                                        <li><a href="#a">Sample Chart</a></li>
+                                    </ul>
+                                </div>
+                                <div class="table-cell">
+                                    <b class="tit">Help</b>
+                                    <ul>
+                                        <li><a href="#a">Contact us</a></li>
+                                        <li><a href="#a">Release Note</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-12">
+                            <b class="tit">문의하기</b>
+                            <ul>
+                                <li><i class="ico ico-call"></i><a href="tel:0212345678">02. 1234. 5678</a><a href="tel:01012345678">010. 1234. 5678</a></li>
+                                <li><i class="ico ico-mail"></i><a href="mailto:uddata@udid.co.kr">uddata@udid.co.kr</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="btm-area">
+                <div class="inner">
+                    <p class="item copyright en">&copy; Copyright Udid data.</p>
+                    <a href="#a" class="item"><b>개인정보처리방침</b></a>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <!-- // footer -->
+</div>
+<!-- //wrap -->
+</body>
+
+
+</html>
+

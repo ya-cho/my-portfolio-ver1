@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>프로셀 홈페이지</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/aos.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/aos.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap">
+    <header id="global-header">
+        <div class="header-wrapper">
+            <h1>
+                <a href="../index.html" class="prosell-logo"><img src="../images/common/prosell_logo.svg" alt="프로셀 바로가기"></a>
+                <span class="sub-logo">
+                    <a href="https://payapp.kr/homepage/index.html" target="_blank" class="payapp-logo"><img src="../images/common/payapp_logo.svg" alt="페이앱 바로가기"></a>
+                    <!--<a href="https://www.udpay.co.kr/" target="_blank" class="udpay-logo"><img src="../images/common/udpay_logo.svg" alt="유디페이 바로가기"></a>-->
+                </span>
+            </h1>
+            <nav class="gnb">
+                <div class="menu-btn">
+                    메뉴클릭
+                </div>
+                <div class="mobile-lnb">
+                    <ul>
+                        <li class="depth">
+                            <a href="javascript:;">주요기능</a>
+                            <ul class="sub">
+                                <li><a href="../function/design.html">디자인관리</a></li>
+                                <li><a href="../function/product.html">상품관리</a></li>
+                                <li><a href="../function/order.html">주문/배송관리</a></li>
+                                <li><a href="../function/etc.html">기타</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../hosting/hosting.html">호스팅</a>
+                        </li>
+                        <li>
+                            <a href="../addition/additional.html">부가서비스</a>
+                        </li>
+                        <li>
+                            <a href="service.html">결제서비스</a>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">가이드</a>
+                            <ul class="sub">
+                                <li><a href="">시작하기</a></li>
+                                <li><a href="">튜토리얼</a></li>
+                                <li><a href="">도움말</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">고객센터</a>
+                            <ul class="sub">
+                                <li><a href="../cscenter/faq.html">자주묻는질문</a></li>
+                                <li><a href="../cscenter/qa-list.html">문의하기</a></li>
+                                <li><a href="../cscenter/domain-write.html">도메인 연동 신청</a></li>
+                                <li><a href="../cscenter/db-write.html">쇼핑몰 DB 이전신청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">내 서비스</a>
+                        </li>
+                    </ul>
+                    <div class="mobile-info">
+                        <a href="../member/login.html" class="btn-round">로그인</a>
+                        <a href="javascript:;" class="btn-purple btn-round" onclick="location.href='../member/join.html'">회원가입</a>
+                    </div>
+                </div>
+                <div class="web">
+                    <div class="gnb-area">
+                        <ul>
+                            <li class="drop">
+                                <a href="../function/design.html">주요기능</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="../function/design.html">디자인관리</a></li>
+                                        <li><a href="../function/product.html">상품관리</a></li>
+                                        <li><a href="../function/order.html">주문/배송관리</a></li>
+                                        <li><a href="../function/etc.html">기타</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="../hosting/hosting.html">호스팅</a>
+                            </li>
+                            <li class="drop">
+                                <a href="../addition/additional.html">부가서비스</a>
+                            </li>
+                            <li class="drop">
+                                <a href="service.html" class="on">결제서비스</a>
+                            </li>
+                            <li class="drop">
+                                <a href="#a">가이드</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="">시작하기</a></li>
+                                        <li><a href="">튜토리얼</a></li>
+                                        <li><a href="">도움말</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="../cscenter/faq.html">고객센터</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="../cscenter/faq.html">자주묻는질문</a></li>
+                                        <li><a href="../cscenter/qa-list.html">문의하기</a></li>
+                                        <li><a href="../cscenter/domain-write.html">도메인 연동 신청</a></li>
+                                        <li><a href="../cscenter/db-write.html">쇼핑몰 DB 이전신청</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="">내 서비스</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="gnb-info">
+                <a href="../member/login.html">로그인</a>
+                <a href="javascript:;" onclick="location.href='../member/join.html'">회원가입</a>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <section class="container sub-container pay-service" id="service">
+        <section class="section1">
+            <div class="banner bg-purple">
+                <div class="inner">
+                    <div class="txt">
+                        <h3 data-aos="fade-down" data-aos-duration="700">결제 서비스</h3>
+                        <div class="guide-txt">
+                            <p>단순 솔루션사들과 달리 <span>PG 라이선스를 직접 보유한 UDID는</span></p>
+                            <p>업계 최저 PG 수수료를 구현하였으며, <span>빠른 심사 및 빠른 정산 서비스를 제공합니다.</span></p>
+                        </div>
+                    </div>
+                    <div class="obj" data-aos="fade" data-aos-duration="700" data-aos-delay="500">
+                        <img src="../images/sub_page/sub_icon/service_icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section class="section2">
+            <div class="inner">
+                <div class="sub-tit">
+                    <h4>빠르고 간편한 원스톱 서비스</h4>
+                </div>
+                <div class="content service all" data-aos="fade-up" data-aos-duration="700" data-aos-delay="1000">
+                    <ul class="title">
+                        <li>적용대상</li>
+                        <li><p>페이앱<span class="label">당일처리</span></p></li>
+                        <li><span class="company">기존 PG사</span></li>
+                    </ul>
+                    <ul>
+                        <li>가입신청</li>
+                        <li>온라인 접수</li>
+                        <li>온라인 접수</li>
+                    </ul>
+                    <ul>
+                        <li>계약서 작성/제출</li>
+                        <li>당일 처리 <small>계약서 다운로드 후 작성 및 이메일 접수</small></li>
+                        <li>3~7일 소요 <small>계약서 우편 수령 후 작성 및 우편 접수</small></li>
+                    </ul>
+                    <ul>
+                        <li>카드사 승인 심사</li>
+                        <li>당일 처리 <small>가입 당일 즉시 결제 가능</small></li>
+                        <li>3~14일 소요 <small>은행/카드사 개별 심사 진행(심사 전 결제 불가)</small></li>
+                    </ul>
+                    <ul>
+                        <li>휴대폰 결제</li>
+                        <li>당일 처리</li>
+                        <li>별도 가입</li>
+                    </ul>
+                    <ul>
+                        <li>네이버 페이</li>
+                        <li>당일 처리</li>
+                        <li>별도 가입</li>
+                    </ul>
+                    <ul>
+                        <li>카카오 페이</li>
+                        <li>당일 처리</li>
+                        <li>별도 가입</li>
+                    </ul>
+                    <ul>
+                        <li>결제대금 정산</li>
+                        <li>익일 / 3일 / 5일 정산</li>
+                        <li>5일 / 7일 정산</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section class="section3">
+            <div class="inner">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4>등록비<small class="text-gray">VAT 별도</small></h4>
+                    </div>
+                    <div class="panel-body" data-aos="fade-up" data-aos-duration="700">
+                        <div class="line">
+                            <div class="horizon-list">
+                                <div class="horizon-tit">초기등록비</div>
+                                <div class="horizon-cont">
+                                    <span class="price">
+                                        <p class="arrow-line">
+                                            <b class="price-text">120,000</b> <small>원</small>
+                                        </p>
+                                        <strong><b class="text-red">0원</b> (무료이벤트)</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="horizon-list">
+                                <div class="horizon-tit">유지비</div>
+                                <div class="horizon-cont">
+                                    <span class="price">
+                                        <strong><b class="text-red">0원</b></strong>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+
+        <section class="section4">
+            <div class="inner">
+                <div class="sub-tit">
+                    <h4>가입비/등록비/수수료율 체크 <small class="text-gray">VAT 별도</small></h4>
+                </div>
+                <div class="content service" data-aos="fade-up" data-aos-duration="700">
+                    <ul class="title">
+                        <li>서비스명</li>
+                        <li><p>프로셀<span class="label">FREE</span></p></li>
+                        <li class="visible-lg"><span class="company">A사</span></li>
+                        <li class="visible-lg"><span class="company">B사</span></li>
+                        <li class="visible-lg"><span class="company">C사</span></li>
+                        <li>타사<span>(A,B,C사)</span></li>
+                    </ul>
+                    <ul>
+                        <li>기본 수수료율</li>
+                        <li>3.4%</li>
+                        <li class="visible-lg">3.5%</li>
+                        <li class="visible-lg">3.5%</li>
+                        <li class="visible-lg">3.4%</li>
+                        <li>3.4% or <span>3.5%</span></li>
+                    </ul>
+                    <ul>
+                        <li>PG 제공사</li>
+                        <li>PAYAPP 단독</li>
+                        <li class="visible-lg">KCP 외 6개사 선택</li>
+                        <li class="visible-lg">KCP 외 6개사 선택</li>
+                        <li class="visible-lg">KCP 외 6개사 선택</li>
+                        <li>KCP 외 6개사 선택</li>
+                    </ul>
+                    <ul>
+                        <li>PG 가입비</li>
+                        <li>무료</li>
+                        <li class="visible-lg">220,000원</li>
+                        <li class="visible-lg">무료</li>
+                        <li class="visible-lg">220,000원</li>
+                        <li>무료 or <span>220,000원</span></li>
+                    </ul>
+                    <ul>
+                        <li>휴대폰 결제</li>
+                        <li>무료 <span>(기본제공)</span></li>
+                        <li class="visible-lg">별도 가입 <span>(11만원)</span></li>
+                        <li class="visible-lg">별도 가입 <span>(11만원)</span></li>
+                        <li class="visible-lg">별도 가입 <span>(11만원)</span></li>
+                        <li>별도 가입 <span>(11만원)</span></li>
+                    </ul>
+                    <ul>
+                        <li>네이버 페이</li>
+                        <li>무료 <span>(기본제공)</span></li>
+                        <li class="visible-lg">별도 가입 <span>(무료)</span></li>
+                        <li class="visible-lg">별도 가입 <span>(무료)</span></li>
+                        <li class="visible-lg">별도 가입 <span>(무료)</span></li>
+                        <li>별도 가입 <span>(무료)</span></li>
+                    </ul>
+                    <ul>
+                        <li>카카오 페이</li>
+                        <li>무료 <span>(기본제공)</span></li>
+                        <li class="visible-lg">별도 가입 <span>(22만원)</span></li>
+                        <li class="visible-lg">별도 가입 <span>(22만원)</span></li>
+                        <li class="visible-lg">별도 가입 <span>(22만원)</span></li>
+                        <li>별도 가입 <span>(22만원)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //section4 -->
+
+        <section class="section5">
+            <div class="inner">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4>결제수수료<small class="text-gray">VAT 별도</small></h4>
+                    </div>
+                    <div class="panel-body" data-aos="fade-up" data-aos-duration="700">
+                        <div class="line">
+                            <div class="horizon-list-add">
+                                <div class="horizon-tit">사업자 (법인/개인)</div>
+                                <div class="horizon-cont">
+                                    <div class="list-group-wrap">
+                                        <div class="list-group">
+                                            <strong>카드결제/간편결제</strong>
+                                            <p class="per">2.1% ~ 3.4%</p>
+                                            <div class="pay-label">
+                                                <img src="../images/common/ico_naverpay.png" alt="네이버페이">
+                                                <img src="../images/common/ico_kakaopay.png" alt="카카오페이">
+                                                <img src="../images/common/ico_payco.png" alt="페이코">
+                                            </div>
+                                            <p class="text-red"><small>아래 우대수수료 조건 참조</small></p>
+                                        </div>
+                                        <div class="list-group">
+                                            <strong>휴대폰 소액결제</strong>
+                                            <p class="per">5%</p>
+                                        </div>
+                                        <div class="list-group">
+                                            <strong>계좌이체</strong>
+                                            <p class="per">2.3%</p>
+                                        </div>
+                                        <div class="list-group">
+                                            <strong>가상계좌</strong>
+                                            <p class="per">220원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="horizon-list-add">
+                                <div class="horizon-tit">비사업자 개인</div>
+                                <div class="horizon-cont">
+                                    <div class="list-group-wrap">
+                                        <div class="list-group">
+                                            <strong>카드결제/간편결제</strong>
+                                            <p class="per">4.0%</p>
+                                            <div class="pay-label">
+                                                <img src="../images/common/ico_naverpay.png" alt="네이버페이">
+                                                <img src="../images/common/ico_payco.png" alt="페이코">
+                                            </div>
+                                        </div>
+                                        <div class="list-group">
+                                            <strong>휴대폰 소액결제</strong>
+                                            <p class="per">5.7%</p>
+                                        </div>
+                                        <div class="list-group">
+                                            <strong>계좌이체</strong>
+                                            <p class="per">2.3%</p>
+                                        </div>
+                                        <div class="list-group">
+                                            <strong>가상계좌</strong>
+                                            <p class="per">220원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tip">알려드립니다.</div>
+                        <div class="bu-list bu-sm">
+                            <ul>
+                                <li>카카오페이는 사업자만 이용 가능합니다.</li>
+                                <li class="text-red">실물결제 기준이며, 비실물의 경우 수수료가 인상될 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section5 -->
+
+        <section class="section6">
+            <div class="inner">
+                <div class="panel-block">
+                    <div class="panel-heading">
+                        <h4>우대수수료<small class="text-gray">VAT 별도</small></h4>
+                    </div>
+                    <div class="panel-body" data-aos="fade-up" data-aos-duration="700">
+                        <div class="panel-area">
+                            <div class="list-group-wrap">
+                                <div class="list-group">
+                                    <strong>영세</strong>
+                                    <strong>연 매출 3억원 이하</strong>
+                                    <b class="text-orange"><i class="ico ico-l ico-discount"></i>1.3% 인하</b>
+                                    <p class="per">2.1%</p>
+                                </div>
+                                <div class="list-group">
+                                    <strong>중소1 (중소)</strong>
+                                    <strong>연 매출 3~5억원</strong>
+                                    <b class="text-orange"><i class="ico ico-l ico-discount"></i>0.8% 인하</b>
+                                    <p class="per">2.6%</p>
+                                </div>
+                                <div class="list-group">
+                                    <strong>중소2 (준중소)</strong>
+                                    <strong>연 매출 5~10억원</strong>
+                                    <b class="text-orange"><i class="ico ico-l ico-discount"></i>0.7% 인하</b>
+                                    <p class="per">2.7%</p>
+                                </div>
+                                <div class="list-group">
+                                    <strong>중소3 (중견)</strong>
+                                    <strong>연 매출 10~30억원</strong>
+                                    <b class="text-orange"><i class="ico ico-l ico-discount"></i>0.5% 인하</b>
+                                    <p class="per">2.9%</p>
+                                </div>
+                                <div class="list-group">
+                                    <strong>일반</strong>
+                                    <strong>연 매출 30억 이상</strong>
+                                    <b class="text-orange">미적용</b>
+                                    <p class="per">3.4%</p>
+                                </div>
+                                <div class="list-group">
+                                    <strong>신규 (등록1년이내)</strong>
+                                    <strong>연 매출 미산출</strong>
+                                    <b class="text-orange">미적용</b>
+                                    <p class="per">3.4%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tip">알려드립니다.</div>
+                        <div class="bu-list bu-sm">
+                            <ul>
+                                <li>자영업자, 소상공인 부담경감을 위해 수수료를 차액정산해 드립니다.</li>
+                                <li>상기 영중소 우대수수료는 사업자(법인/개인)의 경우에만 해당됩니다.</li>
+                                <li>가맹점 구분 기준은 국세청 및 여신금융협회 자료를 기준으로 조정되며, <b>연매출 변동에 따라 상향 또는 하향될 수 있습니다.</b></li>
+                                <li>간편결제의 경우 신용카드결제만 우대수수료 적용 대상이며, 카카오머니, 네이버계좌/포인트 등 현금성 결제분은 해당되지 않습니다.</li>
+                                <li class="text-red">PG사 가입 당시에 국세청에 신고된 <b>카드 매출액이 파악되지 않는 신규가맹점</b>에는 &ZeroWidthSpace;우대수수료율이 적용되지 않으며, 일반가맹점 수수료율이 적용됩니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section6 -->
+    </section>
+    <!-- //container -->
+
+    <footer id="global-footer">
+        <div class="footer-area">
+            <section class="footer-wrap">
+                <div class="top">
+                    <h1><img src="../images/common/prosell_logo_gray.svg" alt="프로셀 로고"></h1>
+                    <div class="familysite">
+                        <span class="select-btn"></span>
+                        <span class="select-chk">패밀리 사이트</span>
+                        <ul class="site-list">
+                            <li><a href="http://blogpay.co.kr/" target="_blank">블로그페이</a></li>
+                            <li><a href="https://make.link/" target="_blank">메이크링크</a></li>
+                            <li><a href="http://mklink.co.kr/main" target="_blank">마케터링크</a></li>
+                            <li><a href="https://prosell.co.kr/" target="_blank">프로셀</a></li>
+                            <li><a href="https://www.ciderpay.com/" target="_blank">사이다페이</a></li>
+                            <li><a href="https://zipsa.net/" target="_blank">집사</a></li>
+                            <li><a href="https://danbipay.com/main" target="_blank">단비페이</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright-wrap">
+                    <div class="company">
+                        <p>
+                            <span>대표자명 : 정재훈</span><span>사업자등록번호 : 113-86-56537<a href="https://www.ftc.go.kr/www/bizCommList.do?key=232" target="_blank" class="lighten">사업자정보확인</a></span><span>통신판매업신고 : 제 2012-서울구로-0239호</span>
+                        </p>
+                        <p>
+                            <span>주소 : 서울특별시 구로구 디지털로 26길 61 에이스하이엔드타워 2차 1202호</span><span>대표메일 : <a href="mailto:payapp@udid.co.kr">prosell@udid.co.kr</a></span>
+                        </p>
+                        <p>Copyright © 프로셀. All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="terms">
+                    <a href="" target="_blank">공지사항</a>
+                    <a href="">서비스이용약관</a>
+                    <a href="">개인정보처리방침</a>
+                </div>
+                <div class="banner-wrap">
+                    <div class="social">
+                        <a href="https://www.instagram.com/payapp_official/" target="_blank" title="페이앱 공식 인스타그램"><i class="ico ico-insta"></i></a>
+                        <a href="https://www.facebook.com/udidcorporation" target="_blank" title="페이앱 공식 페이스북"><i class="ico ico-facebook"></i></a>
+                        <a href="https://pf.kakao.com/_LAsjT" target="_blank" title="페이앱 공식 플러스친구"><i class="ico ico-kakaoplus"></i></a>
+                        <a href="https://blog.naver.com/udidcompany" target="_blank" title="페이앱 공식 네이버 블로그"><i class="ico ico-blog"></i></a>
+                        <a href="https://post.naver.com/udidpayapp" target="_blank" title="블로그페이 공식 포스트"><i class="ico ico-post"></i></a>
+                    </div>
+                    <div class="banner-area">
+                        <span><i class="ico ico-innobiz"></i></span>
+                        <span><i class="ico ico-isms"></i></span>
+                        <span><i class="ico ico-nts"></i></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="top-btn">
+            <div role="button" class="f-btn go-top"><i class="ico ico-top"></i></div>
+        </div>
+
+    </footer>
+    <!-- //footer -->
+</div>
+<!-- //main-wrap -->
+</body>
+
+
+</html>
+

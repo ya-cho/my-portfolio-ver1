@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>프로셀 홈페이지</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/aos.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/aos.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap">
+    <header id="global-header">
+        <div class="header-wrapper">
+            <h1>
+                <a href="../index.html" class="prosell-logo"><img src="../images/common/prosell_logo.svg" alt="프로셀 바로가기"></a>
+                <span class="sub-logo">
+                    <a href="https://payapp.kr/homepage/index.html" target="_blank" class="payapp-logo"><img src="../images/common/payapp_logo.svg" alt="페이앱 바로가기"></a>
+                    <!--<a href="https://www.udpay.co.kr/" target="_blank" class="udpay-logo"><img src="../images/common/udpay_logo.svg" alt="유디페이 바로가기"></a>-->
+                </span>
+            </h1>
+            <nav class="gnb">
+                <div class="menu-btn">
+                    메뉴클릭
+                </div>
+                <div class="mobile-lnb">
+                    <ul>
+                        <li class="depth">
+                            <a href="javascript:;">주요기능</a>
+                            <ul class="sub">
+                                <li><a href="../function/design.html">디자인관리</a></li>
+                                <li><a href="../function/product.html">상품관리</a></li>
+                                <li><a href="../function/order.html">주문/배송관리</a></li>
+                                <li><a href="../function/etc.html">기타</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../hosting/hosting.html">호스팅</a>
+                        </li>
+                        <li>
+                            <a href="additional.html">부가서비스</a>
+                        </li>
+                        <li>
+                            <a href="../service/service.html">결제서비스</a>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">가이드</a>
+                            <ul class="sub">
+                                <li><a href="">시작하기</a></li>
+                                <li><a href="">튜토리얼</a></li>
+                                <li><a href="">도움말</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">고객센터</a>
+                            <ul class="sub">
+                                <li><a href="../cscenter/faq.html">자주묻는질문</a></li>
+                                <li><a href="../cscenter/qa-list.html">문의하기</a></li>
+                                <li><a href="../cscenter/domain-write.html">도메인 연동 신청</a></li>
+                                <li><a href="../cscenter/db-write.html">쇼핑몰 DB 이전신청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">내 서비스</a>
+                        </li>
+                    </ul>
+                    <div class="mobile-info">
+                        <a href="../member/login.html" class="btn-round">로그인</a>
+                        <a href="javascript:;" class="btn-purple btn-round" onclick="location.href='../member/join.html'">회원가입</a>
+                    </div>
+                </div>
+                <div class="web">
+                    <div class="gnb-area">
+                        <ul>
+                            <li class="drop">
+                                <a href="../function/design.html">주요기능</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="../function/design.html">디자인관리</a></li>
+                                        <li><a href="../function/product.html">상품관리</a></li>
+                                        <li><a href="../function/order.html">주문/배송관리</a></li>
+                                        <li><a href="../function/etc.html">기타</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="../hosting/hosting.html">호스팅</a>
+                            </li>
+                            <li class="drop">
+                                <a href="additional.html" class="on">부가서비스</a>
+                            </li>
+                            <li class="drop">
+                                <a href="../service/service.html">결제서비스</a>
+                            </li>
+                            <li class="drop">
+                                <a href="#a">가이드</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="">시작하기</a></li>
+                                        <li><a href="">튜토리얼</a></li>
+                                        <li><a href="">도움말</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="../cscenter/faq.html">고객센터</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="../cscenter/faq.html">자주묻는질문</a></li>
+                                        <li><a href="../cscenter/qa-list.html">문의하기</a></li>
+                                        <li><a href="../cscenter/domain-write.html">도메인 연동 신청</a></li>
+                                        <li><a href="../cscenter/db-write.html">쇼핑몰 DB 이전신청</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="">내 서비스</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="gnb-info">
+                <a href="../member/login.html">로그인</a>
+                <a href="javascript:;" onclick="location.href='../member/join.html'">회원가입</a>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <section class="container sub-container additional" id="service">
+        <section class="section1">
+            <div class="banner bg-purple">
+                <div class="inner">
+                    <div class="txt">
+                        <h3 data-aos="fade-down" data-aos-duration="700">부가 서비스</h3>
+                        <div class="guide-txt">
+                            <p>프로셀은 사용자 편의를 목적으로 실비가 <span>발생하는 서비스에 한해서만 유상 제공합니다.</span></p>
+                            <p>관리자 계정, 통계분석, 상품평 등 쇼핑몰 운영에 <span>꼭 필요한 서비스는 모두 무료입니다!</span></p>
+                        </div>
+                    </div>
+                    <div class="obj" data-aos="fade" data-aos-duration="700" data-aos-delay="500">
+                        <img src="../images/sub_page/sub_icon/additional_icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section class="section2">
+            <div class="inner">
+                <div class="sub-tit">
+                    <h4>무상 제공 서비스</h4>
+                </div>
+                <div class="content service" data-aos="fade-up" data-aos-duration="700" data-aos-delay="1000">
+                    <ul class="title">
+                        <li>서비스명</li>
+                        <li><p>프로셀<span class="label">FREE</span></p></li>
+                        <li class="visible-lg"><span class="company">A사</span></li>
+                        <li class="visible-lg"><span class="company">B사</span></li>
+                        <li class="visible-lg"><span class="company">C사</span></li>
+                        <li>타사<span>(A,B,C사)</span></li>
+                    </ul>
+                    <ul>
+                        <li>호스팅 <span>(이용료)</span></li>
+                        <li>무료 <span>(무제한)</span></li>
+                        <li class="visible-lg">무료</li>
+                        <li class="visible-lg">월 55,000원</li>
+                        <li class="visible-lg">월 / 무료 ~ 33,000원</li>
+                        <li>무료~<span>월 55,000원</span></li>
+                    </ul>
+                    <ul>
+                        <li>DB/FILE 백업</li>
+                        <li>무료 <span>(무제한)</span></li>
+                        <li class="visible-lg">무료</li>
+                        <li class="visible-lg">무료</li>
+                        <li class="visible-lg">무료</li>
+                        <li>무료</li>
+                    </ul>
+                    <ul>
+                        <li>통계/분석 <span>(확장형)</span></li>
+                        <li>무료 <span>(무제한)</span></li>
+                        <li class="visible-lg">연 55,000원</li>
+                        <li class="visible-lg">연 55,000원</li>
+                        <li class="visible-lg">월 33,000원</li>
+                        <li>월 33,000원 or<span>연 55,000원</span></li>
+                    </ul>
+                    <ul>
+                        <li>상품평 <span>(확장형)</span></li>
+                        <li>무료 <span>(무제한)</span></li>
+                        <li class="visible-lg">월 55,000원</li>
+                        <li class="visible-lg">월 99,000원</li>
+                        <li class="visible-lg">월 55,000원</li>
+                        <li>월 55,000원 or<span>99,000원</span></li>
+                    </ul>
+                    <ul>
+                        <li>게시판 추가</li>
+                        <li>무료 <span>(무제한)</span></li>
+                        <li class="visible-lg">월 700원 <span>(100M / 1개 기준)</span></li>
+                        <li class="visible-lg">월 55,000원 <span>(1G / 1개 기준)</span></li>
+                        <li class="visible-lg">월 11,000원 <span>(1G / 1개 기준)</span></li>
+                        <li>월 700원<span>(100M/개) or</span><span>월 55,000원</span><span>(1G/1개)</span></li>
+                    </ul>
+                    <ul>
+                        <li>부계정 추가</li>
+                        <li>무료 <span>(무제한)</span></li>
+                        <li class="visible-lg">월 1,000원 <span>(1개 기준)</span></li>
+                        <li class="visible-lg">월 22,000원 <span>(5개 초과 시 1개 기준)</span></li>
+                        <li class="visible-lg">무료</li>
+                        <li>무료 or<span>계정당 월 1,000원 or</span><span>월 22,000원</span><span>(5개 초과 시 1개 기준)</span></li>
+                    </ul>
+                    <ul>
+                        <li>무통장 입금 <span>자동 확인</span></li>
+                        <li>무료 <span>(무제한)</span></li>
+                        <li class="visible-lg">월 9,900원</li>
+                        <li class="visible-lg">연 55,000원</li>
+                        <li class="visible-lg">월 9,900원</li>
+                        <li>월 9,900원 or<span>연 55,000원</span></li>
+                    </ul>
+                    <ul>
+                        <li>글로벌샵 <span>(다국어)</span></li>
+                        <li>무료 <span>(무제한)</span><small>12개 국어 제공 예정</small></li>
+                        <li class="visible-lg">무료<small>8개 국어</small></li>
+                        <li class="visible-lg">월 55,000원<small>4개 국어 1개 기준</small></li>
+                        <li class="visible-lg">무료<small>4개 국어</small></li>
+                        <li>무료<span>8개 국어</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section class="section3">
+            <div class="inner">
+                <div class="sub-tit">
+                    <h4>유상 제공 서비스 <small class="text-gray">VAT 별도</small></h4>
+                </div>
+                <div class="content" data-aos="fade-up" data-aos-duration="700">
+                    <ul class="service-item">
+                        <li>
+                            <div class="item">
+                                <i class="ico ico-message"></i>
+                                <p class="tit">휴대폰 메시지 발송</p>
+                                <div class="price">
+                                    <p>건당 14원</p>
+                                    <span>(최저 9.5원)</span>
+                                </div>
+                                <div class="guide">
+                                    충전 후 이용 가능한 선불형 서비스입니다.<br>
+                                    충전 금액에 따라 할인 요율이 적용되며,<br>
+                                    발송 건 당 이용 요금이 차감됩니다.
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <i class="ico ico-alarm"></i>
+                                <p class="tit">카카오 알림톡 발송</p>
+                                <div class="price">
+                                    <p>건당 10원</p>
+                                    <span>(최저 6.8원)</span>
+                                </div>
+                                <div class="guide">
+                                    카카오톡 사용자에 한해 휴대폰 메시지를<br>
+                                    대체하여 발송합니다.<br>
+                                    (별도 충전 없이 메시지 충전금에서<br>
+                                    이용 요금이 차감됩니다.)
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <i class="ico ico-check"></i>
+                                <p class="tit">본인확인 서비스</p>
+                                <div class="price">
+                                    <p>건당 50원</p>
+                                </div>
+                                <div class="guide">
+                                    성인몰/폐쇄몰 등 실명 및<br>
+                                    성인 식별이 필요한 경우에만 사용하세요.<br>
+                                    (메시지 발송 서비스와 별도로<br>
+                                    충전 후 이용하실 수 있습니다.)
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item">
+                                <i class="ico ico-secret"></i>
+                                <p class="tit">SSL 보안 서버 인증서</p>
+                                <div class="price">
+                                    <p>연 27,000원</p>
+                                </div>
+                                <div class="guide">
+                                    외부 도메인 연결 시 요청에 따라<br>
+                                    인증서(GlobalSign Alpha SSL)를<br>
+                                    구입/적용하실 수 있습니다.<br>
+                                    (기본 도메인 사용 시 무료 적용)
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+    </section>
+    <!-- //container -->
+
+    <footer id="global-footer">
+        <div class="footer-area">
+            <section class="footer-wrap">
+                <div class="top">
+                    <h1><img src="../images/common/prosell_logo_gray.svg" alt="프로셀 로고"></h1>
+                    <div class="familysite">
+                        <span class="select-btn"></span>
+                        <span class="select-chk">패밀리 사이트</span>
+                        <ul class="site-list">
+                            <li><a href="http://blogpay.co.kr/" target="_blank">블로그페이</a></li>
+                            <li><a href="https://make.link/" target="_blank">메이크링크</a></li>
+                            <li><a href="http://mklink.co.kr/main" target="_blank">마케터링크</a></li>
+                            <li><a href="https://prosell.co.kr/" target="_blank">프로셀</a></li>
+                            <li><a href="https://www.ciderpay.com/" target="_blank">사이다페이</a></li>
+                            <li><a href="https://zipsa.net/" target="_blank">집사</a></li>
+                            <li><a href="https://danbipay.com/main" target="_blank">단비페이</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright-wrap">
+                    <div class="company">
+                        <p>
+                            <span>대표자명 : 정재훈</span><span>사업자등록번호 : 113-86-56537<a href="https://www.ftc.go.kr/www/bizCommList.do?key=232" target="_blank" class="lighten">사업자정보확인</a></span><span>통신판매업신고 : 제 2012-서울구로-0239호</span>
+                        </p>
+                        <p>
+                            <span>주소 : 서울특별시 구로구 디지털로 26길 61 에이스하이엔드타워 2차 1202호</span><span>대표메일 : <a href="mailto:payapp@udid.co.kr">prosell@udid.co.kr</a></span>
+                        </p>
+                        <p>Copyright © 프로셀. All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="terms">
+                    <a href="" target="_blank">공지사항</a>
+                    <a href="">서비스이용약관</a>
+                    <a href="">개인정보처리방침</a>
+                </div>
+                <div class="banner-wrap">
+                    <div class="social">
+                        <a href="https://www.instagram.com/payapp_official/" target="_blank" title="페이앱 공식 인스타그램"><i class="ico ico-insta"></i></a>
+                        <a href="https://www.facebook.com/udidcorporation" target="_blank" title="페이앱 공식 페이스북"><i class="ico ico-facebook"></i></a>
+                        <a href="https://pf.kakao.com/_LAsjT" target="_blank" title="페이앱 공식 플러스친구"><i class="ico ico-kakaoplus"></i></a>
+                        <a href="https://blog.naver.com/udidcompany" target="_blank" title="페이앱 공식 네이버 블로그"><i class="ico ico-blog"></i></a>
+                        <a href="https://post.naver.com/udidpayapp" target="_blank" title="블로그페이 공식 포스트"><i class="ico ico-post"></i></a>
+                    </div>
+                    <div class="banner-area">
+                        <span><i class="ico ico-innobiz"></i></span>
+                        <span><i class="ico ico-isms"></i></span>
+                        <span><i class="ico ico-nts"></i></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="top-btn">
+            <div role="button" class="f-btn go-top"><i class="ico ico-top"></i></div>
+        </div>
+
+    </footer>
+    <!-- //footer -->
+</div>
+<!-- //main-wrap -->
+</body>
+
+
+</html>
+

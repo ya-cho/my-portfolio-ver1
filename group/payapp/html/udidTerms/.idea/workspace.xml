@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f09371e7-e360-4fa4-964e-805ca160a736" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="391" column="52" selection-start-line="391" selection-start-column="52" selection-end-line="391" selection-end-column="52" />
+              <folding>
+                <element signature="n#article#1;n#div#1;n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/privacy/privacy20190115.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="211" column="45" selection-start-line="211" selection-start-column="45" selection-end-line="211" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/layout.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="527" column="21" lean-forward="true" selection-start-line="527" selection-start-column="21" selection-end-line="527" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>’</find>
+      <find>대금을</find>
+      <find>휴대폰 번호</find>
+      <find>휴대폰결제</find>
+      <find>.terms-header</find>
+      <find>.terms-header h2 span:after</find>
+      <find>col-lg</find>
+      <find>:hoe</find>
+      <find>html</find>
+      <find>520</find>
+      <find>.terms-header h2</find>
+      <find>.tab-menu &gt; *</find>
+      <find>.tab-container</find>
+      <find>terms-header</find>
+      <find>hidden-sm</find>
+      <find>개인정보 처리방침</find>
+      <find>arrow</find>
+      <find>.panel-header .btn-view .arrow</find>
+      <find>top</find>
+      <find>go-top</find>
+      <find>footer</find>
+      <find>개인정보처리방침</find>
+      <find>bookmark-wrap</find>
+      <find>li</find>
+      <find>.panel-body</find>
+      <find>0</find>
+      <find>persona</find>
+      <find>id=&quot;</find>
+      <find>bookmark</find>
+      <find>id=&quot;per</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>line1</replace>
+      <replace>depth1</replace>
+      <replace>depth2</replace>
+      <replace>class=&quot;list-st&quot;</replace>
+      <replace>.list-st</replace>
+      <replace>list1-st</replace>
+      <replace>list-st</replace>
+      <replace>&quot;</replace>
+      <replace>휴대폰번호</replace>
+      <replace>'</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/css/reset.css" />
+        <option value="$PROJECT_DIR$/privacy/privacy20191016.html" />
+        <option value="$USER_HOME$/Downloads/html/js/common.js" />
+        <option value="$PROJECT_DIR$/css/layout.css" />
+        <option value="$PROJECT_DIR$/js/common.js" />
+        <option value="$PROJECT_DIR$/sub/privacy_popup.html" />
+        <option value="$PROJECT_DIR$/privacy/privacy20191023.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/privacy/privacy20190115.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="25" />
+    <option name="y" value="23" />
+    <option name="width" value="2535" />
+    <option name="height" value="1417" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="udidTerms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="udidTerms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="udidTerms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="udidTerms" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="udidTerms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="udidTerms" type="462c0819:PsiDirectoryNode" />
+              <item name="privacy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="udidTerms" type="b2602c69:ProjectViewProjectNode" />
+              <item name="udidTerms" type="462c0819:PsiDirectoryNode" />
+              <item name="sub" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/privacy" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/sub" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f09371e7-e360-4fa4-964e-805ca160a736" name="Default Changelist" comment="" />
+      <created>1603154549181</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603154549181</updated>
+      <workItem from="1603154550441" duration="352000" />
+      <workItem from="1603157519516" duration="19772000" />
+      <workItem from="1603241229568" duration="5673000" />
+      <workItem from="1603249179914" duration="5000" />
+      <workItem from="1603267388883" duration="2178000" />
+      <workItem from="1603326390293" duration="2000" />
+      <workItem from="1603341085130" duration="25624000" />
+      <workItem from="1603431164500" duration="11214000" />
+      <workItem from="1603672564971" duration="36658000" />
+      <workItem from="1603844040702" duration="7024000" />
+      <workItem from="1604292660216" duration="4673000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="113175000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="25" y="23" width="2535" height="1417" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14600882" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4796875" weight="0.06185567" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4968051" weight="0.12012645" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4968051" weight="0.3561644" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.48988286" weight="0.54689145" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005208" side_tool="true" weight="0.058762886" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49946752" weight="0.1369863" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49947917" weight="0.058762886" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../shobizHompage/w/js/common.js</url>
+          <line>94</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../udidHompage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../shobizHompage/w/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="193" column="19" lean-forward="true" selection-start-line="89" selection-start-column="4" selection-end-line="193" selection-end-column="19" />
+          <folding>
+            <element signature="e#3030#6267#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../shobizHompage/w/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../shobizHompage/w/scss/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="2491" column="21" lean-forward="true" selection-start-line="2407" selection-end-line="2491" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/html/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="69" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="224" column="8" selection-start-line="224" selection-start-column="8" selection-end-line="226" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/html/scss/layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="1154" selection-start-line="1154" selection-end-line="1177" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="527" column="21" lean-forward="true" selection-start-line="527" selection-start-column="21" selection-end-line="527" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/privacy/privacy20191023.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="462" column="12" selection-start-line="462" selection-start-column="12" selection-end-line="462" selection-end-column="12" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub/privacy_popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#5291#5309#0" expanded="true" />
+            <element signature="e#5364#5384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="391" column="52" selection-start-line="391" selection-start-column="52" selection-end-line="391" selection-end-column="52" />
+          <folding>
+            <element signature="n#article#1;n#div#1;n#div#1;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/privacy/privacy20190115.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="211" column="45" selection-start-line="211" selection-start-column="45" selection-end-line="211" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

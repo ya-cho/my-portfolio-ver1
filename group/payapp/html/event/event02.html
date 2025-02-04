@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no"/>
+    <title>PAYAPP</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;900&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/aos.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/aos.js"></script>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/jquery-waypoints.min.js"></script>
+    <script type="text/javascript" src="../js/inview.min.js"></script>
+    <script type="text/javascript" src="../js/counterup.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap">
+    <header id="global-header">
+        <div class="sticky-bar"></div>
+        <div class="header-wrapper">
+            <h1>
+                <a href="../index.html">페이앱</a>
+            </h1>
+            <nav class="gnb">
+                <div class="menu-btn">
+                    메뉴클릭
+                </div>
+                <div class="mobile-lnb">
+                    <ul>
+                        <li>
+                            <a href="../about/about.html">페이앱소개</a>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">결제방식</a>
+                            <ul class="sub">
+                                <li><a href="../pay/pay_simple.html">통합/간편결제</a></li>
+                                <li><a href="../pay/pay_camera.html">카메라결제</a></li>
+                                <li><a href="../pay/pay_sms.html">SMS결제</a></li>
+                                <li><a href="../pay/pay_touch.html">터치결제</a></li>
+                                <li><a href="../pay/pay_qr.html">QR결제</a></li>
+                                <li><a href="../pay/pay_period.html">정기결제</a></li>
+                                <li><a href="../pay/pay_foreign.html">해외결제</a></li>
+                                <li><a href="../pay/pay_sub.html">부계정</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">가입안내</a>
+                            <ul class="sub">
+                                <li><a href="../guide/guide1.html">가입절차</a></li>
+                                <li><a href="../guide/guide2.html">비용안내</a></li>
+                                <li><a href="../guide/guide3.html">구비서류</a></li>
+                                <li><a href="../guide/guide4.html">보증보험</a></li>
+                                <li><a href="../guide/guide5.html">정산안내</a></li>
+                                <li><a href="../guide/guide6.html">리셀러안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../api/api.html">API 연동</a>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">고객센터</a>
+                            <ul class="sub">
+                                <li><a href="../bbs/bbs_faq.html">자주 묻는 질문</a></li>
+                                <li><a href="../bbs/bbs_notice.html">공지사항</a></li>
+                                <li><a href="../bbs/bbs_ask.html">문의사항</a></li>
+                                <li><a href="../bbs/bbs_use.html">이용가이드</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="mobile-info">
+                        <a href="tel:1800-3772">고객센터 연결</a>
+                        <a href="../member/login.html">로그인</a>
+                        <a href="/cardevent/cardevent.html" title="페이앱 카드 무이자 행사 내용 보기" target="_blank">무이자 할부안내</a>
+                        <button type="button" onclick="window.open('../member/seller_regist.html')" class="btn btn-blue btn-round btn-block">판매자 회원가입</button>
+                        <div class="mobile-ban">
+                            <a href="http://blogpay.co.kr/" target="_blank" title="새창으로 이동">
+                                <img src="../images/banner/img_aside_blogpay_m.png" alt="블로그페이 바로가기">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="web">
+                    <ul>
+                        <li>
+                            <a href="../about/about.html">페이앱소개</a>
+                        </li>
+                        <li>
+                            <a href="../pay/pay_simple.html">결제방식</a>
+                            <ul class="sub">
+                                <li><a href="../pay/pay_simple.html">통합/간편결제</a></li>
+                                <li><a href="../pay/pay_camera.html">카메라결제</a></li>
+                                <li><a href="../pay/pay_sms.html">SMS결제</a></li>
+                                <li><a href="../pay/pay_touch.html">터치결제</a></li>
+                                <li><a href="../pay/pay_qr.html">QR결제</a></li>
+                                <li><a href="../pay/pay_period.html">정기결제</a></li>
+                                <li><a href="../pay/pay_foreign.html">해외결제</a></li>
+                                <li><a href="../pay/pay_sub.html">부계정</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../guide/guide1.html">가입안내</a>
+                            <ul class="sub">
+                                <li><a href="../guide/guide1.html">가입절차</a></li>
+                                <li><a href="../guide/guide2.html">비용안내</a></li>
+                                <li><a href="../guide/guide3.html">구비서류</a></li>
+                                <li><a href="../guide/guide4.html">보증보험</a></li>
+                                <li><a href="../guide/guide5.html">정산안내</a></li>
+                                <li><a href="../guide/guide6.html">리셀러안내</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="../api/api.html">API 연동</a>
+                        </li>
+                        <li>
+                            <a href="../bbs/bbs_faq.html">고객센터</a>
+                            <ul class="sub">
+                                <li><a href="../bbs/bbs_faq.html">자주 묻는 질문</a></li>
+                                <li><a href="../bbs/bbs_notice.html">공지사항</a></li>
+                                <li><a href="../bbs/bbs_ask.html">문의사항</a></li>
+                                <li><a href="../bbs/bbs_use.html">이용가이드</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="gnb-info">
+                <a href="../member/login.html">로그인</a>
+                <a href="javascript:;" onclick="location.href='../member/seller_regist.html'">판매자 회원가입</a>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <section class="container" id="event02">
+        <section class="section1">
+            <div class="heading-event">
+                <h2>페이앱<span> 결제프로세스</span></h2>
+                <p data-aos="fade-up" data-aos-easing="ease" data-aos-delay="300">지금 가입하면 <strong>모든 것이 무료</strong>입니다.</p>
+            </div>
+            <div class="img-area">
+                <div class="phone" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="800" data-aos-delay="500">
+                    <img src="../images/event/event02/sec1_object.png" alt="">
+                </div>
+                <div class="logo-wrapper">
+                    <div class="logos"></div>
+                </div>
+            </div>
+            <p class="sub-tit" data-aos="fade-up" data-aos-duration="600">
+                온/오프라인 모두 결제 받을 수 있는<br><strong>신개념 결제 솔루션 페이앱</strong>은 <span>다양한 결제 사용이 가능합니다.</span>
+            </p>
+            <div class="arrow-ani">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section class="section2">
+            <div class="heading-event">
+                <h2 data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">바로결제</h2>
+            </div>
+            <div class="cont-area">
+                <div class="outer">
+                    <div class="tab-menu">
+                        <div class="tab-btns">
+                            <button class="active">카메라결제</button>
+                            <button>NFC결제</button>
+                            <button>QR결제</button>
+                            <button>리더기결제</button>
+                        </div>
+                    </div>
+                    <div class="step-area tabs">
+                        <div class="inner">
+                            <div class="tab active">
+                                <div class="step-slider">
+                                    <ul class="step-guide">
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 01</h4>
+                                                <p>상품금액 입력 후<br><strong>카메라결제를 클릭</strong>합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_camera01.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 02</h4>
+                                                <p>촬영을 위해<br><strong>결제할 카드를 준비</strong>합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_camera02.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 03</h4>
+                                                <p>가로카드는 앞면, 세로카드는 뒷면<br>사각형에 맞춰 <strong>카드를 촬영</strong>합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_camera03.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 04</h4>
+                                                <p>카드인식이 정상적으로 되면<br><strong>결제가 완료</strong>됩니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_camera04.png" alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <div class="step-slider">
+                                    <ul class="step-guide">
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 01</h4>
+                                                <p>상품금액 입력 후<br><strong>NFC결제를 클릭</strong>합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_nfc01.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 02</h4>
+                                                <p>NFC모드를 활성 후 휴대폰 뒷면에<br><strong>결제할 카드를 접촉</strong>합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_nfc02.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 03</h4>
+                                                <p>카드인식이 정상적으로 되면<br><strong>결제가 진행</strong>됩니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_nfc03.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 04</h4>
+                                                <p>결제가 완료되면<br><strong>'결제확인'</strong> 화면으로 이동합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_nfc04.png" alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <div class="step-slider">
+                                    <ul class="step-guide">
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 01</h4>
+                                                <p>상품금액 입력 후<br><strong>QR결제를 클릭</strong>합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_qr01.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 02</h4>
+                                                <p>생성된 QR코드를 확인후<br><strong>결제를 진행</strong>합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_qr02.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 03</h4>
+                                                <p>생성된 <strong>QR코드를 촬영</strong>하면<br>결제가 진행됩니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_qr03.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 04</h4>
+                                                <p>결제가 완료되면<br><strong>'결제확인'</strong> 화면으로 이동합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_qr04.png" alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <div class="step-slider">
+                                    <ul class="step-guide">
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 01</h4>
+                                                <p>상품금액 입력 후<br><strong>OK CHECK를 클릭</strong>합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_reader01.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 02</h4>
+                                                <p><strong>리더기를 휴대폰에 장착</strong>후<br>결제할 카드를 읽혀줍니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_reader02.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 03</h4>
+                                                <p>카드인식이 정상적으로 되면<br><strong>결제가 진행</strong>됩니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_reader03.png" alt="">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="txt">
+                                                <h4>STEP 04</h4>
+                                                <p>결제가 완료되면<br><strong>'결제확인'</strong> 화면으로 이동합니다.</p>
+                                            </div>
+                                            <div class="obj">
+                                                <img src="../images/event/event02/sec2_reader04.png" alt="">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section class="section3">
+            <div class="inner">
+                <div class="heading-event">
+                    <h2 data-aos="zoom-in" data-aos-duration="800" data-aos-dealy="300">링크결제</h2>
+                </div>
+                <div class="cont-area" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="800" data-aos-delay="300">
+                    <ul class="link-pay">
+                        <li class="item">
+                            <div class="img-area">
+                                <img src="../images/event/event02/sec3_step1.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <span>STEP 01</span>
+                                <h5>판매자 링크생성</h5>
+                                <p>상품금액, 상품명, 구매자 연락처 입력</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="img-area">
+                                <img src="../images/event/event02/sec3_step2.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <span>STEP 02</span>
+                                <h5>구매자 링크클릭</h5>
+                                <p>SMS, 카카오톡 등 간편한 결제요청</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="img-area">
+                                <img src="../images/event/event02/sec3_step3.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <span>STEP 03</span>
+                                <h5>구매자 결제진행</h5>
+                                <p>신용카드, 휴대폰 등 다양한 결제수단</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="img-area">
+                                <img src="../images/event/event02/sec3_step4.png" alt="">
+                            </div>
+                            <div class="txt">
+                                <span>STEP 04</span>
+                                <h5>구매자 결제완료</h5>
+                                <p>영수증이 출력되며 결제완료 확인</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+
+        <section class="section4">
+            <div class="heading-event">
+                <h2 data-aos="zoom-in" data-aos-duration="800" data-aos-dealy="300">결제수단</h2>
+            </div>
+            <div class="cont-area">
+                <div class="device-box" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                    <img src="../images/event/event02/sec4_phone_bg.png" alt="">
+                </div>
+                <div class="card-wrap" data-aos="fade-in" data-aos-delay="650" data-aos-duration="900">
+                    <ul class="card-list">
+                        <li><img src="../images/event/event02/sec4_card01.png" alt=""></li>
+                        <li><img src="../images/event/event02/sec4_card02.png" alt=""></li>
+                        <li><img src="../images/event/event02/sec4_card03.png" alt=""></li>
+                        <li><img src="../images/event/event02/sec4_card04.png" alt=""></li>
+                        <li><img src="../images/event/event02/sec4_card05.png" alt=""></li>
+                        <li><img src="../images/event/event02/sec4_card06.png" alt=""></li>
+                        <li><img src="../images/event/event02/sec4_card07.png" alt=""></li>
+                        <li><img src="../images/event/event02/sec4_card08.png" alt=""></li>
+                        <li><img src="../images/event/event02/sec4_card09.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //section4 -->
+
+        <section class="section5">
+            <div class="inner">
+                <div class="txt">
+                    <p data-aos="fade-up" data-aos-duration="800">신개념 모바일 결제 솔루션</p>
+                    <h3 data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">페이앱과 함께 성장하세요.</h3>
+                </div>
+                <a href="../bbs/ask_write.html" target="_blank">문의하기</a>
+            </div>
+        </section>
+    </section>
+    <!-- //container -->
+
+    <footer id="global-footer">
+        <div class="footer-area">
+            <section class="footer-wrap">
+                <h1>(주)유디아이디</h1>
+                <div class="familysite">
+                    <span class="select-btn"> </span>
+                    <span class="select-chk">FamilySite</span>
+                    <ul class="site-list">
+                        <li><a href="http://blogpay.co.kr/" target="_blank">블로그페이</a></li>
+                        <li><a href="https://make.link/" target="_blank">메이크링크</a></li>
+                        <li><a href="http://mklink.co.kr/main" target="_blank">마케터링크</a></li>
+                        <li><a href="https://prosell.co.kr/" target="_blank">프로셀</a></li>
+                        <li><a href="https://www.ciderpay.com/" target="_blank">사이다페이</a></li>
+                        <li><a href="https://zipsa.net/" target="_blank">집사</a></li>
+                        <li><a href="https://danbipay.com/main" target="_blank">단비페이</a></li>
+                    </ul>
+                </div>
+                <div class="copyright-wrap">
+                    <div class="company">
+                        <p>
+                            <span>상호명 : (주)유디아이디</span><span>대표자 : 김재인</span><span>개인정보관리책임자 : 김미정</span><span>사업자등록번호 : 113-86-56537</span>
+                        </p>
+                        <p>
+                            <span>통신판매업 신고번호 : 제 2012-서울구로-0239호<a href="http://www.ftc.go.kr/www/bizCommList.do?key=232" target="_blank"> [사업자정보확인]</a></span><span>고객센터 : 1800-3772</span><span>팩스 : 02-6008-9760</span><span><a href="mailto:payapp@udid.co.kr">이메일 : payapp@udid.co.kr</a></span>
+                        </p>
+                        <p>주소 : 서울특별시 구로구 디지털로 26길 61 에이스하이엔드타워 2차 1202호</p>
+                        <p>COPYRIGHT © 2012 UDID CORP. All rights reserved. Inspired by Charlie C</p>
+                    </div>
+                </div>
+                <div class="terms">
+                    <a href="http://udid.co.kr/" target="_blank">회사소개</a>
+                    <a href="../udidTerms/index.html">이용약관</a>
+                    <a href="../udidTerms/index.html">개인정보처리방침</a>
+                    <a href="http://blogpay.co.kr/dev/" target="_blank">개발자센터</a>
+                    <a onclick="window.open('./member/partnership.html','제휴제안 신청','resizable=1, scrollbars=1, width=770 height=820')" data-ajax="false" target="_blank">제휴문의</a>
+                </div>
+                <div class="banner-wrap">
+                    <div class="banner-area">
+                        <div class="banner">
+                            <strong><img src="../images/common/img_mark_isms.png" alt="ISMS"><span>ISMS</span></strong>
+                            <span>개인정보보호<em class="wbr">관리체계인증 19-016</em></span>
+                        </div>
+                        <div class="banner">
+                            <strong>PG</strong>
+                            <span>전자지급결제대행업<em class="wbr">등록번호 02-004-00096</em></span>
+                        </div>
+                        <div class="banner">
+                            <strong>ESCROW</strong>
+                            <span>결제대금예치업<em class="wbr">등록번호 02-006-00035</em></span>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.instagram.com/payapp_official/" target="_blank" title="페이앱 공식 인스타그램"><i class="ico ico-insta"></i></a>
+                        <a href="https://www.facebook.com/udidcorporation" target="_blank" title="페이앱 공식 페이스북"><i class="ico ico-facebook"></i></a>
+                        <a href="https://pf.kakao.com/_LAsjT" target="_blank" title="페이앱 공식 플러스친구"><i class="ico ico-kakaoplus"></i></a>
+                        <a href="https://blog.naver.com/udidcompany" target="_blank" title="페이앱 공식 네이버 블로그"><i class="ico ico-blog"></i></a>
+                        <a href="https://post.naver.com/udidpayapp" target="_blank" title="블로그페이 공식 포스트"><i class="ico ico-post"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="floating-cont">
+            <div class="fixed-menu">
+                <div class="menu-list">
+                    <a href="http://blogpay.co.kr/" target="_blank" title="새창으로이동"><span class="hidden-xs">링크형 주문서부터 쇼핑몰까지 한번에,</span> 블로그페이</a>
+                    <a href="../member/login.html">관리자 로그인</a>
+                    <a>서비스 신청</a>
+                    <a href="javascript:;" onclick="window.open('./popup/pay_test.html','원격 결제 테스트','width=400,height=600,top=200,left=300,location=no,status=no,scrollbars=yes');">결제 테스트</a>
+                    <a href="javascript:;" onclick="window.open('./popup/pay_view.html','결제 내역 조회','width=828,height=500,top=200,left=400,location=no,status=no,scrollbars=yes');">결제내역 조회</a>
+                    <a>무이자 할부</a>
+                </div>
+            </div>
+        </div>
+        <div class="floating-menu">
+            <div role="button" class="f-btn go-top">
+                <b>TOP</b>
+            </div>
+            <div role="button" class="f-btn go-menu"></div>
+        </div>
+
+    </footer>
+    <!-- //footer -->
+
+</div>
+<!-- //wrap -->
+</body>
+</html>
+

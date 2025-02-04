@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>유캔싸인</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/chunk-vendors.60e13059.css"> <!-- 기존 관리자 확인용 css 추후 삭제 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout_sample.css"> <!-- 기존 관리자 확인용 css 추후 삭제 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap">
+    <header>
+        <h1>
+            <a href="../documents.html"><span class="logo logo-sm white">유캔싸인</span><em>관리자</em></a>
+        </h1>
+        <div role="button" class="menu"><span class="line"></span></div>
+    </header>
+    <aside>
+        <div class="side-wrap">
+            <button type="button" class="btn btn-blue btn-md btn-rounded">서명 요청하기</button>
+            <nav>
+                <div class="side-link">
+                    <b class="text-blue">무제한</b>
+                    <a href="#a">총 잔여 서명요청 <i class="ico ico-rem ico-link"></i></a>
+                </div>
+                <div class="menu-list">
+                    <ul class="slide-menu">
+                        <li class="depth">
+                            <a href="../documents.html">
+                                <i class="ico ico-papers"></i>조직문서
+                            </a>
+                            <ul class="sub">
+                                <li><a href="#a">내 담당 문서</a></li>
+                                <li><a href="#a">공유 받은 문서</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../template.html">
+                                <i class="ico ico-rem ico-template"></i>템플릿
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../bulkTransmit.html">
+                                <i class="ico ico-send"></i>대량전송
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../docuEdit.html">
+                                <i class="ico ico-edit"></i>문서편집기
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../signStamp.html">
+                                <i class="ico ico-seal"></i>사인/도장
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="info-menu">
+                        <a href="./profile.html" class="active"><span class="new">설정</span> <i class="arrow arrow-md arrow-gray right"></i></a> <!-- 설정이 추가되면 new 클래스 추가 -->
+                        <a href="#a">고객센터 <i class="arrow arrow-md arrow-gray right"></i></a>
+                        <a href="javascript:;">로그아웃 <i class="arrow arrow-md arrow-gray right"></i></a>
+                    </div>
+                </div>
+            </nav>
+            <div class="update-btn ">
+                <button type="button" class="btn btn-dark-blue btn-md btn-rounded">
+                    <i class="ico ico-rem ico-update"></i><span class="new">업데이트 소식</span> <!-- 업데이트가 추가되면 new 클래스 추가 -->
+                </button>
+            </div>
+        </div>
+    </aside>
+    <section class="container sub-bg">
+        <div class="a-header">
+            <h2>설정</h2>
+            <div class="change-locale">
+                <button type="button" class="ant-dropdown-trigger dropdown ant-btn">다국어</button>
+            </div>
+        </div>
+        <section class="a-cont">
+            <div class="setting">
+                <div class="tab-line">
+                    <div class="inner">
+                        <ul>
+                            <li class="active"><a href="profile.html">내 정보</a></li>
+                            <li><a href="billing.html">결제 정보</a></li>
+                            <li><a href="organization.html">조직 정보</a></li>
+                            <li><a href="members.html">구성원 정보</a></li>
+                            <li><a href="share.html">기본 공유 관리</a></li>
+                            <li><a href="branding.html">맞춤 브랜딩</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="inner">
+                        <div class="info-cont">
+                            <div class="horizon-list">
+                                <div>
+                                    <div class="list-tit">
+                                        <h4>내정보</h4>
+                                    </div>
+                                    <ul class="info-list">
+                                        <li>주식회사 아트리즈
+                                            <div class="btn-inline"><a href="#a" class="text-blue">변경하기</a></div>
+                                        </li>
+                                        <li>
+                                            변경할 이름
+                                            <div class="input-group form-control input-group-lg">
+                                                <input type="text" value="주식회사 아트리즈" maxlength="32">
+                                                <span role="button" class="input-group-addon btn-active" title="저장하기">저장하기</span>
+                                                <!-- 인풋 입력 시 btn-active 로 컬러 변경됩니다.-->
+                                            </div>
+                                        </li>
+                                        <!-- 변경하기 버튼 클릭했을 때 나오는 영역입니다. -->
+                                        <li>계정 이메일<p>admin@atreez.com</p></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="list-tit">
+                                        <h4>비밀번호</h4>
+                                    </div>
+                                    <ul class="info-list">
+                                        <li>
+                                            <div class="form-group form-group-md">
+                                                <label for="pw" class="form-tit necessary">이전 비밀번호</label>
+                                                <input type="password" id="pw" placeholder="영어, 숫자 또는 특수문자 조합 20자 이내"  class="form-control" maxlength="20">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group form-group-md">
+                                                <label for="Newpw" class="form-tit necessary">새 비밀번호</label>
+                                                <input type="password" id="Newpw" placeholder="영어, 숫자 또는 특수문자 조합 10~20자 이내"  class="form-control" maxlength="20">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group form-group-md">
+                                                <label for="Newpw" class="form-tit necessary">새 비밀번호 확인</label>
+                                                <input type="password" id="Newpw" placeholder="영어, 숫자 또는 특수문자 조합 10~20자 이내"  class="form-control" maxlength="20">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn btn-blue">저장하기</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+<!-- //wrap -->
+
+</body>
+
+
+</html>
+

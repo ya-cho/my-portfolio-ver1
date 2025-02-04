@@ -1,0 +1,50 @@
+/* base */
+
+@font-face {
+    font-family: 'Nanum Gothic'; 
+    font-style: normal;
+    font-weight: 400;
+    src: local('NanumGothic'), local('나눔고딕');
+}
+@font-face {
+    font-family: 'Nanum Gothic'; 
+    font-style: normal;
+    font-weight: 700;
+    src: local('NanumGothic Bold'), local('NanumGothic-Bold'), local('나눔고딕 Bold');
+}
+@font-face {
+    font-family: 'Nanum Gothic'; 
+    font-style: normal;
+    font-weight: 800;
+    src: local('NanumGothic ExtraBold'), local('NanumGothic-ExtraBold'), local('나눔고딕 ExtraBold');
+}
+
+/* custom */
+
+@font-face {
+    font-family: 'ff-l';
+    font-style: normal;
+    font-weight: 400;
+    src: local('NanumGothic'), local('나눔고딕');
+}
+@font-face {
+    font-family: 'ff-r';
+    font-style: normal;
+    font-weight: 400;
+    src: local('NanumGothic'), local('나눔고딕');
+}
+@font-face {
+    font-family: 'ff-m';
+    font-style: normal;
+    font-weight: 700;
+    src: local('NanumGothic Bold'), local('NanumGothic-Bold'), local('나눔고딕 Bold');
+}
+@font-face {
+    font-family: 'ff-b';
+    font-style: normal;
+    font-weight: 800;
+    src: local('NanumGothic ExtraBold'), local('NanumGothic-ExtraBold'), local('나눔고딕 ExtraBold');
+}
+
+body {font-family:'Nanum Gothic',HelveticaNeue-Light,AppleSDGothicNeo-Light,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color:#000000;}
+input, button, textarea {font-family:'Nanum Gothic',HelveticaNeue-Light,AppleSDGothicNeo-Light,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;}

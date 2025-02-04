@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Prosell Admin</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/font/common.css">
+    <link rel="stylesheet" href="../css/adm/common.css">
+    <link rel="stylesheet" href="../css/adm/ui.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="update"></div>
+    <div class="layout-top clearfix">
+        <h1 class="logo">
+            <a href="#"></a>
+        </h1>
+        <ul class="menu">
+            <li><a href="">PC 바로가기</a></li>
+            <li><a href="">모바일 바로가기</a></li>
+            <li><a href="">기술지원</a></li>
+            <li><a href="">페이앱</a></li>
+        </ul>
+        <div class="side">
+            <span class="name">{아이디} 님</span>
+            <div class="order-info">
+                <div class="select-wrap">
+                    <div class="selectbox" data-focus="">
+                        <span class="select">주문자명</span>
+                        <div class="option">
+                            <input type="hidden" name="choice" value="" data-title="주문자명">
+                            <ul>
+                                <li class="focus" data-value="">주문자명</li>
+                                <li data-value="">수령자명</li>
+                                <li data-value="">주문번호</li>
+                                <li data-value="">주문상품명</li>
+                                <li data-value="">휴대폰번호</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-wrap">
+                    <input type="text" name="" id="" placeholder="주문 검색">
+                    <a href="" class="btn-search">
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:#616977;}
+                                .st1{fill:none;stroke:#616977;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+                            </style>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M8.43,3c2.95,0,5.35,2.4,5.35,5.35c0,2.95-2.4,5.35-5.35,5.35c-2.95,0-5.35-2.4-5.35-5.35
+                                    C3.08,5.4,5.48,3,8.43,3 M8.43,1C4.37,1,1.08,4.29,1.08,8.35c0,4.06,3.29,7.35,7.35,7.35c4.06,0,7.35-3.29,7.35-7.35
+                                    C15.78,4.29,12.49,1,8.43,1L8.43,1z"></path>
+                                </g>
+                                <line class="st1" x1="13.07" y1="13.35" x2="18.08" y2="18.37"></line>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <a href="" class="logout"></a>
+        </div>
+    </div>
+    <div class="layout-main side">
+        <div class="layout-wrap clearfix">
+            <div class="side-menu">
+                <span class="ham-btn" data-btn="menu-side" data-value=""></span>
+                <ul class="menu">
+                    <li class="depth1" data-menu-depth1="product">
+                        <div class="icon">
+                            <i class="ico ico-product"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">상품관리</p>
+                            <div class="depth2">
+                                <a href="" class="on">상품 조회/수정</a>
+                                <a href="">상품 등록</a>
+                                <a href="">상품 일괄등록</a>
+                                <a href="">상품 카테고리</a>
+                                <a href="">상품 불편신고</a>
+                                <a href="" class="darken">사진 보관함</a>
+                                <a href="" class="darken">문서 보관함</a>
+                                <a href="" class="darken">서식 보관함</a>
+                                <a href="" class="darken">상품 브랜드</a>
+                                <a href="" class="darken">상품 추가주문옵션</a>
+                                <a href="" class="darken">상품 색상/규격</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="order">
+                        <div class="icon">
+                            <i class="ico ico-order"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">주문관리</p>
+                            <div class="depth2">
+                                <a href="">주문 조회<span class="count">99</span></a>
+                                <a href="">미결제 확인<span class="count">99</span></a>
+                                <a href="">발송 관리<span class="count">99</span></a>
+                                <a href="">일괄 발송처리</a>
+                                <a href="">발주 관리</a>
+                                <a href="">취소 관리<span class="count">99</span></a>
+                                <a href="">반품 관리<span class="count">99</span></a>
+                                <a href="">교환 관리<span class="count">99</span></a>
+                                <a href="">개인 결제관리<span class="count">99</span></a>
+                                <a href="" class="darken">구매확정 내역</a>
+                                <a href="" class="darken">전체 결제내역</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="account">
+                        <div class="icon">
+                            <i class="ico ico-account"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">회원/혜택관리</p>
+                            <div class="depth2">
+                                <a href="">쿠폰관리</a>
+                                <a href="">쿠폰 이용내역 조회</a>
+                                <a href="">쿠폰 자동발급 설정</a>
+                                <a href="">적립금 관리</a>
+                                <a href="">적립금 자동지급 설정</a>
+                                <a href="">회원계정 관리</a>
+                                <a href="">고객등급 관리</a>
+                                <a href="" class="darken">휴면계정 관리</a>
+                                <a href="" class="darken">탈퇴계정 관리</a>
+                                <a href="" class="darken">본인확인 회원</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="ai">
+                        <div class="icon">
+                            <i class="ico ico-ai"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">마케팅·메시지</p>
+                            <div class="depth2">
+                                <a href="">메시지 보내기</a>
+                                <a href="">메시지 발송내역</a>
+                                <a href="">메시지 자동발송 설정</a>
+                                <a href="">알림톡 자동발송 설정</a>
+                                <a href="">이메일 자동발송 설정</a>
+                                <a href="">이메일 발송내역</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="contents">
+                        <div class="icon">
+                            <i class="ico ico-contents"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">문의/게시판관리</p>
+                            <div class="depth2">
+                                <a href="">상품문의 관리</a>
+                                <a href="">1:1문의 관리</a>
+                                <a href="">상품평 관리</a>
+                                <a href="">자주묻는 질문</a>
+                                <a href="">공지사항</a>
+                                <a href="">게시판 관리</a>
+                                <a href="">게시판 권한 설정</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="design">
+                        <div class="icon">
+                            <i class="ico ico-design"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">디자인관리</p>
+                            <div class="depth2">
+                                <a href="">쇼핑몰 색상·로고</a>
+                                <a href="">쇼핑몰 템플릿</a>
+                                <a href="">쇼핑몰 디자인 편집</a>
+                                <a href="">통합 배너</a>
+                                <a href="">메인 배너</a>
+                                <a href="">팝업창 관리</a>
+                                <a href="" class="darken">쇼핑몰 페이지 스킨</a>
+                                <a href="" class="darken">아이콘 디자인</a>
+                                <a href="" class="darken">쿠폰 디자인</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="charges">
+                        <div class="icon">
+                            <i class="ico ico-charges"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">정산관리</p>
+                            <div class="depth2">
+                                <a href="">페이앱 판매자</a>
+                                <a href="">페이앱 고객지원</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="stat">
+                        <div class="icon">
+                            <i class="ico ico-stat"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">통계 및 분석</p>
+                            <div class="depth2">
+                                <a href="">방문 통계</a>
+                                <a href="">회원 통계</a>
+                                <a href="">상품 통계</a>
+                                <a href="">주문 통계</a>
+                                <a href="">매출 통계</a>
+                                <a href="">기타 통계</a>
+                                <a href="" class="darken">현재 접속자</a>
+                                <a href="" class="darken">방문자 로그</a>
+                                <a href="" class="darken">페이지 로그</a>
+                                <a href="" class="darken">로그인 기록</a>
+                                <a href="" class="darken">고객 장바구니 분석</a>
+                                <a href="" class="darken">고객 상품보관함 분석</a>
+                                <a href="" class="darken">고객 최근본상품 분석</a>
+                                <a href="" class="darken">고객 검색기록 분석</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="depth1" data-menu-depth1="shopping">
+                        <div class="icon">
+                            <i class="ico ico-shopping"></i>
+                        </div>
+                        <div class="menu-group">
+                            <p class="title" data-btn="menu-depth1">쇼핑몰관리</p>
+                            <div class="depth2">
+                                <a href="">판매자 정보</a>
+                                <a href="">쇼핑환경 설정</a>
+                                <a href="">배송사 관리</a>
+                                <a href="">할증지역 관리</a>
+                                <a href="">상품 공급자 관리</a>
+                                <a href="">결제수단 설정</a>
+                                <a href="">시스템 설정</a>
+                                <a href="" class="darken">외부연동 설정</a>
+                                <a href="" class="darken">회원가입폼 설정</a>
+                                <a href="" class="darken">웹 페이지 관리</a>
+                                <a href="" class="darken">관리자 계정 관리</a>
+                                <a href="" class="darken">관리자 권한 설정</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="container">
+                <div id="layout-header" class="layout-header">
+                    <span class="btn-side" data-btn="menu-side" data-value=""></span>
+                    <a href="" class="title">상품 조회/수정</a>
+                </div>
+                <div class="layout-container">
+                    <div class="panel-form">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <p>상품 조회<i class="arrow down"></i></p>
+                                <span class="arrow-btn"><i class="arrow down"></i></span>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="menu">
+                                    <li>
+                                        <span class="sub-tit">기간설정</span>
+                                        <div class="cont-group date">
+                                            <div class="group">
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select">상품 등록일</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">상품 등록일</li>
+                                                            <li class="" data-value="">상품 수정일</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="group">
+                                                <ul class="btn-group clearfix">
+                                                    <li>전체</li>
+                                                    <li class="on">금일</li>
+                                                    <li>전일</li>
+                                                    <li>금월</li>
+                                                    <li>전월</li>
+                                                    <li>3개월</li>
+                                                    <li>6개월</li>
+                                                    <li>1년</li>
+                                                </ul>
+                                            </div>
+                                            <div class="group">
+                                                <div class="period">
+                                                    <input type="text">
+                                                    <span class="ico-period">
+                                                        <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-5 -4 16 16" style="enable-background:new -5 -4 16 16;" xml:space="preserve">
+                                                            <style type="text/css">
+                                                                .st2{fill:none;stroke:#000000;stroke-miterlimit:10;}
+                                                            </style>
+                                                            <g>
+                                                                <path d="M10-1v12H-4V-1H10 M11-2H-5v14h16V-2L11-2z"/>
+                                                            </g>
+                                                            <line class="st2" x1="-1.5" y1="-2" x2="-1.5" y2="-4"/>
+                                                            <rect x="-2" y="1" width="2" height="2"/>
+                                                            <rect x="6" y="1" width="2" height="2"/>
+                                                            <rect x="2" y="1" width="2" height="2"/>
+                                                            <rect x="-2" y="4" width="2" height="2"/>
+                                                            <rect x="6" y="4" width="2" height="2"/>
+                                                            <rect x="2" y="4" width="2" height="2"/>
+                                                            <rect x="-2" y="7" width="2" height="2"/>
+                                                            <rect x="6" y="7" width="2" height="2"/>
+                                                            <rect x="2" y="7" width="2" height="2"/>
+                                                            <line class="st2" x1="7.5" y1="-2" x2="7.5" y2="-4"/>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <span>~</span>
+                                                <div class="period">
+                                                    <input type="text">
+                                                    <span class="ico-period">
+                                                        <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-5 -4 16 16" style="enable-background:new -5 -4 16 16;" xml:space="preserve">
+                                                            <style type="text/css">
+                                                                .st2{fill:none;stroke:#000000;stroke-miterlimit:10;}
+                                                            </style>
+                                                            <g>
+                                                                <path d="M10-1v12H-4V-1H10 M11-2H-5v14h16V-2L11-2z"/>
+                                                            </g>
+                                                            <line class="st2" x1="-1.5" y1="-2" x2="-1.5" y2="-4"/>
+                                                            <rect x="-2" y="1" width="2" height="2"/>
+                                                            <rect x="6" y="1" width="2" height="2"/>
+                                                            <rect x="2" y="1" width="2" height="2"/>
+                                                            <rect x="-2" y="4" width="2" height="2"/>
+                                                            <rect x="6" y="4" width="2" height="2"/>
+                                                            <rect x="2" y="4" width="2" height="2"/>
+                                                            <rect x="-2" y="7" width="2" height="2"/>
+                                                            <rect x="6" y="7" width="2" height="2"/>
+                                                            <rect x="2" y="7" width="2" height="2"/>
+                                                            <line class="st2" x1="7.5" y1="-2" x2="7.5" y2="-4"/>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="sub-tit">검색/키워드</span>
+                                        <div class="cont-group keyword">
+                                            <div class="group">
+                                                <ul class="radio-group">
+                                                    <li>
+                                                        <input type="radio" id="search01" name="search" checked>
+                                                        <label for="search01">
+                                                            <span>상품번호</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="search02" name="search">
+                                                        <label for="search02">
+                                                            <span>바코드</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="search03" name="search">
+                                                        <label for="search03">
+                                                            <span>QR 코드</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <textarea name="" id=""></textarea>
+                                            </div>
+                                            <div class="group">
+                                                <div class="input-group">
+                                                    <label for="product">상품명</label>
+                                                    <input type="text" id="product">
+                                                </div>
+                                                <div class="input-group">
+                                                    <label for="model">모델명</label>
+                                                    <input type="text" id="model">
+                                                </div>
+                                            </div>
+                                            <div class="group">
+                                                <div class="input-group">
+                                                    <label for="supply">상품 공급자</label>
+                                                    <input type="text" id="supply">
+                                                </div>
+                                                <div class="input-group">
+                                                    <label for="keyword">검색 키워드</label>
+                                                    <input type="text" id="keyword">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="sub-tit">카테고리</span>
+                                        <div class="cont-group category">
+                                            <div class="group">
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select">대분류 전체</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">대분류 전체</li>
+                                                            <li class="" data-value="">대분류 전체</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select disabled">중분류</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">중분류</li>
+                                                            <li class="" data-value="">중분류</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select disabled">소분류</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">소분류</li>
+                                                            <li class="" data-value="">소분류</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="selectbox" data-focus="">
+                                                    <span class="select disabled">세분류</span>
+                                                    <div class="option">
+                                                        <input type="hidden" id="" name="" data-title="" value="">
+                                                        <ul>
+                                                            <li class="focus" data-value="">세분류</li>
+                                                            <li class="" data-value="">세분류</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="sub-tit">조건탐색</span>
+                                        <div class="cont-group">
+                                            <div class="group">
+                                                <ul class="inline-form clearfix">
+                                                    <li>
+                                                        <input type="checkbox" id="check01" name="check01" checked>
+                                                        <label for="check01">
+                                                            <span>판매가능</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="check02" name="check02">
+                                                        <label for="check02">
+                                                            <span>판매불가</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="check03" name="check03">
+                                                        <label for="check03">
+                                                            <span>품절</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="check04" name="check04">
+                                                        <label for="check04">
+                                                            <span>즉시할인</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="check05" name="check05">
+                                                        <label for="check05">
+                                                            <span>무료배송</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="check06" name="check06">
+                                                        <label for="check06">
+                                                            <span>유료배송</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" id="check07" name="check07">
+                                                        <label for="check07">
+                                                            <span>해외배송</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="sub-tit">목록 정렬방식</span>
+                                        <div class="cont-group">
+                                            <div class="group">
+                                                <ul class="inline-form">
+                                                    <li>
+                                                        <input type="radio" id="list01" name="list" checked>
+                                                        <label for="list01">
+                                                            <span>등록일순</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="list02" name="list">
+                                                        <label for="list02">
+                                                            <span>수정일순</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="list03" name="list">
+                                                        <label for="list03">
+                                                            <span>재고량순</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="list04" name="list">
+                                                        <label for="list04">
+                                                            <span>판매가순</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="list05" name="list">
+                                                        <label for="list05">
+                                                            <span>판매량순</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="list06" name="list">
+                                                        <label for="list06">
+                                                            <span>상품평순</span>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" id="list07" name="list">
+                                                        <label for="list07">
+                                                            <span>전시순서순</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="btn-wrap">
+                                    <a href="" class="btn btn-blue">검색</a>
+                                    <a href="" class="btn btn-gray-line">초기화</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <p>목록설정<i class="arrow down"></i></p>
+                                <span class="arrow-btn"><i class="arrow down"></i></span>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="menu drag-section">
+                                    <li>
+                                        <span class="sub-tit">출력 항목</span>
+                                        <div class="cont-group list">
+                                            <div class="group">
+                                                <ul class="btn-group clearfix">
+                                                    <li>출력항목 명칭</li>
+                                                    <li>글자 + 좌우패딩10</li>
+                                                    <li>관리/메모는 뺌(항상 맨앞에)</li>
+                                                    <li>모니터 크기로 부터</li>
+                                                    <li>왼쪽메뉴와 좌우패딩 빼고</li>
+                                                    <li>확보된 공간보다</li>
+                                                    <li>항목이 길거나 많으면</li>
+                                                    <li>발주옵션의</li>
+                                                    <li>엑셀양식 설정 참고해서</li>
+                                                    <li>출력항목을 밑으로 내림</li>
+                                                    <li>폰트 색상은 기존처럼 회색/파란색 구분 불필요</li>
+                                                    <li>드래그할대 잔상도 H1 줄임</li>
+                                                    <li>폰트색상 #999999</li>
+                                                    <li>할말이 없다</li>
+                                                    <li>이거만들면 디폴트 설정해야함</li>
+                                                    <li>출력항목의 설정값은 각 계정별 DB에 보존됨</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="sub-tit">숨김 항목</span>
+                                        <div class="cont-group list">
+                                            <div class="group">
+                                                <ul class="btn-group clearfix">
+                                                    <li>숨김항목 명칭</li>
+                                                    <li>BG #f0f3f6</li>
+                                                    <li>폰트/테두리 색상 동일</li>
+                                                    <li>띠어낸곳, 붙일 곳 잔상확인</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-form">
+                        <div class="result-title clearfix">
+                            <ul>
+                                <li>목록 결과 총 <span>1,256</span> 개</li>
+                                <li>검색 결과 총 <span>0</span> 개
+                                    <i class="ico-cancel">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 7 7" style="enable-background:new 0 0 7 7;" xml:space="preserve">
+                                        <style type="text/css">
+                                            .st3{fill:#FFFFFF;}
+                                        </style>
+                                            <g>
+                                                <g>
+                                                    <line class="st3" x1="1" y1="1" x2="6" y2="6"/>
+                                                    <path d="M6,6.5c-0.13,0-0.26-0.05-0.35-0.15l-5-5c-0.2-0.2-0.2-0.51,0-0.71s0.51-0.2,0.71,0l5,5c0.2,0.2,0.19,0.51,0,0.71C6.26,6.45,6.13,6.5,6,6.5z"/>
+                                                </g>
+                                                <g>
+                                                    <line class="st3" x1="1" y1="6" x2="6" y2="1"/>
+                                                    <path d="M1,6.5c-0.13,0-0.26-0.05-0.35-0.15c-0.2-0.2-0.2-0.51,0-0.71l5-5c0.2-0.2,0.51-0.2,0.71,0c0.19,0.2,0.19,0.51,0,0.71l-5,5C1.26,6.45,1.13,6.5,1,6.5z"/>
+                                                </g>
+                                            </g>
+                                    </svg>
+                                    </i>
+                                </li>
+                            </ul>
+                            <a href="">
+                                <i class="ico-excel">
+                                    <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                         y="0px" viewBox="-7 -6 20 20" style="enable-background:new -7 -6 20 20;" xml:space="preserve">
+                                        <style type="text/css">
+                                            .st4{fill:#207347;}
+                                            .st5{fill:#FFFFFF;}
+                                        </style>
+                                        <path class="st4" d="M12.23,14H-6.23C-6.62,14-7,13.62-7,13.23V-5.23C-7-5.62-6.62-6-6.23-6h18.46C12.62-6,13-5.62,13-5.23v18.46C13,13.62,12.62,14,12.23,14z"/>
+                                        <path class="st5" d="M4.31-1.69v-0.92l-8.23,1.46V9.15l8.23,1.46V9.77h6V-1.69H4.31z M1.31,7.31L-0.15,5l-1.31,1.92l-1.31-0.15l1.92-2.93l-1.69-2.69L-1.23,1l1.15,1.69l1.31-2.08l1.85-0.23L0.69,3.85l2.62,3.69L1.31,7.31z M9.08,8.46H4.38V4.54h4.69V8.46zM9.08,3.54H4.38v-3.92h4.69V3.54z"/>
+                                    </svg>
+                                </i>액셀다운
+                            </a>
+                        </div>
+                        <div class="btn-section">
+                            <div class="group">
+                                <a href="">선택삭제</a>
+                                <div class="btn-group">
+                                    <a href="" class="focus">ON</a>
+                                    <a href="">OFF</a>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <a href="">판매가 변경</a>
+                                <a href="">즉시할인 변경</a>
+                                <a href="">재고수량 변경</a>
+                                <a href="">카테고리 변경</a>
+                            </div>
+                            <div class="group">
+                                <div class="selectbox" data-focus="">
+                                    <span class="select">기타정보 변경</span>
+                                    <div class="option">
+                                        <input type="hidden" id="" name="" data-title="" value="">
+                                        <ul>
+                                            <li class="focus" data-value="">기타정보 변경</li>
+                                            <li class="" data-value="">기타정보 변경</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="selectbox" data-focus="">
+                                    <span class="select">20 개씩</span>
+                                    <div class="option">
+                                        <input type="hidden" id="" name="" data-title="" value="">
+                                        <ul>
+                                            <li class="focus" data-value="">20 개씩</li>
+                                            <li class="" data-value="">30 개씩</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

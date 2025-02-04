@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>프로셀 홈페이지</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/aos.css">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/aos.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap">
+    <header id="global-header">
+        <div class="header-wrapper">
+            <h1>
+                <a href="../index.html" class="prosell-logo"><img src="../images/common/prosell_logo.svg" alt="프로셀 바로가기"></a>
+                <span class="sub-logo">
+                    <a href="https://payapp.kr/homepage/index.html" target="_blank" class="payapp-logo"><img src="../images/common/payapp_logo.svg" alt="페이앱 바로가기"></a>
+                    <!--<a href="https://www.udpay.co.kr/" target="_blank" class="udpay-logo"><img src="../images/common/udpay_logo.svg" alt="유디페이 바로가기"></a>-->
+                </span>
+            </h1>
+            <nav class="gnb">
+                <div class="menu-btn">
+                    메뉴클릭
+                </div>
+                <div class="mobile-lnb">
+                    <ul>
+                        <li class="depth">
+                            <a href="javascript:;">주요기능</a>
+                            <ul class="sub">
+                                <li><a href="../function/design.html">디자인관리</a></li>
+                                <li><a href="../function/product.html">상품관리</a></li>
+                                <li><a href="../function/order.html">주문/배송관리</a></li>
+                                <li><a href="../function/etc.html">기타</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../hosting/hosting.html">호스팅</a>
+                        </li>
+                        <li>
+                            <a href="../addition/additional.html">부가서비스</a>
+                        </li>
+                        <li>
+                            <a href="../service/service.html">결제서비스</a>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">가이드</a>
+                            <ul class="sub">
+                                <li><a href="">시작하기</a></li>
+                                <li><a href="">튜토리얼</a></li>
+                                <li><a href="">도움말</a></li>
+                            </ul>
+                        </li>
+                        <li class="depth">
+                            <a href="javascript:;">고객센터</a>
+                            <ul class="sub">
+                                <li><a href="faq.html">자주묻는질문</a></li>
+                                <li><a href="qa-list.html">문의하기</a></li>
+                                <li><a href="domain-write.html">도메인 연동 신청</a></li>
+                                <li><a href="db-write.html">쇼핑몰 DB 이전신청</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">내 서비스</a>
+                        </li>
+                    </ul>
+                    <div class="mobile-info">
+                        <a href="../member/login.html" class="btn-round">로그인</a>
+                        <a href="javascript:;" class="btn-purple btn-round" onclick="location.href='../member/join.html'">회원가입</a>
+                    </div>
+                </div>
+                <div class="web">
+                    <div class="gnb-area">
+                        <ul>
+                            <li class="drop">
+                                <a href="../function/design.html">주요기능</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="../function/design.html">디자인관리</a></li>
+                                        <li><a href="../function/product.html">상품관리</a></li>
+                                        <li><a href="../function/order.html">주문/배송관리</a></li>
+                                        <li><a href="../function/etc.html">기타</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="../hosting/hosting.html">호스팅</a>
+                            </li>
+                            <li class="drop">
+                                <a href="../addition/additional.html">부가서비스</a>
+                            </li>
+                            <li class="drop">
+                                <a href="../service/service.html">결제서비스</a>
+                            </li>
+                            <li class="drop">
+                                <a href="#a">가이드</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="">시작하기</a></li>
+                                        <li><a href="">튜토리얼</a></li>
+                                        <li><a href="">도움말</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="faq.html" class="on">고객센터</a>
+                                <div class="drop-cont">
+                                    <ul>
+                                        <li><a href="faq.html">자주묻는질문</a></li>
+                                        <li><a href="qa-list.html">문의하기</a></li>
+                                        <li><a href="domain-write.html" class="active">도메인 연동 신청</a></li>
+                                        <li><a href="db-write.html">쇼핑몰 DB 이전신청</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="drop">
+                                <a href="">내 서비스</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="gnb-info">
+                <a href="../member/login.html">로그인</a>
+                <a href="javascript:;" onclick="location.href='../member/join.html'">회원가입</a>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <section class="container member" id="domain-write">
+        <section class="section1">
+            <div class="inner">
+                <form class="form-style01">
+                    <div class="form-tit">
+                        <h3>도메인 연동신청</h3>
+                        <p>생성하신 쇼핑몰과 보유하신 도메인을 연결합니다.</p>
+                    </div>
+                    <div class="form-content">
+                        <h4 class="panel-tit">도메인 연동 정보<span class="tit-guide"><i class="necessary"></i>표시 항목은 필수 입력</span></h4 class="panel-tit">
+                        <ul>
+                            <li class="panel">
+                                <div class="panel-heading">
+                                    <label class="tit necessary">쇼핑몰 선택</label>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="write-box">
+                                        <div class="select text-length-lg">
+                                            <span class="select-btn"></span>
+                                            <span class="select-chk">도메인을 연동하실 쇼핑몰을 선택하세요.</span>
+                                            <ul class="select-list">
+                                                <li>SITE 01</li>
+                                                <li>SITE 02</li>
+                                                <li>SITE 03</li>
+                                                <li>SITE 03</li>
+                                                <li>SITE 03</li>
+                                                <li>SITE 03</li>
+                                                <li>SITE 03</li>
+                                                <li>SITE 03</li>
+                                                <li>SITE 03</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel">
+                                <div class="panel-heading">
+                                    <label for="domain-peristalsis" class="tit necessary">연동 도메인</label>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="write-box">
+                                        <input type="text" class="input-type01 text-length-lg" name="domain-peristalsis" id="domain-peristalsis">
+                                        <span class="guide-text">(예시 : prosell.co.kr)</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel">
+                                <div class="panel-heading">
+                                    <label class="tit necessary">네임서버 등록</label>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="write-box">
+                                        <label for="corp_type1" class="input-rdo">
+                                            <input type="radio" id="corp_type1" name="corp_type">
+                                            <span>직접입력</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel guide-info-area">
+                                <div class="panel-heading">
+                                    <label class="tit">네임서버 정보</label>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="scroll-table">
+                                        <table class="table table-type1">
+                                            <colgroup>
+                                                <col style="width:100px;">
+                                                <col style="width:178px;">
+                                                <col style="width:178px;">
+                                            </colgroup>
+                                            <tbody>
+                                            <tr>
+                                                <th>1차</th>
+                                                <td>ns1.prosell.kr</td>
+                                                <td>218.232.75.228</td>
+                                            </tr>
+                                            <tr>
+                                                <th>2차</th>
+                                                <td>ns2.prosell.kr</td>
+                                                <td>218.232.75.229</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="guide-text">도메인을 구입하신 곳에서 위와같이 네임서버 정보를 변경하시기 바랍니다.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-content">
+                        <h4 class="panel-tit">담당자 정보<span class="tit-guide change-block">진행 중 문의/요청 사항 발생 시 아래 정보로 연락 드리겠습니다.</span></h4 class="panel-tit">
+                        <ul>
+                            <li class="panel">
+                                <div class="panel-heading">
+                                    <label for="domain-name" class="tit necessary">담당자 성명</label>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="write-box">
+                                        <input type="text" class="input-type01 text-length-md" name="domain-name" id="domain-name" value="김희수">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel">
+                                <div class="panel-heading">
+                                    <label for="domain-phone" class="tit necessary">담당자 휴대폰</label>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="write-box">
+                                        <input type="text" class="input-type01 text-length-md" name="domain-phone" id="domain-phone" value="010-1234-5678">
+                                        <span class="guide-text">메시지 수신이 가능한 담당자 번호 입력</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="panel">
+                                <div class="panel-heading">
+                                    <label for="domain-talk" class="tit">남기실 말씀</label>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="write-box">
+                                        <textarea class="input-type01 text-block"></textarea>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="form-content chk-box">
+                        <h4 class="panel-tit">도메인 연동 가이드</h4 class="panel-tit">
+                        <div class="check-form01">
+                            <ul>
+                                <li>아직 도메인을 보유하지 않는 회원님께서는 도메인을 먼저 구입하신 후에 본 신청서를 작성하시기 바랍니다.</li>
+                                <li>도메인을 처음 구매하시는 경우, 최초 등록비용만 저렴한 미끼 상품과 등록 대행업체에 주의하시기 바랍니다. 도메인 연장 시 폭리를 취하거나 네임서버 설정, 포워딩/아웃룩 메일 연동 등이 불가할 수 있습니다. 후이즈, 닷네임 등의 공인된 등록기관을 이용하세요.</li>
+                                <li>본 신청서를 제출하신 후 바로 도메인을 구매하신 곳의 웹사이트를 방문하시어 도메인 관리 페이지를 통해 네임서버 정보를 프로셀의 1차/2차 주소와 IP로 변경해 주세요. 신청서만 제출하신 경우 작업이 진행될 수 없습니다.</li>
+                                <li>도메인 연동 작업 중에는 쇼핑몰(관리자 포함)에 접속이 불가할 수 있으며, 연동이 완료되어 정상 접속하기까지 최대 3~4일까지 소요될 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn-area">
+                        <a href="#" class="btn btn-round btn-grayline">취소</a>
+                        <a href="#" class="btn btn-round btn-purple">접수</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </section>
+    <!-- //container -->
+
+    <footer id="global-footer">
+        <div class="footer-area">
+            <section class="footer-wrap">
+                <div class="top">
+                    <h1><img src="../images/common/prosell_logo_gray.svg" alt="프로셀 로고"></h1>
+                    <div class="familysite">
+                        <span class="select-btn"></span>
+                        <span class="select-chk">패밀리 사이트</span>
+                        <ul class="site-list">
+                            <li><a href="http://blogpay.co.kr/" target="_blank">블로그페이</a></li>
+                            <li><a href="https://make.link/" target="_blank">메이크링크</a></li>
+                            <li><a href="http://mklink.co.kr/main" target="_blank">마케터링크</a></li>
+                            <li><a href="https://prosell.co.kr/" target="_blank">프로셀</a></li>
+                            <li><a href="https://www.ciderpay.com/" target="_blank">사이다페이</a></li>
+                            <li><a href="https://zipsa.net/" target="_blank">집사</a></li>
+                            <li><a href="https://danbipay.com/main" target="_blank">단비페이</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright-wrap">
+                    <div class="company">
+                        <p>
+                            <span>대표자명 : 정재훈</span><span>사업자등록번호 : 113-86-56537<a href="https://www.ftc.go.kr/www/bizCommList.do?key=232" target="_blank" class="lighten">사업자정보확인</a></span><span>통신판매업신고 : 제 2012-서울구로-0239호</span>
+                        </p>
+                        <p>
+                            <span>주소 : 서울특별시 구로구 디지털로 26길 61 에이스하이엔드타워 2차 1202호</span><span>대표메일 : <a href="mailto:payapp@udid.co.kr">prosell@udid.co.kr</a></span>
+                        </p>
+                        <p>Copyright © 프로셀. All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="terms">
+                    <a href="" target="_blank">공지사항</a>
+                    <a href="">서비스이용약관</a>
+                    <a href="">개인정보처리방침</a>
+                </div>
+                <div class="banner-wrap">
+                    <div class="social">
+                        <a href="https://www.instagram.com/payapp_official/" target="_blank" title="페이앱 공식 인스타그램"><i class="ico ico-insta"></i></a>
+                        <a href="https://www.facebook.com/udidcorporation" target="_blank" title="페이앱 공식 페이스북"><i class="ico ico-facebook"></i></a>
+                        <a href="https://pf.kakao.com/_LAsjT" target="_blank" title="페이앱 공식 플러스친구"><i class="ico ico-kakaoplus"></i></a>
+                        <a href="https://blog.naver.com/udidcompany" target="_blank" title="페이앱 공식 네이버 블로그"><i class="ico ico-blog"></i></a>
+                        <a href="https://post.naver.com/udidpayapp" target="_blank" title="블로그페이 공식 포스트"><i class="ico ico-post"></i></a>
+                    </div>
+                    <div class="banner-area">
+                        <span><i class="ico ico-innobiz"></i></span>
+                        <span><i class="ico ico-isms"></i></span>
+                        <span><i class="ico ico-nts"></i></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="top-btn">
+            <div role="button" class="f-btn go-top"><i class="ico ico-top"></i></div>
+        </div>
+
+    </footer>
+    <!-- //footer -->
+</div>
+<!-- //main-wrap -->
+</body>
+
+
+</html>
+

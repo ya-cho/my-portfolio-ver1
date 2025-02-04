@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lalalounge</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main_common.css">
+    <link rel="stylesheet" type="text/css" href="../../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../../css/sub_layout.css">
+    <link rel="stylesheet" type="text/css" href="../../css/slick.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../js/question_area.js"></script>
+
+    <!--header,footer-->
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="../../js/slick.min.js"></script>
+    <script type="text/javascript" src="../../js/header.js"></script>
+    <script type="text/javascript" src="../../js/category.js"></script>
+    <script type="text/javascript" src="../../js/aside.js"></script>
+
+    <script type="text/javascript" src="../../js/quick_menu.js"></script>
+    <script type="text/javascript" src="../../js/top_btn.js"></script>
+    <!--//header,footer-->
+
+    <!--[if IE 9]>
+    <script type="text/javascript" src="../../js/media.match.min.js"></script>
+    <script type="text/javascript" src="../../js/placeholder.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>-->
+    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+    <!--<![endif]-->
+</head>
+<body>
+<div id="skip-navigation">
+    <a href="#category">전체상품목록 바로가기</a>
+    <a href="#container">본문 바로가기</a>
+</div>
+
+<div id="wrap">
+    <div class="header">
+        <div class="inner">
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="../../images/logo_b.png" alt="로고">
+                    <!--<span>LALALOUNGE</span> 로고가 없을 때 입력한 텍스트가 노출됨-->
+                </a>
+            </h1>
+            <!-- // logo -->
+
+            <div class="side">
+                <!--<a href="#a" class="display-w">LOGIN</a>--> <!-- 비로그인 상태 -->
+                <!--<a href="#a" class="display-w">JOIN</a>--> <!-- 비로그인 상태 -->
+                <a href="#a" class="display-w">LOGOUT</a> <!-- 로그인 상태 -->
+                <a href="javascript:;" class="btn-search"><i class="ico ico-search-sm">SEARCH</i></a>
+                <a href="mypage/order_list.html" class="display-w"><i class="ico ico-mypage">MYPAGE</i></a>
+                <a href="#a"><i class="ico ico-cart-sm">CART</i><em class="badge badge-red">3</em></a>
+            </div>
+            <!-- // side -->
+        </div>
+        <!-- // inner -->
+
+        <div class="search-wrap">
+            <div class="inner">
+                <form action="">
+                    <div class="input-group">
+                        <input type="search" id="pdSearch" placeholder="Search"><label for="pdSearch">검색</label>
+                        <span class="input-group-addon"><i class="ico ico-search-lg">검색</i></span>
+                    </div>
+                </form>
+                <button type="button" class="btn-close"><i class="ico ico-close">검색창 닫기</i></button>
+            </div>
+        </div>
+        <!-- // search-wrap -->
+    </div>
+    <!-- // header -->
+    <!-- js -> header.js -->
+
+    <div class="category">
+        <div class="inner-sm">
+            <ul class="depth1">
+                <li>
+                    <a href="#a">MENU</a>
+                    <ul class="depth2">
+                        <li><a href="#a">전체보기</a></li>
+                        <li>
+                            <a href="#a">미스트S</a>
+                            <ul class="depth3">
+                                <li><a href="#a">미스트</a></li>
+                                <li><a href="#a">PRODUCT2</a></li>
+                                <li><a href="#a">PRODUCT3</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#a">미스트M</a>
+                            <ul class="depth3">
+                                <li><a href="#a">미스트</a></li>
+                                <li><a href="#a">PRODUCT2</a></li>
+                                <li><a href="#a">PRODUCT3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#a">미스트L</a></li>
+                        <li><a href="#a">미스트XL</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#a">Q&amp;A</a>
+                </li>
+                <li>
+                    <a href="#a">REVIEW</a>
+                </li>
+                <li>
+                    <a href="#a">NEWS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- // category -->
+    <!-- js -> category.js -->
+
+    <div id="aside">
+        <div class="aside-cont">
+            <div class="side-menu">
+                <div class="side-close">
+                    <button type="button"><i class="ico ico-close">닫기</i></button>
+                </div>
+
+                <div class="scroll">
+                    <div class="group" id="category">
+                        <div class="accordion-container">
+                            <ul class="accordion">
+                                <li class="accordion-item">
+                                    <a class="accordion-thumb">SHOP</a>
+                                    <ul class="accordion-panel">
+                                        <li>
+                                            <a href="#a">전체보기</a>
+                                        </li>
+                                        <li>
+                                            <a href="#a">미스트S</a>
+                                        </li>
+                                        <li>
+                                            <a href="#a">미스트M</a>
+                                        </li>
+                                        <li>
+                                            <a href="#a">미스트L</a>
+                                        </li>
+                                        <li>
+                                            <a href="#a">미스트XL</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="accordion-item">
+                                    <a class="accordion-thumb">Q&amp;A</a>
+                                </li>
+                                <li class="accordion-item">
+                                    <a class="accordion-thumb">REVIEW</a>
+                                </li>
+                                <li class="accordion-item">
+                                    <a class="accordion-thumb">NEWS</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- category -->
+
+                    <div class="group bottom">
+                        <a href="#a" class="tit">Login</a>
+                        <a href="#a" class="tit">Join</a>
+                        <a href="#a" class="tit">Mypage</a>
+                        <div class="today-view">
+                            <h4 class="tit">Today</h4>
+                            <ul id="today-wrap">
+                                <li>
+                                    <a href="#a" class="product-box">
+                                        <div class="prod-img">
+                                            <img src="../../images/pd_thumb1.jpg" alt="product" class="thumb">
+                                            <!-- 상품 이미지가 없을 경우
+                                            <div class="no-image">
+                                                <img src="../../images/no_image.png" alt="no image">
+                                            </div>-->
+                                        </div>
+                                        <dl class="info-area">
+                                            <dt class="title"><b>PRODUCT SAMPLE</b></dt>
+                                            <dd class="price">
+                                                <strong>45,000</strong> WON<span class="discount">80,000</span>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#a" class="product-box">
+                                        <div class="prod-img">
+                                            <img src="../../images/pd_thumb2.jpg" alt="product" class="thumb">
+                                        </div>
+                                        <dl class="info-area">
+                                            <dt class="title"><b>PRODUCT SAMPLE</b></dt>
+                                            <dd class="price">
+                                                <strong>45,000</strong> WON<span class="discount">80,000</span>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#a" class="product-box">
+                                        <div class="prod-img">
+                                            <img src="../../images/pd_thumb3.jpg" alt="product" class="thumb">
+                                        </div>
+                                        <dl class="info-area">
+                                            <dt class="title"><b>PRODUCT SAMPLE</b></dt>
+                                            <dd class="price">
+                                                <strong>45,000</strong> WON<span class="discount">80,000</span>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#a" class="product-box">
+                                        <div class="prod-img">
+                                            <img src="../../images/pd_thumb4.jpg" alt="product" class="thumb">
+                                        </div>
+                                        <dl class="info-area">
+                                            <dt class="title"><b>PRODUCT SAMPLE</b></dt>
+                                            <dd class="price">
+                                                <strong>45,000</strong> WON<span class="discount">80,000</span>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#a" class="product-box">
+                                        <div class="prod-img">
+                                            <img src="../../images/pd_thumb5.jpg" alt="product" class="thumb">
+                                        </div>
+                                        <dl class="info-area">
+                                            <dt class="title"><b>PRODUCT SAMPLE</b></dt>
+                                            <dd class="price">
+                                                <strong>45,000</strong> WON<span class="discount">80,000</span>
+                                            </dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <!--<li class="item">
+                                    <a href="#a">
+                                        <div class="no-image">
+                                            <img src="../../images/no_image.png" alt="no image">
+                                        </div>
+                                    </a>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // bottom -->
+                </div>
+            </div>
+            <!-- // side-menu -->
+        </div>
+    </div>
+    <!-- // aside -->
+    <!-- js -> aside.js -->
+
+    <div class="quick-menu">
+        <div class="quick-body">
+            <div class="quick-tit">
+                <span><i class="ico ico-today"></i><em class="badge badge-black">45</em></span>
+                <p>최근 본 상품</p>
+            </div>
+            <!-- 오늘 본 상품이 있을 경우-->
+            <ul id="today-view">
+                <li class="item">
+                    <a href="#a"><img src="../../images/pd_thumb1.jpg" alt="" class="thumb"></a>
+                </li>
+                <li class="item">
+                    <a href="#a"><img src="../../images/pd_thumb2.jpg" alt="" class="thumb"></a>
+                </li>
+                <li class="item">
+                    <a href="#a"><img src="../../images/pd_thumb3.jpg" alt="" class="thumb"></a>
+                </li>
+                <li class="item">
+                    <a href="#a">
+                        <div class="no-image">
+                            <img src="../../images/no_image.png" alt="no image">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- 오늘 본 상품이 없을 경우-->
+            <!--<p class="today-none">상품이<br> 없습니다.</p>-->
+
+            <div class="quick-tit">
+                <a href="#a">
+                    <i class="ico ico-cart-lg"></i>
+                    <p>장바구니 <b>2</b></p>
+                </a>
+            </div>
+        </div>
+        <!-- // quick-body -->
+
+        <div class="quick-footer">
+            <button type="button" class="go-top">TOP</button>
+        </div>
+
+        <div class="quick-banner">
+            <a href="#a" class="kakao">카카오톡 상담하기</a>
+        </div>
+    </div>
+    <!-- // quick-menu -->
+    <!-- js -> quick_menu.js -->
+    <!-- js -> top_btn.js -->
+
+    <!--question_area.js-->
+    <div class="board-faq-list">
+        <div class="sub-inner">
+            <h4 class="sub-title text-center">fAQ</h4>
+            <div class="sub-search-area">
+                <select>
+                    <option>제목</option>
+                    <option>작성자</option>
+                    <option>내용</option>
+                </select>
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <button type="button" class="ico-search"></button>
+            </div>
+            <ul class="subpage-tab">
+                <li class="active"><a href="board_faq_list.html">fAQ</a></li>
+                <li><a href="board_qna_list.html">Q&A</a></li>
+                <li><a href="board_notice_list.html">공지사항</a></li>
+                <li><a href="board_prodqna_list.html">상품문의</a></li>
+                <li><a href="board_review_list.html">구매후기</a></li>
+            </ul>
+            <div class="table table-type3 board-table">
+                <ul class="title-area">
+                    <li>
+                        <span>Q</span>
+                    </li>
+                    <li><p>쇼핑백에 담은 상품은 얼마간 보관되나요?</p></li>
+                </ul>
+                <ul class="info-area">
+                    <li>
+                        <span class="text-red">A</span>
+                    </li>
+                    <li>
+                        <p>
+                            상품이 배송 or 제작이 되지 않은 경우에만 변경이 가능하며,<br>
+                            주문상태에 따라 사이트에서 직접변경 혹은 1:1문의/고객센터로 연락주셔야 합니다.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="title-area">
+                    <li>
+                        <span>Q</span>
+                    </li>
+                    <li><p>결제가 진행되지 않을 때는 어떻게 해야 하나요?</p></li>
+                </ul>
+                <ul class="info-area">
+                    <li>
+                        <span class="text-red">A</span>
+                    </li>
+                    <li>
+                        <p>
+                            답변영역.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="title-area">
+                    <li>
+                        <span>Q</span>
+                    </li>
+                    <li><p>비회원도 주문결제가 가능한가요?</p></li>
+                </ul>
+                <ul class="info-area">
+                    <li>
+                        <span class="text-red">A</span>
+                    </li>
+                    <li>
+                        <p>
+                            답변영역.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="title-area">
+                    <li>
+                        <span>Q</span>
+                    </li>
+                    <li><p>크롬 브라우저에서도 결제가 가능한가요?</p></li>
+                </ul>
+                <ul class="info-area">
+                    <li>
+                        <span class="text-red">A</span>
+                    </li>
+                    <li>
+                        <p>
+                            답변영역.
+                        </p>
+                    </li>
+                </ul>
+                <ul class="title-area">
+                    <li>
+                        <span>Q</span>
+                    </li>
+                    <li><p>카카오페이 결제 시 유의사항은 어떤것이 있나요?</p></li>
+                </ul>
+                <ul class="info-area">
+                    <li>
+                        <span class="text-red">A</span>
+                    </li>
+                    <li>
+                        <p>
+                            답변영역.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="paging">
+                <a href="#" class="ico-prev"></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="ico-next"></a>
+            </div>
+        </div>
+    </div>
+    <!--//question_area.js-->
+
+    <div class="footer">
+        <div class="inner-sm">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="../../images/logo_w.png" alt="로고">
+                    <!--<span>LALALOUNGE</span> 로고가 없을 때 입력한 텍스트가 노출됨-->
+                </a>
+            </h1>
+
+            <div class="content">
+                <div class="info">
+                    <div class="group company">
+                        <div class="link-area">
+                            <a href="#a">이용약관</a>
+                            <a href="#a"><strong>개인정보취급방침</strong></a>
+                        </div>
+
+                        <p class="adr clearfix">
+                            <span>대표자 : <em>유민혜</em></span><span>주소 : <em>[16945]경기 용인시 기흥구 신정로151번길 33-5 (신갈동) 층, 2층</em></span>
+                            <span class="clear">사업자등록번호 : <em>1448701241</em><a href="#a" target="_blank" class="info-btn">[사업자정보확인]</a></span><span>통신판매업신고 : <em>제2019-수원영통-0006호</em></span>
+                            <span class="clear">개인정보책임자 : <em>유민혜</em></span><span>대표메일 : <a href="mailto:lala-lounge@naver.com">lala-lounge@naver.com</a></span>
+                        </p>
+
+                        <ul class="sns">
+                            <li><i class="ico ico-insta">인스타그램</i>
+                                <div class="sns-tooltip black">
+                                    <a href="#a">이동하기</a>
+                                    <a href="#a">공유하기</a>
+                                </div>
+                            </li>
+                            <li><i class="ico ico-facebook">페이스북</i>
+                                <div class="sns-tooltip black">
+                                    <a href="#a">이동하기</a>
+                                    <a href="#a">공유하기</a>
+                                </div>
+                            </li>
+                            <li><i class="ico ico-twitter">트위터</i>
+                                <div class="sns-tooltip black">
+                                    <a href="#a">이동하기</a>
+                                    <a href="#a">공유하기</a>
+                                </div>
+                            </li>
+                            <li><i class="ico ico-kakao">카카오톡</i>
+                                <div class="sns-tooltip black">
+                                    <a href="#a">이동하기</a>
+                                    <a href="#a">공유하기</a>
+                                </div>
+                            </li>
+                            <li><i class="ico ico-story">카카오스토리</i>
+                                <div class="sns-tooltip black">
+                                    <a href="#a">이동하기</a>
+                                    <a href="#a">공유하기</a>
+                                </div>
+                            </li>
+                            <li><i class="ico ico-band">네이버밴드</i>
+                                <div class="sns-tooltip black">
+                                    <a href="#a">이동하기</a>
+                                    <a href="#a">공유하기</a>
+                                </div>
+                            </li>
+                            <li><i class="ico ico-blog">네이버블로그</i>
+                                <div class="sns-tooltip black">
+                                    <a href="#a">이동하기</a>
+                                    <a href="#a">공유하기</a>
+                                </div>
+                            </li>
+                            <li><i class="ico ico-youtube">유튜브</i>
+                                <div class="sns-tooltip black">
+                                    <a href="#a">이동하기</a>
+                                    <a href="#a">공유하기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- // adr -->
+
+                    <div class="group side">
+                        <h3>CALL CENTER</h3>
+                        <b>070-0000-0000</b>
+                        <b><i class="ico ico-kakao"></i>랄라라운지</b>
+                        <dl>
+                            <dt class="hide">CALL CENTER</dt>
+                            <dd>퍙일 AM 09:00 ~ PM 06:00</dd>
+                            <dd>점심 PM 12:00 ~ PM 01:00</dd>
+                            <dd>휴무 토/일/공휴일</dd>
+                        </dl>
+                    </div>
+                    <!-- // call -->
+
+                    <div class="group side">
+                        <h3>BANK INFO</h3>
+                        <b>예금주</b>
+                        <b>(주)랄라라운지</b>
+                        <dl>
+                            <dt class="hide">BANK INFO</dt>
+                            <dd>기업 : <em>93302036701011</em></dd>
+                            <dd>국민 : <em>123456789000</em></dd>
+                            <dd>우리 : <em>123456789000</em></dd>
+                        </dl>
+                    </div>
+                </div>
+                <!-- // info -->
+                <p class="copyright">COPYRIGHT (C) 2019. ALL RIGHT RESERVED</p>
+            </div>
+
+            <div class="escrow">
+                <img src="../../images/escro_logo_w.png" alt="PAYAPP ESCROW">
+                <div class="text">
+                    <b>PAYAPP 구매안전 서비스</b>
+                    <p><span>고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다.</span><a href="#a" class="btn-escrow">에스크로 가입사실 확인</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // footer -->
+</div>
+<!-- // wrap -->
+
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------------
+	var style
+---------------------------------------------------------------- */
+$white: #fff;
+$black: #000000;
+// lighten($black, 20%) = #333, lighten($black, 40%) = #666, lighten($black, 60%) = #999, lighten($black, 80%) = ccc;
+$gray: #ddd;
+$dark-gray: #3f4855;
+$light-gray: #f6f8fb;
+$violet-blue: #6f7bf0;
+$dodger-blue: #5086ed;
+$purple: #714de6;
+$green: #00c73b;
+$light-seagreen: #2bb2ad;
+$seagreen: #3ebc91;
+$red: #ed1c24;
+$navy: #172e7e;
+
+
+$aqua-blue: #3ed4d2;
+$blue: #185ef8;
+$pale-blue: #6e96ff;
+$sky-blue: #00bfff;
+$navy-blue: #484f77;
+$dark-navy: #162351;
+$orange: #ff8909;
+$yellow: #eccb6b;
+
+/* font */
+$main-font: 'Noto Sans KR', sans-serif;
+$num-font: 'Roboto', sans-serif;
+$head-font: 'Spoqa Han Sans', sans-serif;       // 100, 300, 400, 700

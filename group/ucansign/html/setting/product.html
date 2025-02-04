@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge; chrome=1" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+    <meta name=”format-detection” content=”telephone=no”/>
+    <title>유캔싸인</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/chunk-vendors.60e13059.css"> <!-- 기존 관리자 확인용 css 추후 삭제 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout_sample.css"> <!-- 기존 관리자 확인용 css 추후 삭제 -->
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="wrap">
+    <header>
+        <h1>
+            <a href="../documents.html"><span class="logo logo-sm white">유캔싸인</span><em>관리자</em></a>
+        </h1>
+        <div role="button" class="menu"><span class="line"></span></div>
+    </header>
+    <aside>
+        <div class="side-wrap">
+            <button type="button" class="btn btn-blue btn-md btn-rounded">서명 요청하기</button>
+            <nav>
+                <div class="side-link">
+                    <b class="text-blue">무제한</b>
+                    <a href="#a">총 잔여 서명요청 <i class="ico ico-rem ico-link"></i></a>
+                </div>
+                <div class="menu-list">
+                    <ul class="slide-menu">
+                        <li class="depth">
+                            <a href="../documents.html">
+                                <i class="ico ico-papers"></i>조직문서
+                            </a>
+                            <ul class="sub">
+                                <li><a href="#a">내 담당 문서</a></li>
+                                <li><a href="#a">공유 받은 문서</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../template.html">
+                                <i class="ico ico-rem ico-template"></i>템플릿
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../bulkTransmit.html">
+                                <i class="ico ico-send"></i>대량전송
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../docuEdit.html">
+                                <i class="ico ico-edit"></i>문서편집기
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../signStamp.html">
+                                <i class="ico ico-seal"></i>사인/도장
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="info-menu">
+                        <a href="./profile.html" class="active"><span class="new">설정</span> <i class="arrow arrow-md arrow-gray right"></i></a> <!-- 설정이 추가되면 new 클래스 추가 -->
+                        <a href="#a">고객센터 <i class="arrow arrow-md arrow-gray right"></i></a>
+                        <a href="javascript:;">로그아웃 <i class="arrow arrow-md arrow-gray right"></i></a>
+                    </div>
+                </div>
+            </nav>
+            <div class="update-btn ">
+                <button type="button" class="btn btn-dark-blue btn-md btn-rounded">
+                    <i class="ico ico-rem ico-update"></i><span class="new">업데이트 소식</span> <!-- 업데이트가 추가되면 new 클래스 추가 -->
+                </button>
+            </div>
+        </div>
+    </aside>
+    <section class="container sub-bg">
+        <div class="a-header">
+            <h2>설정</h2>
+            <div class="change-locale">
+                <button type="button" class="ant-dropdown-trigger dropdown ant-btn">다국어</button>
+            </div>
+        </div>
+        <section class="a-cont">
+            <div class="setting">
+                <div class="tab-line">
+                    <div class="inner">
+                        <ul>
+                            <li><a href="profile.html">내 정보</a></li>
+                            <li class="active"><a href="billing.html">결제 정보</a></li>
+                            <li><a href="organization.html">조직 정보</a></li>
+                            <li><a href="members.html">구성원 정보</a></li>
+                            <li><a href="share.html">기본 공유 관리</a></li>
+                            <li><a href="branding.html">맞춤 브랜딩</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="inner">
+                        <div class="info-cont">
+                            <div class="horizon-list line">
+                                <div>
+                                    <div class="list-tit">
+                                        <h4>대량 전송</h4>
+                                    </div>
+                                    <ul class="info-list">
+                                        <li>현재 전송 가능한 건 수는 0건입니다.</li>
+                                        <li>
+                                            <div class="form-group form-group-sm">
+                                                <label for="Newpw" class="form-tit">추가 구매할 건 수</label>
+                                                <div class="input-wrap">
+                                                    <input type="text" id="Newpw" placeholder="10" class="form-control"><span>건</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="list-tit">
+                                        <h4>결제 금액</h4>
+                                    </div>
+                                    <ul class="info-list">
+                                        <li>
+                                            <div class="result">
+                                                <ul>
+                                                    <li>
+                                                        <div class="pull-left">
+                                                            <dl>
+                                                                <dt>대량 전송</dt>
+                                                                <dd>~2022.01.03까지</dd>
+                                                            </dl>
+                                                        </div>
+                                                        <div class="pull-right text-right">
+                                                            <span>10건</span>
+                                                            <p>(건당 : 550원)</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="total"><strong>총 결제 금액 : <em>5,500원</em></strong></div>
+                                            </div>
+                                            <div class="guide-txt text-blue">현재 사용중인 요금제 종료일인 2021년 8월 3일까지 사용 가능합니다.</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="list-tit">
+                                        <h4>결제 수단</h4>
+                                    </div>
+                                    <ul class="info-list">
+                                        <li>
+                                            <dl>
+                                                <dt>결제 수단 종류</dt>
+                                                <dd>예치금</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>잔액</dt>
+                                                <dd>327,460원</dd>
+                                            </dl>
+                                            <div class="result mt15">
+                                                <ul class="notice">
+                                                    <li>- 예치금 충전은 설정 > <a href="billing.html">결제 정보</a>에서 하실 수 있습니다.</li>
+                                                    <li>- 예치금이 아닌 다른 결제수단 이용에 대해서는 <a href="#a">고객센터</a>로 문의해주세요.</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group form-group-md">
+                                                <label for="Newpw" class="form-tit">결제 알림용 이메일</label>
+                                                <input type="text" id="Newpw" placeholder="admin@atreez.com" class="form-control">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" class="modal-trigger btn btn-blue" data-modal-id="used-fill">사용량 충전하기</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+<!-- //wrap -->
+
+<div id="used-fill" class="modal modal-sm">
+    <div class="modal-header">
+        <span role="button" class="modal-close">닫기</span>
+    </div>
+    <div class="modal-content text-center">
+        <div class="cont-header">
+            <h3>사용량 충전하기</h3>
+            <b class="text-gray">하단 정보를 확인 후 버튼을 눌러<br>계속 진행해 주세요.</b>
+        </div>
+        <div class="cont-body">
+            <ul class="result">
+                <li>
+                    <dl>
+                        <dt>충전한 사용량</dt>
+                        <dd>대량 전송 1건</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>결제 금액</dt>
+                        <dd>550원</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>추가 정보</dt>
+                        <dd>현재 사용중인 요금제 종료일<br>(2021.08.03)까지 사용 가능</dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="btn-row mt15">
+                <div class="btn-table">
+                    <a href="javascript:;" class="btn btn-gray-line">취소</a>
+                    <a href="javascript:;" class="modal-trigger btn btn-blue" data-modal-id="fill-complete">사용량 충전하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //사용량 충전하기 -->
+
+<div id="fill-complete" class="modal modal-sm">
+    <div class="modal-header">
+        <span role="button" class="modal-close">닫기</span>
+    </div>
+    <div class="modal-content text-center">
+        <div class="cont-header">
+            <svg class="ico-img" data-icon="check-circle" width="4.2em" height="4.2em" fill="#1890ff" aria-hidden="true" viewBox="64 64 896 896" focusable="false">
+                <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z">
+                </path>
+            </svg>
+            <h3>사용량 충전 완료</h3>
+            <b class="text-gray">사용량 충전이 완료되었습니다.<br>결제한 내용이 맞는지 아래 정보를 확인해 주세요.</b>
+        </div>
+        <div class="cont-body">
+            <ul class="result">
+                <li>
+                    <dl>
+                        <dt>충전한 사용량</dt>
+                        <dd>대량 전송 1건</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>결제 수단</dt>
+                        <dd>예치금</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>결제 금액</dt>
+                        <dd>238,740원 (잔액:88,750원)</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="btn-horizon">
+            <a href="javascript:;" class="btn btn-blue">확인</a>
+        </div>
+    </div>
+</div>
+<!-- //사용량 충전완료 -->
+
+</body>
+
+
+</html>
+
